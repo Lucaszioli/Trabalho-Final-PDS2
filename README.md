@@ -15,8 +15,8 @@ Após clonar o repositório, para executar os comandos no terminal:
 e executar o novo executável
 
 ## Autores
-Henrique Dias
-Lucas Zioli
-Malu Lauar
-Matheus Gregor
-Otávio Serafim
+- Henrique Dias
+- Lucas Zioli
+- Malu Lauar
+- Matheus Gregor
+- Otávio Serafim
