@@ -15,8 +15,8 @@ Após clonar o repositório, para executar os comandos no terminal:
 e executar o novo executável
 
 ## Autores
-- Henrique Dias
-- Lucas Zioli
-- Malu Lauar
-- Matheus Gregor
-- Otávio Serafim
+[Henrique Dias](https://github.com/Henrique-Dias15)
+[Lucas Zioli](https://github.com/Lucaszioli)
+[Malu Lauar](https://github.com/lauar-m)
+[Matheus Gregor](https://github.com/nuvemnm)
+[Otávio Serafim](https://github.com/OtavioSerafim)
