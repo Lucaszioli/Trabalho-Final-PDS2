@@ -29,6 +29,10 @@ int Ataque::getQuantidade() {
     return quantidade;
 }
 
+double Ataque::getChanceAcerto() {
+    return chanceAcerto;
+}
+
 vector<Ataque> Ataque::construirAtaques() {
     vector<Ataque> ataques;
     ifstream arquivo("CSVs/Ataques.csv");
@@ -56,8 +60,9 @@ vector<Ataque> Ataque::construirAtaques() {
         int dano = stoi(dados[3]);
         string descricao = dados[4];
         int quantidade = stoi(dados[5]);
+        double chanceAcerto = stod(dados[6]);
 
-        ataques.push_back(Ataque(ID, nome, tipo, dano, descricao, quantidade));
+        ataques.push_back(Ataque(ID, nome, tipo, dano, descricao, quantidade, chanceAcerto));
     }
 
     arquivo.close();

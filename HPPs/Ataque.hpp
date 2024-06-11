@@ -23,7 +23,7 @@ private:
     string descricao; ///< A descrição do ataque.
     int quantidade; ///< A quantidade de vezes que o ataque pode ser usado.
     
-    //double chanceAcerto; ///< A chance de acerto do ataque.
+    double chanceAcerto; ///< A chance de acerto do ataque.
 
 public:
     /**
@@ -35,9 +35,10 @@ public:
      * @param dano O dano causado pelo ataque.
      * @param descricao A descrição do ataque.
      * @param quantidade A quantidade de vezes que o ataque pode ser usado.
+     * @param chanceAcerto A chance de acerto do ataque.
      */
-    Ataque(int ID, string nome, string tipo, int dano, string descricao, int quantidade )
-        : ID(ID), nome(nome), tipo(tipo), dano(dano), descricao(descricao), quantidade(quantidade) {}
+    Ataque(int ID, string nome, string tipo, int dano, string descricao, int quantidade, double chanceAcerto)
+        : ID(ID), nome(nome), tipo(tipo), dano(dano), descricao(descricao), quantidade(quantidade), chanceAcerto(chanceAcerto) {}
 
     int getID(); ///< Retorna o ID do ataque.
     string getNome(); ///< Retorna o nome do ataque.
@@ -45,6 +46,7 @@ public:
     int getDano(); ///< Retorna o dano causado pelo ataque.
     string getDescricao(); ///< Retorna a descrição do ataque.
     int getQuantidade(); ///< Retorna a quantidade de vezes que o ataque pode ser usado.
+    double getChanceAcerto(); ///< Retorna a chance de acerto do ataque.
 
     /**
      * @brief Constrói uma lista de ataques a partir de um arquivo CSV.

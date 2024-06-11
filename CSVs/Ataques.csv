@@ -1,6 +1,6 @@
-ID,Nome,Tipo,Dano,Descricao,Quantidade
-1,Raio Trovão,Elétrico,90,Uma forte descarga elétrica.,15
-2,Lança-Chamas,Fogo,90,Um poderoso ataque de fogo.,15
-3,Jato de Água,Água,40,Um ataque de água fraco.,25
-4,Raio Solar,Grama,120,Um ataque solar de dois turnos.,10
-5,Hiper-Raio,Normal,150,Um ataque muito poderoso.,5
+ID,Nome,Tipo,Dano,Descricao,Quantidade,chanceAcerto
+1,Raio Trovão,Elétrico,90,Uma forte descarga elétrica.,15,0.75
+2,Lança-Chamas,Fogo,90,Um poderoso ataque de fogo.,15,0.75
+3,Jato de Água,Água,40,Um ataque de água fraco.,25,0.9
+4,Raio Solar,Grama,120,Um ataque solar de dois turnos.,10,0.5
+5,Hiper-Raio,Normal,150,Um ataque muito poderoso.,5,0.3
