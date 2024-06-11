@@ -1,4 +1,4 @@
-#include "Ataque.hpp"
+#include "../HPPs/Ataque.hpp"
 #include <fstream>
 #include <sstream>
 #include <exception>
