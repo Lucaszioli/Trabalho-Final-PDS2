@@ -16,11 +16,16 @@ private:
     vector<Ataque> ataques;
 
 public:
-    // Métodos CRUD
-    void criarMonstrinho(/* parâmetros */);
-    void lerMonstrinho(/* parâmetros */);
-    void atualizarMonstrinho(/* parâmetros */);
-    void deletarMonstrinho(/* parâmetros */);
+    
+        int getID();
+        string getNome();
+        string getDescricao();
+        string getTipo();
+        int getHP();
+        int getVelocidade();
+        vector<Ataque> getAtaques();
+    
+        void atacar(/* parâmetros */);
 
-    // Adicione mais métodos conforme necessário
+    
 };

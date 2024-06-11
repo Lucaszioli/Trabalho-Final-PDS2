@@ -12,14 +12,12 @@ private:
     string falas;
 
 public:
-    // Métodos CRUD
-    void criarTreinador(/* parâmetros */);
-    void lerTreinador(/* parâmetros */);
-    void atualizarTreinador(/* parâmetros */);
-    void deletarTreinador(/* parâmetros */);
 
-    // Método para trocar de monstrinho
+    int getID();
+    string getNome();
+    vector<Monstrinho> getEquipe();
+    string getFalas();
+
     void trocarMonstrinho(/* parâmetros */);
 
-    // Adicione mais métodos conforme necessário
 };
