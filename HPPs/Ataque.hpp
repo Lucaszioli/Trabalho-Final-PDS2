@@ -22,6 +22,7 @@ private:
     int dano; ///< O dano causado pelo ataque.
     string descricao; ///< A descrição do ataque.
     int quantidade; ///< A quantidade de vezes que o ataque pode ser usado.
+    
     //double chanceAcerto; ///< A chance de acerto do ataque.
 
 public:
