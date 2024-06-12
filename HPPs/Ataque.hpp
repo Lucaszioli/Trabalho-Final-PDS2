@@ -1,3 +1,5 @@
+#ifndef ATAQUE_HPP
+#define ATAQUE_HPP
 /**
  * @file Ataque.hpp
  * @brief Definição da classe Ataque e seus métodos.
@@ -55,3 +57,5 @@ public:
      */
     static vector<Ataque> construirAtaques();
 };
+
+#endif

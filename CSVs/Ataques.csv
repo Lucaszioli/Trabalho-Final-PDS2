@@ -1,6 +1,46 @@
 ID,Nome,Tipo,Dano,Descricao,Quantidade,chanceAcerto
-1,Raio Trovão,Elétrico,90,Uma forte descarga elétrica.,15,0.75
-2,Lança-Chamas,Fogo,90,Um poderoso ataque de fogo.,15,0.75
-3,Jato de Água,Água,40,Um ataque de água fraco.,25,0.9
-4,Raio Solar,Grama,120,Um ataque solar de dois turnos.,10,0.5
-5,Hiper-Raio,Normal,150,Um ataque muito poderoso.,5,0.3
+1,Mordida Inseto,Inseto,50,Um ataque de mordida de inseto.,30,0.95
+2,Pó de Estrela,Inseto,80,Um ataque com pó mágico de inseto.,15,0.8
+3,Ferrão Venenoso,Inseto,100,Um ataque com um ferrão venenoso.,10,0.7
+4,Cauda Dragão,Dragão,60,Um golpe com a cauda de dragão.,20,0.8
+5,Chama Dragão,Dragão,100,Um ataque de fogo de dragão.,8,0.65
+6,Chama Azul,Dragão,130,Um ataque de fogo de dragão intenso.,4,0.55
+7,Choque do Trovão,Elétrico,40,Um choque elétrico fraco.,25,0.9
+8,Raio Trovão,Elétrico,90,Uma forte descarga elétrica.,10,0.7
+9,Trovão,Elétrico,110,Um raio elétrico poderoso.,6,0.65
+10,Soco Firme,Lutador,50,Um soco forte.,30,0.95
+11,Punho de Ferro,Lutador,75,Um soco potente.,15,0.8
+12,Megachute,Lutador,120,Um chute devastador.,5,0.6
+13,Brasa,Fogo,40,Um ataque de fogo fraco.,25,0.9
+14,Lança-Chamas,Fogo,90,Um poderoso ataque de fogo.,10,0.7
+15,Lança de Fogo,Fogo,120,Um ataque de fogo devastador.,5,0.6
+16,Golpe de Asa,Voador,40,Um golpe com asas.,25,0.9
+17,Esfera Aérea,Voador,60,Um ataque aéreo.,20,0.85
+18,Vendaval,Voador,100,Um ataque com um forte vendaval.,8,0.75
+19,Sombra Noturna,Fantasma,50,Um ataque sombrio.,30,0.95
+20,Esfera Fantasma,Fantasma,80,Um ataque com esfera de energia fantasma.,15,0.8
+21,Toque Assombrado,Fantasma,100,Um ataque fantasmagórico.,10,0.7
+22,Folha Afiada,Grama,45,Um ataque cortante com folhas.,25,0.9
+23,Vinha Poderosa,Grama,70,Um ataque com vinhas fortes.,15,0.8
+24,Raio Solar,Grama,120,Um ataque solar.,5,0.5
+25,Soco de Lama,Terra,20,Um soco com lama.,30,0.9
+26,Terra Quente,Terra,60,Um ataque de terra aquecida.,20,0.85
+27,Terremoto,Terra,100,Um ataque que causa terremoto.,8,0.75
+28,Gelo Estilhaçado,Gelo,50,Um ataque com fragmentos de gelo.,30,0.95
+29,Raio de Gelo,Gelo,90,Um ataque gelado.,10,0.7
+30,Nevasca,Gelo,120,Um ataque de neve.,5,0.6
+31,Furacão,Normal,40,Um ataque com vento forte.,25,0.9
+32,Corte,Normal,50,Um golpe cortante.,30,0.95
+33,Hiper-Raio,Normal,150,Um ataque muito poderoso.,3,0.3
+34,Pancada Venenosa,Veneno,40,Um ataque de veneno fraco.,25,0.9
+35,Explosão de Veneno,Veneno,90,Um ataque de veneno forte.,10,0.7
+36,Golpe Tóxico,Veneno,120,Um golpe venenoso devastador.,5,0.6
+37,Confusão,Psiquico,50,Um ataque com poder psíquico fraco.,30,0.95
+38,Golpe Psíquico,Psiquico,75,Um ataque com poder psíquico.,15,0.8
+39,Explosão Psíquica,Psiquico,130,Um ataque psíquico devastador.,4,0.55
+40,Faca de Pedra,Pedra,60,Um ataque cortante com pedra.,20,0.85
+41,Deslizamento de Pedras,Pedra,75,Um ataque com pedras rolando.,15,0.8
+42,Golpe de Rocha,Pedra,100,Um golpe com uma rocha.,8,0.75
+43,Espuma,Água,20,Um ataque com bolhas de água.,30,0.9
+44,Jato de Água,Água,40,Um ataque de água fraco.,20,0.85
+45,Hidro Bomba,Água,110,Um ataque de água poderoso.,6,0.65
