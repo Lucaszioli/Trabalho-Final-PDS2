@@ -18,5 +18,5 @@ public:
     std::string getNome();
     vector<Monstrinho *> getEquipe();
     std::string getFalas();
-    bool verificaEquipe();
+    virtual bool verificaEquipe();
 };
