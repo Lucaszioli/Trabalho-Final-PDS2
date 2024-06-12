@@ -1,6 +1,8 @@
 #ifndef ITEM
 #define ITEM
 
+#include "../Jogador.hpp"
+#include "../Monstrinho.hpp"
 #include <string>
 using std::string;
 
@@ -8,13 +10,24 @@ class Item{
     private:
         int id;
         string nome;
-        string descrição;
-        int quantidade;
+        string descricao;
     public:
-        virtual void usarItem() = 0;
-        virtual void pegarItem() = 0;
-        string getNome();
-        string getDescrição();
+        /**
+         * @brief Usa um item selecionado
+         * 
+         * @param Monstro O monstro que o item será utilizado
+         */
+        virtual void usarItem(Monstrinho monstro) = 0;
+
+        /**
+         * @brief Pega um item aleatorio
+         * 
+         * @param jogador Jogador que o item é atribuido para
+         */
+        string getNome(); //<= Retorna o nome
+        void setNome(string nome); // <= Muda o nome
+        string getDescricao(); //<= Retorna a descrição
+        void setDescricao(string descricao); //<= Muda a descrição
 };
 
 #endif
