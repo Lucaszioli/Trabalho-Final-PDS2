@@ -1,16 +1,15 @@
-#include <string>
-#include <vector>
-#include "Monstrinho.hpp"
+#ifndef JOGADOR_HPP
+#define JOGADOR_HPP
 #include "Treinador.hpp"
 
-using namespace std;
-
-class Jogador : public Treinador {
+class Jogador : public Treinador
+{
 private:
-    // Adicione atributos específicos do Jogador aqui, se houver
-
+    // Implementar inventário
 public:
-    // Adicione métodos específicos do Jogador aqui, se houver
-
-    // Sobrescreva métodos de Treinador aqui, se necessário
+    Jogador(int ID, string nome, vector<Monstrinho *> equipe);
+    void mudaEquipe() override;
+    void imprimeEquipe();
 };
+
+#endif
