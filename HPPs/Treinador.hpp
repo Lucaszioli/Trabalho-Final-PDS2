@@ -2,22 +2,19 @@
 #include <vector>
 #include "Monstrinho.hpp"
 
-using namespace std;
-
-class Treinador {
+class Treinador
+{
 private:
     int ID;
-    string nome;
-    vector<Monstrinho> equipe;
-    string falas;
+    std::string nome;
+    vector<Monstrinho *> equipe;
+    std::string falas;
 
 public:
-
+    Treinador(int ID, std::string nome, vector<Monstrinho *> equipe, std::string falas);
     int getID();
-    string getNome();
-    vector<Monstrinho> getEquipe();
-    string getFalas();
-
-    void trocarMonstrinho(/* parâmetros */);
-
+    std::string getNome();
+    vector<Monstrinho *> getEquipe();
+    std::string getFalas();
+    bool verificaEquipe();
 };
