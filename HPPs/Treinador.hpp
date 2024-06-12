@@ -5,10 +5,12 @@
 class Treinador
 {
 private:
-    int ID;
-    std::string nome;
-    vector<Monstrinho *> equipe;
     std::string falas;
+
+protected:
+    int ID;
+    vector<Monstrinho *> equipe;
+    std::string nome;
 
 public:
     Treinador(int ID, std::string nome, vector<Monstrinho *> equipe, std::string falas);
