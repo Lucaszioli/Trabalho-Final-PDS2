@@ -1,8 +1,10 @@
 #include "../HPPs/Ataque.hpp"
+#include "../HPPs/Monstrinho.hpp"
 #include <fstream>
 #include <sstream>
 #include <exception>
 #include <stdexcept>
+#include <cstdlib>
 
 int Ataque::getID() {
     return ID;
@@ -65,6 +67,16 @@ vector<Ataque> Ataque::construirAtaques() {
         ataques.push_back(Ataque(ID, nome, tipo, dano, descricao, quantidade, chanceAcerto));
     }
 
-    arquivo.close();
-    return ataques;
-}
+        arquivo.close();
+        return ataques;
+    }
+
+    // void Ataque::causarDano(Monstrinho &inimigo) {
+    //     inimigo.setHP(inimigo.getHP() - dano);
+    // }
+
+    bool Ataque::checarAcerto() {
+        double randomValue = (double)rand() / RAND_MAX; 
+
+        return randomValue <= chanceAcerto;
+    }

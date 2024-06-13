@@ -56,6 +56,8 @@ public:
      * @return Um vetor com todos os ataques do arquivo CSV.
      */
     static vector<Ataque> construirAtaques();
+    bool checarAcerto();
+    // void causarDano(Monstrinho &inimigo);
 };
 
 #endif
