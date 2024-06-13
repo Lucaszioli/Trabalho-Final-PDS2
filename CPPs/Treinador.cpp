@@ -29,3 +29,11 @@ bool Treinador::verificaEquipe()
 void Treinador::mudaEquipe()
 {
 }
+
+void Treinador::imprimeEquipe()
+{
+    for (int i = 0; i < equipe.size(); i++)
+    {
+        cout << i + 1 << " - " << equipe[i]->getNome() << " | Vida: " << equipe[i]->getHP() << endl;
+    }
+}

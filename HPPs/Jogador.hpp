@@ -9,7 +9,6 @@ private:
 public:
     Jogador(int ID, string nome, vector<Monstrinho *> equipe);
     void mudaEquipe() override;
-    void imprimeEquipe();
 };
 
 #endif

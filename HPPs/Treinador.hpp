@@ -19,6 +19,7 @@ public:
     vector<Monstrinho *> getEquipe();
     bool verificaEquipe();
     virtual void mudaEquipe();
+    void imprimeEquipe();
 };
 
 #endif
