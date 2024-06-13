@@ -15,7 +15,6 @@ class Jogo{
         void escolherMonstrinho(vector<Monstrinho> time);
         Monstrinho proximoMonstrinho(vector<Monstrinho> equipe);
         int calculaVidaEquipe();
-        int opcao;
         
         
 
