@@ -1,10 +1,10 @@
 #include "../HPPs/Bot.hpp"
 #include <iostream>
 
-Bot::Bot(int ID, string nome, vector<Monstrinho *> equipe, string fala)
+Bot::Bot(int ID, string nome, vector<Monstrinho *> equipe, vector<std::string> fala)
     : Treinador(ID, nome, equipe), fala(fala) {}
 
-string Bot::getFala()
+vector<std::string> Bot::getFala()
 {
     return fala;
 }
