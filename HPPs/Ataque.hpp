@@ -5,7 +5,6 @@
  * @brief Definição da classe Ataque e seus métodos.
  */
 
-#include <string>
 #include <vector>
 
 using namespace std;
@@ -42,20 +41,75 @@ public:
     Ataque(int ID, string nome, string tipo, int dano, string descricao, int quantidade, double chanceAcerto)
         : ID(ID), nome(nome), tipo(tipo), dano(dano), descricao(descricao), quantidade(quantidade), chanceAcerto(chanceAcerto) {}
 
-    int getID(); ///< Retorna o ID do ataque.
-    string getNome(); ///< Retorna o nome do ataque.
-    string getTipo(); ///< Retorna o tipo do ataque.
-    int getDano(); ///< Retorna o dano causado pelo ataque.
-    string getDescricao(); ///< Retorna a descrição do ataque.
-    int getQuantidade(); ///< Retorna a quantidade de vezes que o ataque pode ser usado.
-    double getChanceAcerto(); ///< Retorna a chance de acerto do ataque.
+    /**
+     * @brief Retorna o ID do ataque.
+     * 
+     * @return int O ID do ataque.
+     */
+    int getID();
+
+    /**
+     * @brief Retorna o nome do ataque.
+     * 
+     * @return string O nome do ataque.
+     */
+    string getNome();
+
+    /**
+     * @brief Retorna o tipo do ataque.
+     * 
+     * @return string O tipo do ataque.
+     */
+    string getTipo();
+
+    /**
+     * @brief Retorna o dano causado pelo ataque.
+     * 
+     * @return int O dano causado pelo ataque.
+     */
+    int getDano();
+
+    /**
+     * @brief Retorna a descrição do ataque.
+     * 
+     * @return string A descrição do ataque.
+     */
+    string getDescricao();
+
+    /**
+     * @brief Retorna a quantidade de vezes que o ataque pode ser usado.
+     * 
+     * @return int A quantidade de vezes que o ataque pode ser usado.
+     */
+    int getQuantidade();
+
+    /**
+     * @brief Retorna a chance de acerto do ataque.
+     * 
+     * @return double A chance de acerto do ataque.
+     */
+    double getChanceAcerto();
 
     /**
      * @brief Constrói uma lista de ataques a partir de um arquivo CSV.
      * 
-     * @return Um vetor com todos os ataques do arquivo CSV.
+     * @return vector<Ataque> Um vetor com todos os ataques do arquivo CSV.
      */
     static vector<Ataque> construirAtaques();
+
+    /**
+     * @brief Verifica se o ataque acertou ou não.
+     * 
+     * @return bool Verdadeiro se o ataque acertou, falso caso contrário.
+     */
+    bool checarAcerto();
+
+    /**
+     * @brief Causa dano a um Monstrinho.
+     * 
+     * @param inimigo O Monstrinho que receberá o dano.
+     */
+    void causarDano(Monstrinho &inimigo);
 };
 
 #endif
