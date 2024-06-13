@@ -72,18 +72,14 @@ vector<Ataque> Ataque::construirAtaques() {
         return ataques;
     }
 
-    void Ataque::causarDano(Monstrinho &inimigo) {
-        inimigo.setHPAtual(inimigo.getHPAtual() - dano);
-        std::cout << inimigo.getNome() << " sofreu " << dano << " de dano!" << std::endl;
-    }
-
-    bool Ataque::checarAcerto() {
+    void Ataque::fazerAtaque(Monstrinho &inimigo) {
         double randomValue = (double)rand() / RAND_MAX; 
         if(randomValue <= chanceAcerto) {
             std::cout << "O ataque acertou!" << std::endl;
+            inimigo.setHPAtual(inimigo.getHPAtual() - dano);
+            std::cout << inimigo.getNome() << " sofreu " << dano << " de dano!" << std::endl;
         }
         else {
             std::cout << "O ataque errou!" << std::endl;
         }
-        return randomValue <= chanceAcerto;
     }

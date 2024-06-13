@@ -98,18 +98,11 @@ public:
     static vector<Ataque> construirAtaques();
 
     /**
-     * @brief Verifica se o ataque acertou ou não.
-     * 
-     * @return bool Verdadeiro se o ataque acertou, falso caso contrário.
-     */
-    bool checarAcerto();
-
-    /**
-     * @brief Causa dano a um Monstrinho.
+     * @brief Verifica se o ataque acertou ou não, caso sim, causa dano a um Monstrinho.
      * 
      * @param inimigo O Monstrinho que receberá o dano.
      */
-    void causarDano(Monstrinho &inimigo);
+    void fazerAtaque(Monstrinho &inimigo);
 };
 
 #endif
