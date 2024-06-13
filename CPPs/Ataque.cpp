@@ -5,6 +5,7 @@
 #include <exception>
 #include <stdexcept>
 #include <cstdlib>
+#include <iostream>
 
 int Ataque::getID() {
     return ID;
@@ -71,12 +72,18 @@ vector<Ataque> Ataque::construirAtaques() {
         return ataques;
     }
 
-    // void Ataque::causarDano(Monstrinho &inimigo) {
-    //     inimigo.setHPAtual(inimigo.getHPAtual() - dano);
-    // }
+    void Ataque::causarDano(Monstrinho &inimigo) {
+        inimigo.setHPAtual(inimigo.getHPAtual() - dano);
+        std::cout << inimigo.getNome() << " sofreu " << dano << " de dano!" << std::endl;
+    }
 
     bool Ataque::checarAcerto() {
         double randomValue = (double)rand() / RAND_MAX; 
-
+        if(randomValue <= chanceAcerto) {
+            std::cout << "O ataque acertou!" << std::endl;
+        }
+        else {
+            std::cout << "O ataque errou!" << std::endl;
+        }
         return randomValue <= chanceAcerto;
     }

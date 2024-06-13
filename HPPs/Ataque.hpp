@@ -5,7 +5,6 @@
  * @brief Definição da classe Ataque e seus métodos.
  */
 
-#include <string>
 #include <vector>
 
 using namespace std;
@@ -57,7 +56,7 @@ public:
      */
     static vector<Ataque> construirAtaques();
     bool checarAcerto();
-    // void causarDano(Monstrinho &inimigo);
+    void causarDano(Monstrinho &inimigo);
 };
 
 #endif
