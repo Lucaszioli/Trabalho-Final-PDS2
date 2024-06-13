@@ -12,5 +12,6 @@ private:
 public:
     // Adicione métodos específicos do Jogador aqui, se houver
     vector<Item> getInventario();
+    void adicionarItem(Item* item);
     // Sobrescreva métodos de Treinador aqui, se necessário
 };

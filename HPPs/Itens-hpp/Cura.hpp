@@ -8,7 +8,7 @@ class Cura: public Item{
     private:
         int cura;
     public:
-        void pegarCura();
+        void pegarItem() override;
         void usarItem(Monstrinho monstro) override;
         void setCura(int cura);
         int getCura();

@@ -22,6 +22,7 @@ public:
         string getDescricao();
         string getTipo();
         int getHP();
+        void setHP(int hp);
         int getVelocidade();
         vector<Ataque> getAtaques();
     

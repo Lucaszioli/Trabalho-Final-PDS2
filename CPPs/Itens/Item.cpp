@@ -20,3 +20,10 @@ void Item::setNome(string n){
     nome = n;
 }
 
+void Item::setTipo(string t){
+    tipo = t;
+}
+
+string Item::getTipo(){
+    return tipo;
+}

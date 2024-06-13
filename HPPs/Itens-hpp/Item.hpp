@@ -8,9 +8,9 @@ using std::string;
 
 class Item{
     private:
-        int id;
         string nome;
         string descricao;
+        string tipo;
     public:
         /**
          * @brief Usa um item selecionado
@@ -24,6 +24,10 @@ class Item{
          * 
          * @param jogador Jogador que o item é atribuido para
          */
+
+        string getTipo();
+        void setTipo(string tipo);
+        virtual void pegarItem() = 0;
         string getNome(); //<= Retorna o nome
         void setNome(string nome); // <= Muda o nome
         string getDescricao(); //<= Retorna a descrição
