@@ -72,7 +72,7 @@ vector<Ataque> Ataque::construirAtaques() {
     }
 
     // void Ataque::causarDano(Monstrinho &inimigo) {
-    //     inimigo.setHP(inimigo.getHP() - dano);
+    //     inimigo.setHPAtual(inimigo.getHPAtual() - dano);
     // }
 
     bool Ataque::checarAcerto() {
