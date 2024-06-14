@@ -1,7 +1,8 @@
 #ifndef JOGADOR_HPP
 #define JOGADOR_HPP
-#include "Treinador.hpp"
 
+#include "Treinador.hpp"
+#include "Itens-hpp/Item.hpp"
 /**
  * @brief Classe que representa um jogador no jogo.
  *
@@ -12,7 +13,7 @@ class Jogador : public Treinador
 {
 private:
     // Implementar inventário
-
+    std::vector<Item*> inventario;
 public:
     /**
      * @brief Construtor da classe Jogador.
@@ -30,6 +31,24 @@ public:
      * Ela permite ao jogador mudar sua equipe de monstrinhos.
      */
     void mudaEquipe() override;
+    /**
+     * @brief Função que permite o jogador receber um item aleatório ao fim de uma rodada
+     */
+    void receberItem();
+
+    /**
+     * @brief Função que permiter pegar o inventario do Jogador
+     */
+    vector<Item*> getInventario();
+    
+    /**
+     * @brief Adiciona um Item ao inventario do jogador
+     * 
+     * @param item Item adicionado no inventario
+     */
+    void adicionarItem(Item* item);
+    void removerItem(int item);
+    bool usarItem();
 };
 
 #endif
