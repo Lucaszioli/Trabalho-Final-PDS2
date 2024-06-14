@@ -37,7 +37,7 @@ vector<Monstrinho> Jogo :: escolherMonstrinho(){
     }
 }
 
-void Jogo :: geraTurno(Jogador &jogador, Bot &bot, Monstrinho &monstroJogador, Monstrinho &monstroBot){
+void Jogo :: geraTurno(Jogador &jogador, Bot &bot, vector<Monstrinho*> monstroJogador, vector<Monstrinho*> monstroBot){
     int opcao;
     cout<<"--------------------------------Turno do Jogador--------------------------------"<<endl;
     cout<<"Escolha uma opção:"<<endl;
@@ -48,25 +48,47 @@ void Jogo :: geraTurno(Jogador &jogador, Bot &bot, Monstrinho &monstroJogador, M
     switch (opcao)
     {
     case 1:
-        
+        if(monstroJogador[0]->getVelocidade() >= monstroBot[0]->getVelocidade()){
+            monstroJogador[0]->atacar(monstroJogador[0], monstroBot[0]);
+            if(monstroBot[0]->getHPAtual() <= 0){
+                bot.mudaEquipe();
+                jogador.receberItem();
+            }else{
+                monstroBot[0]->atacar(monstroBot[0], monstroJogador[0]);
+            }
+        }else{
+            monstroBot[0]->atacar(monstroBot[0], monstroJogador[0]);
+            if(monstroJogador[0]->getHPAtual() <= 0){
+                jogador.mudaEquipe();
+            }else{
+                monstroJogador[0]->atacar(monstroJogador[0], monstroBot[0]);
+            }
+        }
         break;
     
     case 2:
-        
+        jogador.mudaEquipe();
+        monstroBot[0]->atacar(monstroBot[0], monstroJogador[0]);
+        if(monstroJogador[0]->getHPAtual() <= 0){
+            jogador.mudaEquipe();
+        }
         break;
 
     case 3:
-        
+        jogador.usarItem();
+        monstroBot[0]->atacar(monstroBot[0], monstroJogador[0]);
+        if(monstroJogador[0]->getHPAtual() <= 0){
+            jogador.mudaEquipe();
+        }
         break;
     }
     
 }
 
 void Jogo :: iniciar(){
-    vector<Monstrinho> equipe;
+    vector<Monstrinho*> equipe;
     vector<Monstrinho> equipeBot;
     string nome;
-    bool state = false;
     std::string start;
     cout<<"Digite start no terminal para iniciar o jogo."<<endl;
     cin>>start;
@@ -83,7 +105,7 @@ void Jogo :: iniciar(){
             Bot bot(0, "ChatGPT", equipeBot);
         
             while(jogador.verificaEquipe() && bot.verificaEquipe()){
-                geraTurno(jogador, bot, equipe[0], equipeBot[0]);
+                geraTurno(jogador, bot, equipe, equipeBot);
             }
             if(jogador.verificaEquipe()){
                 cout<<"Parabéns você venceu!"<<endl;
