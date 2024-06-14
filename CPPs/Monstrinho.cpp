@@ -18,7 +18,7 @@ string Monstrinho::getDescricao() {
     return descricao;
 }
 
-string Monstrinho::getTipo() {
+vector<string> Monstrinho::getTipo() {
     return tipo;
 }
 
@@ -37,6 +37,10 @@ void Monstrinho::setHPAtual(int HPAtual) {
 int Monstrinho::getVelocidade() {
     return velocidade;
 } 
+
+int Monstrinho::getTier() {
+    return tier;
+}
 
 vector<Ataque> Monstrinho::getAtaques() {
     return ataques;
@@ -66,15 +70,21 @@ vector <Monstrinho> Monstrinho::construirMonstrinhos() {
         int ID = stoi(dados[0]);
         string nome = dados[1];
         string descricao = dados[2];
-        string tipo = dados[3];
+        vector<string> tipo;
+        stringstream ssTipo(dados[3]);
+        string tipoStr;
+        while (getline(ssTipo, tipoStr, ';')) { // Separa os tipos
+            tipo.push_back(tipoStr); // Adiciona cada tipo ao vetor de tipos
+        }
         int HP = stoi(dados[4]);
         int velocidade = stoi(dados[5]);
+        int tier = stoi(dados[6]);
         vector<Ataque> ataques;
         int HPAtual = HP;
 
         vector<Ataque> todosAtaques = Ataque::construirAtaques();
 
-        stringstream ssAtaques(dados[6]);
+        stringstream ssAtaques(dados[7]);
         string ataqueStr;
         while (getline(ssAtaques, ataqueStr, ';')) { // Separa os IDs dos ataques
             for (Ataque ataque : Ataque::construirAtaques()) { // Procura os ataques com os IDs
@@ -92,7 +102,7 @@ vector <Monstrinho> Monstrinho::construirMonstrinhos() {
             }
         }
 
-        monstrinhos.push_back(Monstrinho(ID, nome, descricao, tipo, HP, HPAtual, velocidade, ataques));
+        monstrinhos.push_back(Monstrinho(ID, nome, descricao, tipo, HP, HPAtual, velocidade, tier, ataques));
     }
 
     return monstrinhos;
