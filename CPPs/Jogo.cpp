@@ -1,5 +1,4 @@
 #include <iostream>
-#include <ctime>
 #include <string>
 #include <vector>
 #include "../HPPs/Jogo.hpp"
@@ -7,19 +6,20 @@
 #include "../HPPs/Jogador.hpp"
 #include "../HPPs/Monstrinho.hpp"
 #include "../HPPs/Ataque.hpp"
+#include "../HPPs/Bot.hpp"
 
 using std::vector;
 using std::cout;
 using std::endl;
 using std::cin;
 
-vector<Monstrinho> Jogo :: escolherMonstrinho(vector<Monstrinho> equipe){
+vector<Monstrinho> Jogo :: escolherMonstrinho(){
+    vector<Monstrinho> equipe;
     vector<Monstrinho> monstrinhos;
-    monstrinhos = função da malu
+    monstrinhos = Monstrinho::construirMonstrinhos();
     cout<<"--------------------------------Escolha seu time--------------------------------"<<endl;
     for(int i = 0; i < monstrinhos.size(); i++){
-        cout<<monstrinhos[i]; //mudar para função da malu
-    }
+        cout<<monstrinhos[i].getID()<<"-"<<monstrinhos[i].getNome()<<"-"<<monstrinhos[i].getTier()<<endl;
    
     int opcao;
     for(int i = 0; i < 4; i++){
@@ -34,10 +34,10 @@ vector<Monstrinho> Jogo :: escolherMonstrinho(vector<Monstrinho> equipe){
         }    
     }
     return equipe; 
+    }
 }
 
-
-void Jogo :: geraTurno(Monstrinho &monstrinhoPlayer, Monstrinho &mosntrinhoBot){
+void Jogo :: geraTurno(Jogador &jogador, Bot &bot, Monstrinho &monstroJogador, Monstrinho &monstroBot){
     int opcao;
     cout<<"--------------------------------Turno do Jogador--------------------------------"<<endl;
     cout<<"Escolha uma opção:"<<endl;
@@ -48,54 +48,15 @@ void Jogo :: geraTurno(Monstrinho &monstrinhoPlayer, Monstrinho &mosntrinhoBot){
     switch (opcao)
     {
     case 1:
-         /*
-        if(monstrinho1.velocidade >= monstrinho2.velocidade){
-            gerarAtaque(1);
-                if(monstrinho2.HP <= 0){
-                    trocaMonstrinho(2);
-                    continue;
-                };
-            gerarAtaque(2);
-                if(monstrinho1.HP <= 0){
-                    trocaMonstrinho(1);
-                    continue;
-                };
-                
-        }else{
-            gerarAtaque(2);
-                if(monstrinho1.HP <= 0){
-                    trocaMonstrinho(1);
-                    continue;
-                };
-            gerarAtaque(1);
-                if(monstrinho2.HP <= 0){
-                    trocaMonstrinho(2);
-                    continue;
-                };
-        }
-        */
+        
         break;
     
     case 2:
-        /*
-        trocaMonstrinho(1);
-        gerarAtaque(2);
-            if(monstrinho1.HP <= 0){
-                trocaMonstrinho(1);
-                continue;
-            };
-        */
+        
         break;
 
     case 3:
-        /*
-        usarItem(1);
-        gerarAtaque(2);
-        if(monstrinho1.HP <= 0){
-            trocaMonstrinho(1);
-            continue;
-        }
-        */
+        
         break;
     }
     
@@ -116,15 +77,20 @@ void Jogo :: iniciar(){
         
             cout<<"Escolha um nome para o seu Personagem."<<endl;
             cin>>nome;
-            equipe = escolherMonstrinho(jogador.getEquipe());
+            equipe = escolherMonstrinho();
 
             Jogador jogador(1, nome, equipe);
-            Jogador bot(0, "ChatGPT", equipeBot);
+            Bot bot(0, "ChatGPT", equipeBot);
         
             while(jogador.verificaEquipe() && bot.verificaEquipe()){
-                geraTurno(equipe[0], equipeBot[0]);
+                geraTurno(jogador, bot, equipe[0], equipeBot[0]);
             }
-            cout<<"Digite start para jogar ou qulquer outra coisa para sair."<<endl;
+            if(jogador.verificaEquipe()){
+                cout<<"Parabéns você venceu!"<<endl;
+            }else{
+                cout<<"Você perdeu!"<<endl;
+            }
+            cout<<"Digite start para jogar novamente ou qulquer outra coisa para sair."<<endl;
             cin>>start;
         } while(start == "start");
        }
