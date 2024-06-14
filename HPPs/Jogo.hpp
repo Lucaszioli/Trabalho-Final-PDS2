@@ -2,21 +2,14 @@
 #include <vector>
 #include "Monstrinho.hpp"
 #include "Treinador.hpp"
-#include "Jogador.hpp"
+
 using std::vector;
 using std::string;
 
 class Jogo{
     public:
         void iniciar();
-        void turnoJogador(vector<Monstrinho> equipe);
-        void turnoBot();
-        void geraTurno();
-        void escolherMonstrinho(vector<Monstrinho> time);
-        Monstrinho proximoMonstrinho(vector<Monstrinho> equipe);
-        int calculaVidaEquipe();
-        int opcao;
+        void geraTurno(Jogador &jogador, Bot &bot, vector<Monstrinho*> monstroJogador, vector<Monstrinho*> monstroBot);
+        vector<Monstrinho> escolherMonstrinho();
         
-        
-
 };

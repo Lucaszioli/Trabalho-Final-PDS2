@@ -1,28 +1,119 @@
 #include <iostream>
-#include <fstream>
-#include <sstream>
 #include <string>
-#include <ctime>
-#include <cstdlib>
+#include <vector>
 #include "../HPPs/Jogo.hpp"
-#include "../HPPs/Itens-hpp/Cura.hpp"
-#include "../HPPs/Itens-hpp/Revive.hpp"
-void Jogo::receberItem(Jogador* jogador){
-    try{
-        vector<Item> inventario = jogador->getInventario();
-        srand(static_cast<unsigned int>(std::time(0)));
-        int dado = (rand() % 100) + 1;
-        Item* item;
-        if(dado>60 && dado<=100){
-            item = new Cura();
-            item -> pegarItem();
-        }else if(dado<=60 && dado>40){
-            item = new Revive();
-            item->pegarItem();
-        }
-        jogador->adicionarItem(item);
-    }catch(){
-        
+#include "../HPPs/Treinador.hpp"
+#include "../HPPs/Jogador.hpp"
+#include "../HPPs/Monstrinho.hpp"
+#include "../HPPs/Ataque.hpp"
+#include "../HPPs/Bot.hpp"
+
+using std::vector;
+using std::cout;
+using std::endl;
+using std::cin;
+
+vector<Monstrinho> Jogo :: escolherMonstrinho(){
+    vector<Monstrinho> equipe;
+    vector<Monstrinho> monstrinhos;
+    monstrinhos = Monstrinho::construirMonstrinhos();
+    cout<<"--------------------------------Escolha seu time--------------------------------"<<endl;
+    for(int i = 0; i < monstrinhos.size(); i++){
+        cout<<monstrinhos[i].getID()<<"-"<<monstrinhos[i].getNome()<<"-"<<monstrinhos[i].getTier()<<endl;
+   
+    int opcao;
+    for(int i = 0; i < 4; i++){
+        cout<<"Digite o ID do Monstrinho para adiciona-lo ao seu time."<<endl;
+        cin>>opcao;
+        for(int j = 0; j < monstrinhos.size(); j++){
+            if(opcao == monstrinhos[j].getID()){
+                equipe.push_back(monstrinhos[j]);
+                cout<<"Monstrinho adicionado com sucesso!"<<endl;                
+                break;
+            }
+        }    
+    }
+    return equipe; 
     }
 }
 
+void Jogo :: geraTurno(Jogador &jogador, Bot &bot, vector<Monstrinho*> monstroJogador, vector<Monstrinho*> monstroBot){
+    int opcao;
+    cout<<"--------------------------------Turno do Jogador--------------------------------"<<endl;
+    cout<<"Escolha uma opção:"<<endl;
+    cout<<"1 - Atacar"<<endl;
+    cout<<"2 - Mudar monstrinho"<<endl;
+    cout<<"3 - Usar item"<<endl;
+    cin>>opcao;
+    switch (opcao)
+    {
+    case 1:
+        if(monstroJogador[0]->getVelocidade() >= monstroBot[0]->getVelocidade()){
+            monstroJogador[0]->atacar(monstroJogador[0], monstroBot[0]);
+            if(monstroBot[0]->getHPAtual() <= 0){
+                bot.mudaEquipe();
+                jogador.receberItem();
+            }else{
+                monstroBot[0]->atacar(monstroBot[0], monstroJogador[0]);
+            }
+        }else{
+            monstroBot[0]->atacar(monstroBot[0], monstroJogador[0]);
+            if(monstroJogador[0]->getHPAtual() <= 0){
+                jogador.mudaEquipe();
+            }else{
+                monstroJogador[0]->atacar(monstroJogador[0], monstroBot[0]);
+            }
+        }
+        break;
+    
+    case 2:
+        jogador.mudaEquipe();
+        monstroBot[0]->atacar(monstroBot[0], monstroJogador[0]);
+        if(monstroJogador[0]->getHPAtual() <= 0){
+            jogador.mudaEquipe();
+        }
+        break;
+
+    case 3:
+        jogador.usarItem();
+        monstroBot[0]->atacar(monstroBot[0], monstroJogador[0]);
+        if(monstroJogador[0]->getHPAtual() <= 0){
+            jogador.mudaEquipe();
+        }
+        break;
+    }
+    
+}
+
+void Jogo :: iniciar(){
+    vector<Monstrinho*> equipe;
+    vector<Monstrinho> equipeBot;
+    string nome;
+    std::string start;
+    cout<<"Digite start no terminal para iniciar o jogo."<<endl;
+    cin>>start;
+
+    if(start == "start"){
+        do{
+            cout<<"--------------------------------Bem vindo ao Monstrinhos--------------------------------"<<endl;
+        
+            cout<<"Escolha um nome para o seu Personagem."<<endl;
+            cin>>nome;
+            equipe = escolherMonstrinho();
+
+            Jogador jogador(1, nome, equipe);
+            Bot bot(0, "ChatGPT", equipeBot);
+        
+            while(jogador.verificaEquipe() && bot.verificaEquipe()){
+                geraTurno(jogador, bot, equipe, equipeBot);
+            }
+            if(jogador.verificaEquipe()){
+                cout<<"Parabéns você venceu!"<<endl;
+            }else{
+                cout<<"Você perdeu!"<<endl;
+            }
+            cout<<"Digite start para jogar novamente ou qulquer outra coisa para sair."<<endl;
+            cin>>start;
+        } while(start == "start");
+       }
+}
