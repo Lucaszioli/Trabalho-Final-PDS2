@@ -21,10 +21,11 @@ private:
     int ID; ///< O ID do monstrinho.
     string nome; ///< O nome do monstrinho.
     string descricao; ///< A descrição do monstrinho.
-    string tipo; ///< O tipo do monstrinho.
+    vector<string> tipo; ///< O tipo do monstrinho.
     int HP; ///< A quantidade de HP do monstrinho.
     int HPAtual; ///< A quantidade de HP atual do monstrinho.
     int velocidade; ///< A velocidade do monstrinho. 
+    int tier; ///< O tier do monstrinho (de 1 a 5).
     vector<Ataque> ataques; ///< Os ataques do monstrinho.
 
 public:
@@ -38,10 +39,11 @@ public:
      * @param HP A quantidade de HP do monstrinho.
      * @param HPAtual A quantidade de HP atual do monstrinho.
      * @param velocidade A velocidade do monstrinho.
+     * 
      * @param ataques Os ataques do monstrinho.
      */
-    Monstrinho(int ID, string nome, string descricao, string tipo, int HP, int HPAtual, int velocidade, vector<Ataque> ataques)
-        : ID(ID), nome(nome), descricao(descricao), tipo(tipo), HP(HP), HPAtual(HPAtual), velocidade(velocidade), ataques(ataques) {}
+    Monstrinho(int ID, string nome, string descricao, vector<string> tipo, int HP, int HPAtual, int velocidade, int tier, vector<Ataque> ataques)
+        : ID(ID), nome(nome), descricao(descricao), tipo(tipo), HP(HP), HPAtual(HPAtual), velocidade(velocidade), tier(tier), ataques(ataques) {}
 
     /**
      * @brief Obtém o ID do monstrinho.
@@ -69,7 +71,7 @@ public:
      * 
      * @return O tipo do monstrinho.
      */
-    string getTipo();
+    vector<string> getTipo();
 
     /**
      * @brief Obtém a quantidade de HP do monstrinho.
@@ -98,6 +100,13 @@ public:
      * @return A velocidade do monstrinho.
      */
     int getVelocidade();
+
+    /**
+     * @brief Obtém o tier do monstrinho.
+     * 
+     * @return O tier do monstrinho.
+     */
+    int getTier();
 
     /**
      * @brief Obtém os ataques do monstrinho.
