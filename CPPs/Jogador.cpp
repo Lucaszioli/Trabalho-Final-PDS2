@@ -15,28 +15,45 @@ Jogador::Jogador(int ID, string nome, vector<Monstrinho *> equipe)
 
 void Jogador::mudaEquipe()
 {
-    if (verificaEquipe())
+    while (true)
     {
-        if (equipe[0]->getHP() <= 0)
+        if (verificaEquipe())
         {
-            cout << "O " << equipe[0]->getNome() << " foi derrotado!" << endl;
-            cout << "Escolha um monstrinho para substituir o que foi derrotado: " << endl;
+            if (equipe[0]->getHP() <= 0)
+            {
+                cout << "O " << equipe[0]->getNome() << " foi derrotado!" << endl;
+                cout << "Escolha um monstrinho para substituir o que foi derrotado: " << endl;
+            }
+            else
+            {
+                cout << "Escolha outro monstrinho: " << endl;
+            }
             imprimeEquipe();
             int escolha;
             cin >> escolha;
             if (escolha < 1 || escolha > equipe.size())
             {
                 cout << "Escolha inválida!" << endl;
-                mudaEquipe();
+                continue;
             }
             if (equipe[escolha - 1]->getHP() <= 0)
             {
                 cout << "Esse monstrinho está desmaiado!" << endl;
-                mudaEquipe();
+                continue;
             }
-            equipe.push_back(equipe[0]);
-            equipe[0] = equipe[escolha - 1];
-            equipe.erase(equipe.begin() + escolha - 1);
+            if (equipe[escolha - 1] == equipe[0] && equipe[0]->getHP() > 0)
+            {
+                cout << "Esse monstrinho já está em batalha!" << endl;
+                continue;
+            }
+            if (escolha >= 1 && escolha <= equipe.size() && equipe[escolha - 1]->getHP() > 0 && equipe[escolha - 1] != equipe[0])
+            {
+                equipe.push_back(equipe[0]);
+                equipe[0] = equipe[escolha - 1];
+                equipe.erase(equipe.begin() + escolha - 1);
+                std::cout << "Agora o Montrinho: " << equipe[0]->getNome() << " está em batalha!" << std::endl;
+                break;
+            }
         }
     }
 }
