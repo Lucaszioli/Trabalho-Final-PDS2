@@ -27,3 +27,11 @@ void Item::setTipo(string t){
 string Item::getTipo(){
     return tipo;
 }
+
+string Item::getRaridade(){
+    return raridade;
+}
+
+void Item::setRaridade(string r){
+    raridade = r;
+}

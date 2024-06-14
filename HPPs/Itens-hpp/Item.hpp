@@ -11,13 +11,14 @@ class Item{
         string nome;
         string descricao;
         string tipo;
+        string raridade;
     public:
         /**
          * @brief Usa um item selecionado
          * 
          * @param Monstro O monstro que o item será utilizado
          */
-        virtual void usarItem(Monstrinho monstro) = 0;
+        virtual void usarItem(Monstrinho* monstro) = 0; //mudar dependendo se for ponteiro ou não
 
         /**
          * @brief Pega um item aleatorio
@@ -28,6 +29,8 @@ class Item{
         string getTipo();
         void setTipo(string tipo);
         virtual void pegarItem() = 0;
+        string getRaridade();
+        void setRaridade(string raridade);
         string getNome(); //<= Retorna o nome
         void setNome(string nome); // <= Muda o nome
         string getDescricao(); //<= Retorna a descrição

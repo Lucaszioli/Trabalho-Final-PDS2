@@ -9,7 +9,7 @@ class Cura: public Item{
         int cura;
     public:
         void pegarItem() override;
-        void usarItem(Monstrinho monstro) override;
+        void usarItem(Monstrinho* monstro) override;
         void setCura(int cura);
         int getCura();
 };

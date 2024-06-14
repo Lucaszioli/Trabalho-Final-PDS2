@@ -4,10 +4,15 @@
 #include <stdexcept>
 #include <string>
 
-class ItemError : public std::runtime_error {
+class ItemError : public std::exception{
 public:
-    ItemError(const std::string& message)
-        : std::runtime_error(message) {}
+    explicit ItemError(const std::string& message)
+        : msg_(message) {}
+    const char* what() const noexcept override {
+    return msg_.c_str();
+}
+    private:
+        std::string msg_;
 };
 
 #endif

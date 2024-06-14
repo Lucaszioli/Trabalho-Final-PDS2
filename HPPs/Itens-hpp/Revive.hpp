@@ -5,12 +5,12 @@
 
 class Revive : public Item{
     private:
-        string tipo;
+        string raridade;
     public:
-        string getTipo();
+        string getRaridade();
         void pegarItem() override;
-        void usarItem(Monstrinho monstro) override;
-        void setTipo(string tipo);
+        void usarItem(Monstrinho* monstro) override;
+        void setRaridade(string tipo);
 };
 
 
