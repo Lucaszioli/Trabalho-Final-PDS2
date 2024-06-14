@@ -25,8 +25,7 @@ void Revive::pegarItem(){
     }
 }
 
-void Revive::usarItem(Monstrinho* monstro){
-
+bool Revive::usarItem(Monstrinho* monstro){
     if(monstro->getHPAtual() > 0){
         throw ReviveError("Selecione outro monstro");
     }
@@ -37,4 +36,5 @@ void Revive::usarItem(Monstrinho* monstro){
     }else if(raridade == "Max"){
         monstro->setHPAtual(vidaTotal);
     }
+    return false;
 }

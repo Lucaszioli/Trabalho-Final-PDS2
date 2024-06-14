@@ -1,12 +1,12 @@
 #include "../../HPPs/Itens-hpp/Cura.hpp"
 #include <cstdlib>
-#include <../../ERR/CuraError.hpp>
+#include "../../ERR/CuraError.hpp"
 
-void Cura::usarItem(Monstrinho* m){
+bool Cura::usarItem(Monstrinho* m){
     int vidaTotal = m -> getHP();
     int vidaAtual = m -> getHPAtual(); // mudar quando tiver 2 vidas
     if (vidaAtual == vidaTotal){
-        throw CuraError("O monstrinoho já está com a vida máxima, escolha outro monstro");
+        throw CuraError("O monstrinho já está com a vida máxima, escolha outro monstro");
     }
     if (vidaAtual == 0){
         throw CuraError("O monstrinho já está morto, use um Revive ou escolha outro monstro");
@@ -16,6 +16,7 @@ void Cura::usarItem(Monstrinho* m){
         vidaFinal = vidaTotal;
     } 
     m -> setHPAtual(vidaFinal);
+    return false;
 }
 
 void Cura::pegarItem(){

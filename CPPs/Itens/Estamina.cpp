@@ -1,6 +1,7 @@
 #include "../../HPPs/Itens-hpp/Estamina.hpp"
 #include "../../ERR/EstaminaError.hpp"
 #include "../../ERR/EscolhaError.hpp"
+#include "../../HPPs/Ataque.hpp"
 #include <iostream>
 
 void Estamina::setEnergia(int e){
@@ -27,42 +28,46 @@ void Estamina::pegarItem(){
     }else if(dado<=55 && dado>0){
         setRaridade("Pequena");
         setEnergia(5);
-        setNome("Estamina média");
+        setNome("Estamina pequena");
         setDescricao("Recupera 5 de estamina de um ataque");
     }
 }
 
-void Estamina::usarItem(Monstrinho* monstro){
+bool Estamina::usarItem(Monstrinho* monstro){
     bool erro = 0;
     do{
         try{
-            vector<Ataque>ataques = monstro -> getAtaques();
+            if(monstro->getHPAtual() == 0){
+                throw EstaminaError("O monstrinho já está morto, use um Revive ou escolha outro monstro");
+            }
+            vector<Ataque*> ataques = monstro -> getAtaques();
             int i = 1;
             int escolha;
             for(auto& ataque:ataques){
-                if(ataque.getQuantidade() != ataque.getMaxQuantidade()){
-                    cout<<i<<"- "<<ataque.getNome()<<endl;
-                    i++;
-                }
+                cout<<i<<"- "<<ataque->getNome()<<"Estamina: "<<ataque->getQuantidadeAtual()<<"/"<<ataque->getQuantidade()<<endl;
+                i++;
             }
-
-            if(i == 1){
-                throw EstaminaError("Escolha outro monstrinho");
-            }
-
+            cout<<i<<"- Voltar"<<endl;
+            cout<<"Escolha um ataque para recuperar Estamina"<<endl;
             cin>>escolha;
             if(escolha>i){
                 throw EscolhaError("Escolha maior que o numero possível de opções");
             }
-
-            Ataque& ataqueRenovado = ataques[escolha-1];
-
+            if(escolha == i){
+                return true;
+            }
+            Ataque* ataqueRenovado = ataques[escolha-1];
+            int atual = ataqueRenovado->getQuantidadeAtual();
+            int maximo = ataqueRenovado->getQuantidade();
+            if(maximo == atual){
+                throw EscolhaError("O Ataque ja apresenta Estamina maxima");
+            }
             int quantidade = getEnergia();
-            int maximo = ataqueRenovado.getMaxQuantidade();
-            ataqueRenovado.setQuantidade(quantidade);
-
-            if(ataqueRenovado.getQuantidade() > maximo){
-                ataqueRenovado.setQuantidade(maximo);
+            int mudanca = quantidade + atual;
+            if(mudanca > maximo){
+                ataqueRenovado->setQuantidadeAtual(maximo);
+            }else{
+                ataqueRenovado->setQuantidadeAtual(mudanca);
             }
             erro = 0;
         }catch(EscolhaError& e){
@@ -70,4 +75,5 @@ void Estamina::usarItem(Monstrinho* monstro){
             cout<<e.what()<<endl;
         }
     }while(erro == 1);
+    return false;
 }

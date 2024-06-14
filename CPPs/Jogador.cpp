@@ -5,6 +5,8 @@
 #include "../HPPs/Itens-hpp/Estamina.hpp"
 #include "../ERR/BadRequestError.hpp"
 #include "../ERR/EscolhaError.hpp"
+#include "../ERR/ItemError.hpp"
+#include "../ERR/ReviveError.hpp"
 #include <ctime>
 #include <cstdlib>
 
@@ -45,7 +47,6 @@ void Jogador::receberItem(){
     do{
         try{
             vector<Item*> inventario = getInventario();
-            srand(static_cast<unsigned int>(time(0)));
             int dado = (rand() % 100) + 1;
             Item* item;
             if(dado>60 && dado<=100){
@@ -66,7 +67,10 @@ void Jogador::receberItem(){
     }while(erro == 1);
 }
 
-void Jogador::usarItem(){
+bool Jogador::usarItem(){
+    bool erro = 0;
+    bool usou = false;
+    do{
     try{
         vector<Item*> inventario = getInventario();
         int i = 1;
@@ -77,6 +81,7 @@ void Jogador::usarItem(){
             cout<<i<<"- "<<item->getNome()<<endl;
             i++;
         }
+        cout<<i<<"- Voltar"<<endl; 
         int escolhaItem;
         cout<<"Qual item você quer usar?"<<endl;
         cin>>escolhaItem;
@@ -84,66 +89,81 @@ void Jogador::usarItem(){
         if(escolhaItem > i){
             throw EscolhaError("Escolha maior que o numero possível de opções");
         }
+        if(escolhaItem != i){
+            Item* item = inventario[escolhaItem-1];
 
-        Item* item = inventario[escolhaItem-1];
-
-        string tipo = item -> getTipo();
-
-        if(tipo == "Cura"){
+            string tipo = item -> getTipo();
             vector<Monstrinho *> equipe = getEquipe();
-            int j = 1;
-            int escolhaMonstro;
-            for(auto& monstro:equipe){
-                cout<<j<<"- "<<monstro->getNome()<<" HP:"<<monstro->getHPAtual()<<"/"<<monstro->getHP()<<endl;
-                j++;
-            }
-            cout<< "Em qual monstro você deseja usar o item?"<<endl;
-            cin >> escolhaMonstro;
-            if(escolhaMonstro > j){
-                throw EscolhaError("Escolha maior que o numero possível de opções");
-            }
+            bool voltar = 0;
+            do{
+                int j = 1;
+                int escolhaMonstro;
+                for(auto& monstro:equipe){
+                    cout<<j<<"- "<<monstro->getNome()<<" HP:"<<monstro->getHPAtual()<<"/"<<monstro->getHP()<<endl;
+                    j++;
+                }
+                cout<<j<<"- Voltar"<<endl; 
+                cout<< "Em qual monstro você deseja usar o item?"<<endl;
+                cin >> escolhaMonstro;
+                if(escolhaMonstro > j){
+                    throw EscolhaError("Escolha maior que o numero possível de opções");
+                }
+                
+                if(escolhaMonstro != j){
+                    if(tipo == "Cura"){
+                        Monstrinho* monstro = equipe[escolhaMonstro - 1];
+                        voltar = dynamic_cast<Cura*>(item)->usarItem(monstro);
 
-            Monstrinho* monstro = equipe[escolhaMonstro - 1];
-            dynamic_cast<Cura*>(item)->usarItem(monstro);
-            removerItem(item);
-        }else if(tipo == "Revive"){
-            vector<Monstrinho *> equipe = getEquipe();
-            int j = 1;
-            int escolhaMonstro;
-            for(auto& monstro:equipe){
-                cout<<j<<"- "<<monstro->getNome()<<" HP:"<<monstro->getHPAtual()<<"/"<<monstro->getHP()<<endl;
-                j++;
-            }
-            cout<< "Em qual monstro você deseja usar o item?"<<endl;
-            cin >> escolhaMonstro;
-            if(escolhaMonstro > j){
-                throw EscolhaError("Escolha maior que o numero possível de opções");
-            }
+                    }else if(tipo == "Revive"){
+                        Monstrinho* monstro = equipe[escolhaMonstro - 1];
+                        voltar = dynamic_cast<Revive*>(item)->usarItem(monstro);
 
-            Monstrinho* monstro = equipe[escolhaMonstro - 1];
-            dynamic_cast<Revive*>(item)->usarItem(monstro);
-            removerItem(item);
-        }else if(tipo == "Estamina"){
-            vector<Monstrinho *> equipe = getEquipe();
-            int j = 1;
-            int escolhaMonstro;
-            for(auto& monstro:equipe){
-                cout<<j<<"- "<<monstro->getNome()<<" HP:"<<monstro->getHPAtual()<<"/"<<monstro->getHP()<<endl;
-                j++;
-            }
-            cout<< "Em qual monstro você deseja usar o item?"<<endl;
-            cin >> escolhaMonstro;
-            if(escolhaMonstro > j){
-                throw EscolhaError("Escolha maior que o numero possível de opções");
-            }
-
-            Monstrinho* monstro = equipe[escolhaMonstro - 1];
-            dynamic_cast<Estamina*>(item)->usarItem(monstro);
-            removerItem(item);
+                    }else if(tipo == "Estamina"){
+                        Monstrinho* monstro = equipe[escolhaMonstro - 1];
+                        voltar =dynamic_cast<Estamina*>(item)->usarItem(monstro);
+                    }
+                    if (voltar == false){
+                        removerItem(escolhaItem-1);
+                    }
+                }
+                if(escolhaMonstro == j){
+                    voltar = 0;
+                    erro = 1;
+                    continue;
+                }
+                erro = 0;
+                usou = true;
+            }while(voltar == 1);
+            
+        }else if(escolhaItem == i){
+            erro = 0;
+            usou = false;
+            continue;
         }
-    }catch(const BadRequestError& e){
-        cout<<e.what()<<endl;
-    }catch(const EscolhaError& e){
-        cout<<e.what()<<endl;
-    }
+        
+        }catch(const BadRequestError& e){
+            cout<<e.what()<<endl;
+            erro = 0;
+            usou = false;
+        }catch(const EscolhaError& e){
+            cout<<e.what()<<endl;
+            erro = 1;
+        }catch(const ItemError& e){
+            cout<<e.what()<<endl;
+            erro = 1;
+        }
+    }while(erro == 1);
+    return usou;
+}
+
+void Jogador::adicionarItem(Item* item){
+    inventario.push_back(item);
+}
+
+void Jogador::removerItem(int item){
+    inventario.erase(inventario.begin() + item);
+}
+
+vector<Item*> Jogador::getInventario(){
+    return inventario;
 }

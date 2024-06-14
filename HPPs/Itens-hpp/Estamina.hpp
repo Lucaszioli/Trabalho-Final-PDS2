@@ -10,7 +10,7 @@ class Estamina : public Item{
         void pegarItem() override;
         int getEnergia();
         void setEnergia(int energia);
-        void usarItem(Monstrinho* monstro) override;
+        bool usarItem(Monstrinho* monstro) override;
 };
 
 #endif

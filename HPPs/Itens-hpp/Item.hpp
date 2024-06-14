@@ -1,7 +1,6 @@
 #ifndef ITEM
 #define ITEM
 
-#include "../Jogador.hpp"
 #include "../Monstrinho.hpp"
 #include <string>
 using std::string;
@@ -18,13 +17,7 @@ class Item{
          * 
          * @param Monstro O monstro que o item será utilizado
          */
-        virtual void usarItem(Monstrinho* monstro) = 0; //mudar dependendo se for ponteiro ou não
-
-        /**
-         * @brief Pega um item aleatorio
-         * 
-         * @param jogador Jogador que o item é atribuido para
-         */
+        virtual bool usarItem(Monstrinho* monstro) = 0; //mudar dependendo se for ponteiro ou não
 
         string getTipo();
         void setTipo(string tipo);

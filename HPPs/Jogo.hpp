@@ -14,7 +14,6 @@ class Jogo{
         void geraTurno();
         void escolherMonstrinho(vector<Monstrinho> time);
         Monstrinho proximoMonstrinho(vector<Monstrinho> equipe);
-        void receberItem(Jogador* jogador);
         int calculaVidaEquipe();
         int opcao;
         
