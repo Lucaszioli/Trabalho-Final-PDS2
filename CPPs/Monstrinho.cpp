@@ -1,0 +1,99 @@
+#include "../HPPs/Monstrinho.hpp"
+#include "../HPPs/Ataque.hpp"
+#include <fstream>
+#include <sstream>
+#include <exception>
+#include <stdexcept>
+#include <iostream>
+
+int Monstrinho::getID() {
+    return ID;
+}
+
+string Monstrinho::getNome() {
+    return nome;
+}
+
+string Monstrinho::getDescricao() {
+    return descricao;
+}
+
+string Monstrinho::getTipo() {
+    return tipo;
+}
+
+int Monstrinho::getHP() {
+    return HP;
+}
+
+int Monstrinho::getHPAtual() {
+    return HPAtual;
+}
+
+void Monstrinho::setHPAtual(int HPAtual) {
+    this->HPAtual = HPAtual;
+}
+
+int Monstrinho::getVelocidade() {
+    return velocidade;
+} 
+
+vector<Ataque> Monstrinho::getAtaques() {
+    return ataques;
+}
+
+vector <Monstrinho> Monstrinho::construirMonstrinhos() {
+    vector<Monstrinho> monstrinhos;
+    ifstream arquivo("CSVs/Monstrinhos.csv");
+
+    if (!arquivo.is_open()) {
+        throw runtime_error("Não foi possível abrir o arquivo Monstrinhos.csv");
+    }
+
+    string linha;
+    getline(arquivo, linha); 
+
+    while (getline(arquivo, linha)) {
+        stringstream ss(linha);
+        vector<string> dados;
+
+        while (ss.good()) {
+            string substr;
+            getline(ss, substr, ',');
+            dados.push_back(substr);
+        }
+
+        int ID = stoi(dados[0]);
+        string nome = dados[1];
+        string descricao = dados[2];
+        string tipo = dados[3];
+        int HP = stoi(dados[4]);
+        int velocidade = stoi(dados[5]);
+        vector<Ataque> ataques;
+        int HPAtual = HP;
+
+        vector<Ataque> todosAtaques = Ataque::construirAtaques();
+
+        stringstream ssAtaques(dados[6]);
+        string ataqueStr;
+        while (getline(ssAtaques, ataqueStr, ';')) { // Separa os IDs dos ataques
+            for (Ataque ataque : Ataque::construirAtaques()) { // Procura os ataques com os IDs
+                if (ataque.getID() == stoi(ataqueStr)) { // Se o ID do ataque for igual ao ID do ataqueStr
+                    ataques.push_back(ataque); // Adiciona o ataque ao vetor de ataques
+                }
+            }
+        }
+
+        for (int i = 6; i < dados.size(); i++) { // Para cada ataque do monstrinho
+            for (Ataque ataque : Ataque::construirAtaques()) { // Procura os ataques com os IDs
+                if (ataque.getID() == stoi(dados[i])) { // Se o ID do ataque for igual ao ID do ataqueStr
+                    ataques.push_back(ataque); // Adiciona o ataque ao vetor de ataques
+                }
+            }
+        }
+
+        monstrinhos.push_back(Monstrinho(ID, nome, descricao, tipo, HP, HPAtual, velocidade, ataques));
+    }
+
+    return monstrinhos;
+}
