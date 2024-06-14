@@ -1,0 +1,31 @@
+ID,Nome,Tipo,Descricao,HP,Velocidade,Tier,Ataques
+001,Voltorac,Elétrico,Um Monstrinho que armazena energia elétrica em seus músculos,500,90,1,7;8;9;31
+002,Pyrolisk,Fogo,Um Monstrinho reptiliano que pode cuspir fogo de sua boca,450,85,2,13;14;15;31
+003,Aquafang,Água,Um Monstrinho aquático com presas afiadas,480,70,1,43;44;45;31
+004,Terranox,Terra,Um Monstrinho robusto que vive subterraneamente,520,55,2,25;26;27;31
+005,Arborwing,Grama;Voador,Um Monstrinho que combina a leveza das folhas com a força do vento,470,80,3,22;23;24;16
+006,Frostbite,Gelo,Um Monstrinho que pode congelar tudo ao seu redor,450,65,3,28;29;30;31
+007,Venomir,Veneno,Um Monstrinho que pode liberar toxinas poderosas,430,75,3,34;35;36;31
+008,Lumispark,Elétrico,Um Monstrinho que brilha intensamente e emite eletricidade,460,95,2,7;8;9;31
+009,Pyroclaw,Fogo;Pedra,Um Monstrinho que tem garras incandescentes,500,50,4,13;14;15;41
+010,Seashade,Água;Fantasma,Um Monstrinho etéreo que assombra os mares,470,60,5,43;44;45;19
+011,Thornvine,Grama,Um Monstrinho coberto de espinhos afiados,490,70,2,22;23;24;31
+012,Flarebloom,Fogo;Grama,Um Monstrinho que floresce em chamas,475,65,1,13;14;15;24
+013,Quakejaw,Terra;Aço,Um Monstrinho com mandíbulas poderosas e duras como aço,540,45,3,25;26;27;31
+014,Whispair,Fantasma,Um Monstrinho espectral que sussurra no escuro,400,85,2,19;20;21;31
+015,Crystagoon,Gelo;Aço,Um Monstrinho coberto de cristais afiados,520,55,4,28;29;30;31
+016,Dragontide,Dragão;Água,Um Monstrinho que controla as marés e o mar,570,65,3,4;5;6;44
+017,Florabreeze,Grama;Voador,Um Monstrinho leve como uma brisa que controla o vento,450,90,2,16;17;18;22
+018,Cinderslash,Fogo;Lutador,Um Monstrinho feroz com golpes incandescentes,480,75,1,10;11;12;13
+019,Toxifang,Veneno,Um Monstrinho com presas venenosas,450,80,4,34;35;36;31
+020,Electrowave,Elétrico;Água,Um Monstrinho que combina eletricidade e água em seus ataques,470,85,3,7;8;9;44
+021,Blazeclaw,Fogo,Um Monstrinho com garras flamejantes,470,80,2,13;14;15;31
+022,Frosthorn,Gelo;Terra,Um Monstrinho poderoso que mistura gelo e terra,540,50,2,25;26;27;28
+023,Venomtail,Veneno;Inseto,Um Monstrinho com uma cauda venenosa mortal,420,75,5,34;35;36;31
+024,Gliderwing,Voador,Um Monstrinho ágil que controla o vento,450,95,4,16;17;18;31
+025,Rockfury,Pedra,Um Monstrinho robusto com uma força bruta impressionante,500,55,2,40;41;42;31
+026,Stormwing,Voador;Elétrico,Um Monstrinho ágil que controla tempestades,470,100,4,7;8;9;18
+027,Serpenfire,Fogo;Dragão,Um Monstrinho serpentino com chamas ardentes,500,80,1,4;5;6;14
+028,Gloomshade,Fantasma,Um Monstrinho sombrio que se esconde nas sombras,450,75,1,19;20;21;31
+029,Lumishock,Elétrico,Um Monstrinho que emite luzes encantadoras e eletrizantes,470,80,1,7;8;9;31
+030,Terraclaw,Terra;Lutador,Um Monstrinho forte e resistente,510,70,3,10;11;12;28
