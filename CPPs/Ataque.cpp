@@ -32,6 +32,20 @@ int Ataque::getQuantidade() {
     return quantidade;
 }
 
+int Ataque::getQuantidadeAtual() {
+    return quantidadeAtual;
+}
+
+void Ataque::setQuantidadeAtual(int valor) {
+    if (valor < 0) {
+        throw std::invalid_argument("Valor não pode ser negativo");
+    } else if (valor > quantidade) {
+        throw std::invalid_argument("Valor não pode ser maior que a quantidade total");
+    } else {
+        quantidadeAtual = valor;
+    }
+}
+
 double Ataque::getChanceAcerto() {
     return chanceAcerto;
 }
