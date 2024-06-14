@@ -32,6 +32,20 @@ int Ataque::getQuantidade() {
     return quantidade;
 }
 
+int Ataque::getQuantidadeAtual() {
+    return quantidadeAtual;
+}
+
+void Ataque::setQuantidadeAtual(int valor) {
+    if (valor < 0) {
+        throw std::invalid_argument("Valor não pode ser negativo");
+    } else if (valor > quantidade) {
+        throw std::invalid_argument("Valor não pode ser maior que a quantidade total");
+    } else {
+        quantidadeAtual = valor;
+    }
+}
+
 double Ataque::getChanceAcerto() {
     return chanceAcerto;
 }
@@ -72,18 +86,21 @@ vector<Ataque> Ataque::construirAtaques() {
         return ataques;
     }
 
-    void Ataque::causarDano(Monstrinho &inimigo) {
+bool Ataque::fazerAtaque(Monstrinho &inimigo) {
+    if (quantidadeAtual <= 0) {
+        std::cout << "O Monstrinho já está cansado desse ataque!" << std::endl;
+        return false;
+    }
+
+    double randomValue = (double)rand() / RAND_MAX; 
+    if(randomValue <= chanceAcerto) {
+        std::cout << "O ataque acertou!" << std::endl;
         inimigo.setHPAtual(inimigo.getHPAtual() - dano);
         std::cout << inimigo.getNome() << " sofreu " << dano << " de dano!" << std::endl;
     }
-
-    bool Ataque::checarAcerto() {
-        double randomValue = (double)rand() / RAND_MAX; 
-        if(randomValue <= chanceAcerto) {
-            std::cout << "O ataque acertou!" << std::endl;
-        }
-        else {
-            std::cout << "O ataque errou!" << std::endl;
-        }
-        return randomValue <= chanceAcerto;
+    else {
+        std::cout << "O ataque errou!" << std::endl;
     }
+    quantidadeAtual--;
+    return true;
+}
