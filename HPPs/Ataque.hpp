@@ -23,7 +23,7 @@ private:
     int dano; ///< O dano causado pelo ataque.
     string descricao; ///< A descrição do ataque.
     int quantidade; ///< A quantidade de vezes que o ataque pode ser usado.
-    
+    int quantidadeAtual; ///< A quantidade atual de vezes que o ataque pode ser usado.
     double chanceAcerto; ///< A chance de acerto do ataque.
 
 public:
@@ -39,7 +39,7 @@ public:
      * @param chanceAcerto A chance de acerto do ataque.
      */
     Ataque(int ID, string nome, string tipo, int dano, string descricao, int quantidade, double chanceAcerto)
-        : ID(ID), nome(nome), tipo(tipo), dano(dano), descricao(descricao), quantidade(quantidade), chanceAcerto(chanceAcerto) {}
+        : ID(ID), nome(nome), tipo(tipo), dano(dano), descricao(descricao), quantidade(quantidade), quantidadeAtual(quantidade), chanceAcerto(chanceAcerto) {}
 
     /**
      * @brief Retorna o ID do ataque.
@@ -77,12 +77,25 @@ public:
     string getDescricao();
 
     /**
-     * @brief Retorna a quantidade de vezes que o ataque pode ser usado.
+     * @brief Retorna a quantidade máxima de vezes que o ataque pode ser usado.
      * 
      * @return int A quantidade de vezes que o ataque pode ser usado.
      */
     int getQuantidade();
 
+    /**
+     * @brief Retorna a quantidade atual de vezes que o ataque pode ser usado.
+     * 
+     * @return int A quantidade atual de vezes que o ataque pode ser usado.
+     */
+    int getQuantidadeAtual();
+
+    /**
+     * @brief Define a quantidade atual de vezes que o ataque pode ser usado.
+     * 
+     * @param valor A nova quantidade atual de vezes que o ataque pode ser usado.
+     */
+    void setQuantidadeAtual(int valor);
     /**
      * @brief Retorna a chance de acerto do ataque.
      * 
@@ -98,18 +111,12 @@ public:
     static vector<Ataque> construirAtaques();
 
     /**
-     * @brief Verifica se o ataque acertou ou não.
+     * @brief Realiza um ataque em um monstrinho.
      * 
-     * @return bool Verdadeiro se o ataque acertou, falso caso contrário.
+     * @param inimigo O monstrinho que será atacado.
+     * @return bool true se o monstrinho conseguiu realizar o ataque, false caso contrário.
      */
-    bool checarAcerto();
-
-    /**
-     * @brief Causa dano a um Monstrinho.
-     * 
-     * @param inimigo O Monstrinho que receberá o dano.
-     */
-    void causarDano(Monstrinho &inimigo);
+    bool fazerAtaque(Monstrinho &inimigo);
 };
 
 #endif

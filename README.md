@@ -10,9 +10,9 @@ COLOCAR INSTRUÇÕES DE JOGO
 Após clonar o repositório, para executar os comandos no terminal:
 - `make` ou `make all` compila 
 - `make clean` apaga o executável
-- `make run` executa o executável
+- `make run` executa
 - `make rebuild` após fazer alguma alteração no código, esse comando vai apagar o executável, recompilar
-e executar o novo executável
+e executar o novo 
 
 ## Autores
 - [Henrique Dias](https://github.com/Henrique-Dias15)
