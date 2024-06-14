@@ -1,56 +1,61 @@
 #include <iostream>
-#include <fstream>
-#include <sstream>
+#include <ctime>
 #include <string>
+#include <vector>
 #include "../HPPs/Jogo.hpp"
 #include "../HPPs/Treinador.hpp"
+#include "../HPPs/Jogador.hpp"
 #include "../HPPs/Monstrinho.hpp"
 #include "../HPPs/Ataque.hpp"
 
+using std::vector;
 using std::cout;
 using std::endl;
 using std::cin;
 
-void Jogo :: turnoJogador(vector<Monstrinho> equipe){
+void Jogo :: turnoJogador(Jogador &jogador){
+    int opcao;
     std::cin>>opcao;
     switch(opcao){
         case 1:
             /*Atacar*/;
             break;
         case 2:
-            /*Mudar monstrinho*/;
+            jogador.mudaEquipe();
             break;
         case 3:
             /*usar item*/;
             break;
     }
 }
-
-void turnoBot(){
-    int opcao = rand() % 3 + 1;
+/*
+void Jogo :: turnoBot(Jogador &bot){
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+    int opcao = std::rand() % 3 + 1;
     switch(opcao){
         case 1:
-            /*Atacar*/;
+            Atacar;
             break;
         case 2:
-            /*Mudar monstrinho*/;
+            bot.mudaEquipe();
             break;
         case 3:
-            /*usar item*/;
+            usar item;
             break;
     }
 }
+*/
 
-void geraTurno(){
+void Jogo :: geraTurno(Jogador &player, Jogador &bot){
     cout<<"--------------------------------Turno do Jogador--------------------------------"<<endl;
     cout<<"Escolha uma opção:"<<endl;
     cout<<"1 - Atacar"<<endl;
     cout<<"2 - Mudar monstrinho"<<endl;
     cout<<"3 - Usar item"<<endl;
-    turnoJogador();
+    turnoJogador(player);
     cout<<"--------------------------------Turno do Bot--------------------------------"<<endl;
-    turnoBot();
-    if(/*ataque x ataque*/){
+    turnoBot(bot);
+    if(/*ataque*/){
         /*
         if(monstrinho1.velocidade >= monstrinho2.velocidade){
             gerarAtaque(1);
@@ -77,136 +82,38 @@ void geraTurno(){
                 };
         }
         */
-        
-        
            
     }
-    else if(/*ataque x change*/){
-        /*
-        
-        if(monstrinho1.velocidade >= monstrinho2.velocidade){
-            gerarAtaque(1);
-                if(monstrinho2.HP <= 0){
-                    trocaMonstrinho(2);
-                    continue;
-                };
-                
-        }else{
-            trocaMonstrinho(2);
-            gerarAtaque(1);
-                if(monstrinho2.HP <= 0){
-                    trocaMonstrinho(2);
-                    continue;
-                };
-        }
-        */
-    }
-    else if(/*ataque x item*/){
-        /*
-        if(monstrinho1.velocidade >= monstrinho2.velocidade){
-            gerarAtaque(1);
-                if(monstrinho2.HP <= 0){
-                    trocaMonstrinho(2);
-                    continue;
-                };
-                
-        }else{
-            uarItem(2);
-            gerarAtaque(1);
-                if(monstrinho2.HP <= 0){
-                    trocaMonstrinho(2);
-                    continue;
-                };
-        }
-        */
-    }
-    else if(/*change x ataque*/){
+    else if(/*change*/){
         /*
         trocaMonstrinho(1);
         gerarAtaque(2);
-        if(monstrinho1.velocidade >= monstrinho2.velocidade){
-            trocaMonstrinho(1);
-            gerarAtaque(2);
-                if(monstrinho1.HP <= 0){
-                    trocaMonstrinho(1);
-                    continue;
-                };
-        }else{
-            gerarAtaque(2);
             if(monstrinho1.HP <= 0){
                 trocaMonstrinho(1);
                 continue;
             };
-        }
         */
     }
-    else if(/*change x change*/){
-        /*
-        trocaMonstrinho(1);
-        trocaMonstrinho(2);
-        */
-    }
-    else if(/*change x item*/){
-        /*
-        if(monstrinho1.velocidade >= monstrinho2.velocidade){
-            trocaMonstrinho(1);
-            usarItem(2);
-        }else{
-            usarItem(2);
-            trocaMonstrinho(1);
-        }
-        */
-    }
-    else if(/*item x ataque*/){
-        /*
-        if(monstrinho1.velocidade >= monstrinho2.velocidade){
-            usarItem(1);
-            gerarAtaque(2);
-            if(monstrinho1.HP <= 0){
-                trocaMonstrinho(1);
-                continue;
-            }
-        }else{
-            gerarAtaque(2);
-            if(monstrinho1.HP <= 0){
-                trocaMonstrinho(1);
-                continue;
-            }
-            usarItem(1);
-        }
-        */
-    }
-    else if(/*item x change*/){
-        /*
-        if(monstrinho1.velocidade >= monstrinho2.velocidade){
-            usarItem(1);
-            trocarMonstrinho(2);
-        }else{
-            trocarMonstrinho(2);
-            usarItem(1);
-        }
-        */
-    }
-    else if(/*item x item*/){
+    else if(/*item*/){
         /*
         usarItem(1);
-        usarItem(2);
-        if(monstrinho1.velocidade >= monstrinho2.velocidade){
-            usarItem(1);
-            usarItem(2);
-        }else{
-            usarItem(2);
-            usarItem(1);
+        gerarAtaque(2);
+        if(monstrinho1.HP <= 0){
+            trocaMonstrinho(1);
+            continue;
         }
         */
     }
     
 }
 
-void iniciar(){
+void Jogo :: iniciar(){
+    vector<Monstrinho> equipe;
+    vector<Monstrinho> equipeBot;
+    Jogador player(1, "Robervau", equipe);
+    Jogador bot(0, "Roboto", equipeBot);
     bool state = false;
     std::string start;
-
     cout<<"Digite start no terminal para iniciar o jogo."<<endl;
     cin>>start;
 
@@ -215,31 +122,37 @@ void iniciar(){
     }
     while(state){
         cout<<"--------------------------------Bem vindo ao Monstrinhos--------------------------------"<<endl;
-        escolherMonstrinho();
-        while(calculaVidaEquipe() > 0 && calculaVidaEquipe() > 0){
+        escolherMonstrinho(player.equipe);
+        while(player.verificaEquipe() != false && bot.verificaEquipe() != false){
             geraTurno();
         }
         state = false;
     }
 }
 
-/*
-void escolherMonstrinho(vector<Monstrinho> time){
+
+void Jogo :: escolherMonstrinho(vector<Monstrinho> time){
+    vector<Monstrinho> monstrinhos;
+    monstrinhos = função da malu
     cout<<"--------------------------------Escolha seu time--------------------------------"<<endl;
-    for(int i = 0; i < 10; i++){
-        cout<<"coiso"; //mudar para função da malu
+    for(int i = 0; i < monstrinhos.size(); i++){
+        cout<<monstrinhos[i]; //mudar para função da malu
     }
    
     int opcao;
     cout<<"Digite o ID do Monstrinho para adiciona-lo ao seu time."<<endl;
     for(int i = 0; i < 4; i++){
         cin>>opcao;
-        for(int j = 0; j < )
-    }
-
-    
+        for(int j = 0; j < monstrinhos.size(); j++){
+            if(opcao == monstrinhos[j].getID()){
+                time.push_back(monstrinhos[j]);
+                cout<<"Monstrinho adicionado com sucesso!"<<endl;                
+                break;
+            }
+        }    
+    } 
 }
-*/
+
 
 
 

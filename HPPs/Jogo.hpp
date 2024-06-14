@@ -9,13 +9,8 @@ using std::string;
 class Jogo{
     public:
         void iniciar();
-        void turnoJogador(vector<Monstrinho> equipe);
-        void turnoBot();
-        void geraTurno();
+        void turnoJogador(Jogador &player);
+        void turnoBot(Jogador &bot);
+        void geraTurno(Jogador &player, Jogador &bot);
         void escolherMonstrinho(vector<Monstrinho> time);
-        Monstrinho proximoMonstrinho(vector<Monstrinho> equipe);
-        int calculaVidaEquipe();
-        
-        
-
 };
