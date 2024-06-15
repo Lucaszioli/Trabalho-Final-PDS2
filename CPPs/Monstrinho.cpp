@@ -46,6 +46,21 @@ vector<Ataque> Monstrinho::getAtaques() {
     return ataques;
 }
 
+void Monstrinho :: atacar(Monstrinho* monstroAtacante, Monstrinho* monstroAtacado){
+    int opcao;
+    cout<<"Escolha um ataque:"<<endl;
+    for(int i = 0; i < monstroAtacante->getAtaques().size(); i++){
+        cout<<monstroAtacante->getAtaques()[i].getID()<<"-"<<monstroAtacante->getAtaques()[i].getNome()<<endl;
+    }
+    cin>>opcao;    
+    for(int i = 0; i < monstroAtacante->getAtaques().size(); i++){
+        if(opcao == monstroAtacante->getAtaques()[i].getID()){
+            monstroAtacante->getAtaques()[i].fazerAtaque(monstroAtacado[0]);
+            break;
+        }
+    }
+}
+
 vector <Monstrinho> Monstrinho::construirMonstrinhos() {
     vector<Monstrinho> monstrinhos;
     ifstream arquivo("CSVs/Monstrinhos.csv");

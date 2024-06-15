@@ -117,6 +117,14 @@ public:
     vector<Ataque> getAtaques();
 
     /**
+     * @brief Ataca um monstrinho.
+     * 
+     * @param monstroAtacante O monstrinho que está atacando.
+     * @param monstroAtacado O monstrinho que está sendo atacado.
+     */
+    void atacar(Monstrinho* monstroAtacante, Monstrinho* monstroAtacado);
+
+    /**
      * @brief Constrói uma lista de monstrinhos a partir de um arquivo CSV.
      * 
      * @return Um vetor com todos os monstrinhos do arquivo CSV.
