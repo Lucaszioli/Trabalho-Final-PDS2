@@ -1,7 +1,7 @@
-#include "../../HPPs/Itens-hpp/Estamina.hpp"
-#include "../../ERR/EstaminaError.hpp"
-#include "../../ERR/EscolhaError.hpp"
-#include "../../HPPs/Ataque.hpp"
+#include "../HPPs/Estamina.hpp"
+#include "../ERR/EstaminaError.hpp"
+#include "../ERR/EscolhaError.hpp"
+#include "../HPPs/Ataque.hpp"
 #include <iostream>
 
 void Estamina::setEnergia(int e){

@@ -1,5 +1,5 @@
-#include "../../HPPs/Itens-hpp/Revive.hpp"
-#include "../../ERR/ReviveError.hpp"
+#include "../HPPs/Revive.hpp"
+#include "../ERR/ReviveError.hpp"
 #include <iostream>
 using std::cout;
 string Revive::getRaridade(){

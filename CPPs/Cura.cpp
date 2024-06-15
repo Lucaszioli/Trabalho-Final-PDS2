@@ -1,6 +1,6 @@
-#include "../../HPPs/Itens-hpp/Cura.hpp"
+#include "../HPPs/Cura.hpp"
 #include <cstdlib>
-#include "../../ERR/CuraError.hpp"
+#include "../ERR/CuraError.hpp"
 
 bool Cura::usarItem(Monstrinho* m){
     int vidaTotal = m -> getHP();

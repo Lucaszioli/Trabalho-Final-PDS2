@@ -1,5 +1,4 @@
-#include "../../HPPs/Itens-hpp/Item.hpp"
-#include "../../HPPs/Itens-hpp/Cura.hpp"
+#include "../HPPs/Item.hpp"
 #include <stdexcept>
 #include <cstdlib>
 #include <ctime>
