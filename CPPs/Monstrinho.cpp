@@ -93,8 +93,9 @@ vector <Monstrinho> Monstrinho::construirMonstrinhos() {
                 }
             }
         }
+        
 
-        for (int i = 6; i < dados.size(); i++) { // Para cada ataque do monstrinho
+        for (int i = 7; i < dados.size(); i++) { // Para cada ataque do monstrinho
             for (Ataque ataque : Ataque::construirAtaques()) { // Procura os ataques com os IDs
                 if (ataque.getID() == stoi(dados[i])) { // Se o ID do ataque for igual ao ID do ataqueStr
                     ataques.push_back(ataque); // Adiciona o ataque ao vetor de ataques
