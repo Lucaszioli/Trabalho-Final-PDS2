@@ -6,6 +6,7 @@
 #include "Ataque.hpp"
 
 using namespace std;
+class Ataque; // Declaração antecipada da classe Ataque para evitar dependência circular.
 
 /**
  * @class Monstrinho
