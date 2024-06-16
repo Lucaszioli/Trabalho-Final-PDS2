@@ -2,7 +2,6 @@
 #define CURA
 
 #include "Item.hpp"
-#include "../Monstrinho.hpp"
 
 class Cura: public Item{
     private:

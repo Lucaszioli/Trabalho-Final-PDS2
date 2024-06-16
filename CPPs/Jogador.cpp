@@ -1,8 +1,8 @@
 #include "../HPPs/Jogador.hpp"
 #include <iostream>
-#include "../HPPs/Itens-hpp/Cura.hpp"
-#include "../HPPs/Itens-hpp/Revive.hpp"
-#include "../HPPs/Itens-hpp/Estamina.hpp"
+#include "../HPPs/Cura.hpp"
+#include "../HPPs/Revive.hpp"
+#include "../HPPs/Estamina.hpp"
 #include "../ERR/BadRequestError.hpp"
 #include "../ERR/EscolhaError.hpp"
 #include "../ERR/ItemError.hpp"
@@ -103,7 +103,7 @@ bool Jogador::usarItem(){
         cout<<"Qual item você quer usar?"<<endl;
         cin>>escolhaItem;
 
-        if(escolhaItem > i){
+        if(escolhaItem > i || escolhaItem<1){
             throw EscolhaError("Escolha maior que o numero possível de opções");
         }
         if(escolhaItem != i){

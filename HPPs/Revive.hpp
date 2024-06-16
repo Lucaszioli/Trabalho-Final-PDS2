@@ -7,10 +7,8 @@ class Revive : public Item{
     private:
         string raridade;
     public:
-        string getRaridade();
         void pegarItem() override;
         bool usarItem(Monstrinho* monstro) override;
-        void setRaridade(string tipo);
 };
 
 

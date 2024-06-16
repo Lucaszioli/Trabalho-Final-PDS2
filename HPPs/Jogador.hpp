@@ -2,7 +2,7 @@
 #define JOGADOR_HPP
 
 #include "Treinador.hpp"
-#include "Itens-hpp/Item.hpp"
+#include "Item.hpp"
 /**
  * @brief Classe que representa um jogador no jogo.
  *

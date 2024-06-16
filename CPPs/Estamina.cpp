@@ -1,7 +1,7 @@
-#include "../../HPPs/Itens-hpp/Estamina.hpp"
-#include "../../ERR/EstaminaError.hpp"
-#include "../../ERR/EscolhaError.hpp"
-#include "../../HPPs/Ataque.hpp"
+#include "../HPPs/Estamina.hpp"
+#include "../ERR/EstaminaError.hpp"
+#include "../ERR/EscolhaError.hpp"
+#include "../HPPs/Ataque.hpp"
 #include <iostream>
 
 void Estamina::setEnergia(int e){
@@ -50,8 +50,8 @@ bool Estamina::usarItem(Monstrinho* monstro){
             cout<<i<<"- Voltar"<<endl;
             cout<<"Escolha um ataque para recuperar Estamina"<<endl;
             cin>>escolha;
-            if(escolha>i){
-                throw EscolhaError("Escolha maior que o numero possível de opções");
+            if(escolha>i || escolha<1){
+                throw EscolhaError("Escolha diferente do numero possível de opções");
             }
             if(escolha == i){
                 return true;

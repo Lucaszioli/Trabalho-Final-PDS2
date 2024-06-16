@@ -1,22 +1,14 @@
-#include "../../HPPs/Itens-hpp/Revive.hpp"
-#include "../../ERR/ReviveError.hpp"
+#include "../HPPs/Revive.hpp"
+#include "../ERR/ReviveError.hpp"
 #include <iostream>
 using std::cout;
-string Revive::getRaridade(){
-    return raridade;
-}
-
-void Revive::setRaridade(string raridade){
-    this->raridade = raridade;
-}
-
 
 void Revive::pegarItem(){
     int dado = (rand() % 100) + 1;
     setTipo("Revive");
     if(dado>90 && dado<=100){
         setNome("Max Revive");
-        setDescricao("Revive seu mostrinho com a vida máxima");
+        setDescricao("Revive seu monstrinho com a vida máxima");
         setRaridade("Max");
     }else if(dado<=90 && dado>0){
         setNome("Revive");
@@ -27,7 +19,7 @@ void Revive::pegarItem(){
 
 bool Revive::usarItem(Monstrinho* monstro){
     if(monstro->getHPAtual() > 0){
-        throw ReviveError("Selecione outro monstro");
+        throw ReviveError("Monstrinho ainda vivo, selecione outro monstro");
     }
     int vidaTotal = monstro->getHP();
     string raridade = getRaridade();

@@ -1,7 +1,7 @@
 #ifndef ITEM
 #define ITEM
 
-#include "../Monstrinho.hpp"
+#include "Monstrinho.hpp"
 #include <string>
 using std::string;
 
