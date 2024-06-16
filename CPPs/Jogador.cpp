@@ -91,6 +91,7 @@ bool Jogador::usarItem(){
     bool usou = false;
     do{
     try{
+        
         vector<Item*> inventario = getInventario();
         int i = 1;
         if(inventario.size() == 0){
@@ -106,9 +107,12 @@ bool Jogador::usarItem(){
         cout<<"Qual item você quer usar?"<<endl;
         cout<<"------------------------------------------------------------"<<endl;
         cin>>escolhaItem;
-
+        if(std::cin.fail()) { // Se a entrada falhar (por exemplo, o usuário digitou uma string)
+            std::cin.clear(); // Limpa o estado de falha
+            throw EscolhaError("Escolha diferente do numero possível de opções");
+        }
         if(escolhaItem > i || escolhaItem<1){
-            throw EscolhaError("Escolha maior que o numero possível de opções");
+            throw EscolhaError("Escolha diferente do numero possível de opções");
         }
         if(escolhaItem != i){
             Item* item = inventario[escolhaItem-1];
@@ -128,10 +132,13 @@ bool Jogador::usarItem(){
                 cout<< "Em qual monstro você deseja usar o item?"<<endl;
                 cout<<"------------------------------------------------------------"<<endl;
                 cin >> escolhaMonstro;
-                if(escolhaMonstro > j){
-                    throw EscolhaError("Escolha maior que o numero possível de opções");
+                if(std::cin.fail()) { // Se a entrada falhar (por exemplo, o usuário digitou uma string)
+                    std::cin.clear(); // Limpa o estado de falha
+                    throw EscolhaError("Escolha diferente do numero possível de opções");
                 }
-                
+                if(escolhaMonstro > j || escolhaMonstro < 1){
+                    throw EscolhaError("Escolha diferente do numero possível de opções");
+                }
                 if(escolhaMonstro != j){
                     if(tipo == "Cura"){
                         Monstrinho* monstro = equipe[escolhaMonstro - 1];
@@ -179,6 +186,13 @@ bool Jogador::usarItem(){
             erro = 1;
         }catch(const ItemError& e){
             cout<<"------------------------------------------------------------"<<endl;  
+            cout<<e.what()<<endl;
+            cout<<"------------------------------------------------------------"<<endl;
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.get();
+            erro = 1;
+        }catch(const std::exception& e){
+            cout<<"-----------------------------------------------------------"<<endl;  
             cout<<e.what()<<endl;
             cout<<"------------------------------------------------------------"<<endl;
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
