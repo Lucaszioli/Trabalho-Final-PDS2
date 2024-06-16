@@ -158,7 +158,7 @@ double Ataque::getChanceAcerto() {
 
 vector<Ataque> Ataque::construirAtaques() {
     vector<Ataque> ataques;
-    ifstream arquivo("CSVs/Ataques.csv");
+    ifstream arquivo("../CSVs/Ataques.csv");
 
     if (!arquivo.is_open()) {
         throw runtime_error("Não foi possível abrir o arquivo Ataques.csv");

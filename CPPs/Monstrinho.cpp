@@ -63,7 +63,7 @@ void Monstrinho :: atacar(Monstrinho* monstroAtacante, Monstrinho* monstroAtacad
 
 vector <Monstrinho> Monstrinho::construirMonstrinhos() {
     vector<Monstrinho> monstrinhos;
-    ifstream arquivo("CSVs/Monstrinhos.csv");
+    ifstream arquivo("../CSVs/Monstrinhos.csv");
 
     if (!arquivo.is_open()) {
         throw runtime_error("Não foi possível abrir o arquivo Monstrinhos.csv");
