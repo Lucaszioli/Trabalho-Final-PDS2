@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2"
+CMAKE_SOURCE_DIR = /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build"
+CMAKE_BINARY_DIR = /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/Monstrinhos.dir/clean
 CMakeFiles/Monstrinhos.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Monstrinhos.dir/build.make CMakeFiles/Monstrinhos.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Monstrinhos.dir/build.make CMakeFiles/Monstrinhos.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target Monstrinhos"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target Monstrinhos"
 .PHONY : CMakeFiles/Monstrinhos.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Monstrinhos.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Monstrinhos.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles 0
 .PHONY : CMakeFiles/Monstrinhos.dir/rule
 
 # Convenience name for target.

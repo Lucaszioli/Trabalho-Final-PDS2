@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2"
+CMAKE_SOURCE_DIR = /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build"
+CMAKE_BINARY_DIR = /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

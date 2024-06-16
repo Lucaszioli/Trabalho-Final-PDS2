@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/HPPs"
+CXX_INCLUDES = -I/mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/HPPs
 
 CXX_FLAGS = 
 

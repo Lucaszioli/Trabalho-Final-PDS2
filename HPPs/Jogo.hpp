@@ -9,7 +9,8 @@ using std::string;
 class Jogo{
     public:
         void iniciar();
-        void geraTurno(Jogador &jogador, Bot &bot, vector<Monstrinho*> monstroJogador, vector<Monstrinho*> monstroBot);
-        vector<Monstrinho> escolherMonstrinho();
+        void geraTurno(Jogador* jogador, Bot* bot, vector<Monstrinho*> monstroJogador, vector<Monstrinho*> monstroBot);
+        vector<Monstrinho*> escolherMonstrinho();
+        vector<Monstrinho*> criaEquipeBot();
         
 };

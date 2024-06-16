@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2
+# Install script for directory: /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

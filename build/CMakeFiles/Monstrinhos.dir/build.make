@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2"
+CMAKE_SOURCE_DIR = /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build"
+CMAKE_BINARY_DIR = /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Monstrinhos.dir/depend.make
@@ -72,156 +72,156 @@ include CMakeFiles/Monstrinhos.dir/flags.make
 CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.o: CMakeFiles/Monstrinhos.dir/flags.make
 CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.o: ../CPPs/Ataque.cpp
 CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.o: CMakeFiles/Monstrinhos.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.o -c "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Ataque.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.o -c /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Ataque.cpp
 
 CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Ataque.cpp" > CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Ataque.cpp > CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.i
 
 CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Ataque.cpp" -o CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Ataque.cpp -o CMakeFiles/Monstrinhos.dir/CPPs/Ataque.cpp.s
 
 CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.o: CMakeFiles/Monstrinhos.dir/flags.make
 CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.o: ../CPPs/Bot.cpp
 CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.o: CMakeFiles/Monstrinhos.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.o -c "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Bot.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.o -c /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Bot.cpp
 
 CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Bot.cpp" > CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Bot.cpp > CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.i
 
 CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Bot.cpp" -o CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Bot.cpp -o CMakeFiles/Monstrinhos.dir/CPPs/Bot.cpp.s
 
 CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.o: CMakeFiles/Monstrinhos.dir/flags.make
 CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.o: ../CPPs/Cura.cpp
 CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.o: CMakeFiles/Monstrinhos.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.o -c "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Cura.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.o -c /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Cura.cpp
 
 CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Cura.cpp" > CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Cura.cpp > CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.i
 
 CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Cura.cpp" -o CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Cura.cpp -o CMakeFiles/Monstrinhos.dir/CPPs/Cura.cpp.s
 
 CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.o: CMakeFiles/Monstrinhos.dir/flags.make
 CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.o: ../CPPs/Estamina.cpp
 CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.o: CMakeFiles/Monstrinhos.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.o -c "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Estamina.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.o -c /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Estamina.cpp
 
 CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Estamina.cpp" > CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Estamina.cpp > CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.i
 
 CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Estamina.cpp" -o CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Estamina.cpp -o CMakeFiles/Monstrinhos.dir/CPPs/Estamina.cpp.s
 
 CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.o: CMakeFiles/Monstrinhos.dir/flags.make
 CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.o: ../CPPs/Item.cpp
 CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.o: CMakeFiles/Monstrinhos.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.o -c "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Item.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.o -c /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Item.cpp
 
 CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Item.cpp" > CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Item.cpp > CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.i
 
 CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Item.cpp" -o CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Item.cpp -o CMakeFiles/Monstrinhos.dir/CPPs/Item.cpp.s
 
 CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.o: CMakeFiles/Monstrinhos.dir/flags.make
 CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.o: ../CPPs/Jogador.cpp
 CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.o: CMakeFiles/Monstrinhos.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.o -c "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Jogador.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.o -c /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Jogador.cpp
 
 CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Jogador.cpp" > CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Jogador.cpp > CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.i
 
 CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Jogador.cpp" -o CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Jogador.cpp -o CMakeFiles/Monstrinhos.dir/CPPs/Jogador.cpp.s
 
 CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.o: CMakeFiles/Monstrinhos.dir/flags.make
 CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.o: ../CPPs/Jogo.cpp
 CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.o: CMakeFiles/Monstrinhos.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.o -c "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Jogo.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.o -c /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Jogo.cpp
 
 CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Jogo.cpp" > CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Jogo.cpp > CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.i
 
 CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Jogo.cpp" -o CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Jogo.cpp -o CMakeFiles/Monstrinhos.dir/CPPs/Jogo.cpp.s
 
 CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.o: CMakeFiles/Monstrinhos.dir/flags.make
 CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.o: ../CPPs/Monstrinho.cpp
 CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.o: CMakeFiles/Monstrinhos.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.o -c "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Monstrinho.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.o -c /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Monstrinho.cpp
 
 CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Monstrinho.cpp" > CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Monstrinho.cpp > CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.i
 
 CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Monstrinho.cpp" -o CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Monstrinho.cpp -o CMakeFiles/Monstrinhos.dir/CPPs/Monstrinho.cpp.s
 
 CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.o: CMakeFiles/Monstrinhos.dir/flags.make
 CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.o: ../CPPs/Revive.cpp
 CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.o: CMakeFiles/Monstrinhos.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.o -c "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Revive.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.o -c /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Revive.cpp
 
 CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Revive.cpp" > CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Revive.cpp > CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.i
 
 CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Revive.cpp" -o CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Revive.cpp -o CMakeFiles/Monstrinhos.dir/CPPs/Revive.cpp.s
 
 CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.o: CMakeFiles/Monstrinhos.dir/flags.make
 CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.o: ../CPPs/Treinador.cpp
 CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.o: CMakeFiles/Monstrinhos.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.o -c "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Treinador.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.o -MF CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.o.d -o CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.o -c /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Treinador.cpp
 
 CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Treinador.cpp" > CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Treinador.cpp > CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.i
 
 CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/CPPs/Treinador.cpp" -o CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/CPPs/Treinador.cpp -o CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.s
 
 CMakeFiles/Monstrinhos.dir/principal/main.cpp.o: CMakeFiles/Monstrinhos.dir/flags.make
 CMakeFiles/Monstrinhos.dir/principal/main.cpp.o: ../principal/main.cpp
 CMakeFiles/Monstrinhos.dir/principal/main.cpp.o: CMakeFiles/Monstrinhos.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Monstrinhos.dir/principal/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/principal/main.cpp.o -MF CMakeFiles/Monstrinhos.dir/principal/main.cpp.o.d -o CMakeFiles/Monstrinhos.dir/principal/main.cpp.o -c "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/principal/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Monstrinhos.dir/principal/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Monstrinhos.dir/principal/main.cpp.o -MF CMakeFiles/Monstrinhos.dir/principal/main.cpp.o.d -o CMakeFiles/Monstrinhos.dir/principal/main.cpp.o -c /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/principal/main.cpp
 
 CMakeFiles/Monstrinhos.dir/principal/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Monstrinhos.dir/principal/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/principal/main.cpp" > CMakeFiles/Monstrinhos.dir/principal/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/principal/main.cpp > CMakeFiles/Monstrinhos.dir/principal/main.cpp.i
 
 CMakeFiles/Monstrinhos.dir/principal/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Monstrinhos.dir/principal/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/principal/main.cpp" -o CMakeFiles/Monstrinhos.dir/principal/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/principal/main.cpp -o CMakeFiles/Monstrinhos.dir/principal/main.cpp.s
 
 # Object files for target Monstrinhos
 Monstrinhos_OBJECTS = \
@@ -253,7 +253,7 @@ Monstrinhos: CMakeFiles/Monstrinhos.dir/CPPs/Treinador.cpp.o
 Monstrinhos: CMakeFiles/Monstrinhos.dir/principal/main.cpp.o
 Monstrinhos: CMakeFiles/Monstrinhos.dir/build.make
 Monstrinhos: CMakeFiles/Monstrinhos.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable Monstrinhos"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable Monstrinhos"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Monstrinhos.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -265,6 +265,6 @@ CMakeFiles/Monstrinhos.dir/clean:
 .PHONY : CMakeFiles/Monstrinhos.dir/clean
 
 CMakeFiles/Monstrinhos.dir/depend:
-	cd "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2" "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2" "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build" "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build" "/mnt/d/UFMG/OneDrive - Universidade Federal de Minas Gerais/Graduação/Semestre 2/PDS 2/Trabalho FInal/Trabalho-Final-PDS2/build/CMakeFiles/Monstrinhos.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2 /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2 /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build /mnt/c/UFMG/01-2024/PDS2/Trabalho_pds2/Trabalho-Final-PDS2/build/CMakeFiles/Monstrinhos.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Monstrinhos.dir/depend
 
