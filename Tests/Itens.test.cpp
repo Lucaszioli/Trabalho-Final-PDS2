@@ -83,7 +83,7 @@ TEST_CASE("Testando o recebimento do Revive", "[Revive][Item][add]"){
 TEST_CASE("Testando o uso da Cura", "[Cura][Item][use]"){
     Cura c;
     vector<string> tipo = {"teste1","teste2"};
-    vector<Ataque*> ataques = {};
+    vector<Ataque> ataques = {};
     Monstrinho* m = new Monstrinho(1, "teste", "teste", tipo, 100 , 10, 10, 3, ataques);
     SECTION("Cura realizada com sucesso(Max)"){
         c.setCura(100);
@@ -121,7 +121,7 @@ TEST_CASE("Testando o uso da Cura", "[Cura][Item][use]"){
 TEST_CASE("Testando o uso do Revive", "[Revive][Item][use]"){
     Revive r;
     vector<string> tipo = {"teste1","teste2"};
-    vector<Ataque*> ataques = {};
+    vector<Ataque> ataques = {};
     Monstrinho* m = new Monstrinho(1, "teste", "teste", tipo, 100 , 0, 10, 3, ataques);
     SECTION("Revive realizado com sucesso (Max)"){
         r.setRaridade("Max");
@@ -144,15 +144,15 @@ TEST_CASE("Testando o uso do Revive", "[Revive][Item][use]"){
 TEST_CASE("Testando o uso da Estamina", "[Estamina][Item][use]"){
     Estamina e;
     vector<string> tipo = {"teste1","teste2"};
-    Ataque* a = new Ataque(1, "teste", "teste", 10, "teste",50, 10);
-    vector<Ataque*> ataques;
+    Ataque a =  Ataque(1, "teste", "teste", 10, "teste",50, 10);
+    vector<Ataque> ataques;
     ataques.push_back(a);
     Monstrinho* m = new Monstrinho(1, "teste", "teste", tipo, 100 , 100, 10, 3, ataques);
 
 
     SECTION("Uso da Estamina realizado com sucesso (Max)"){
         e.setEnergia(100);
-        a->setQuantidadeAtual(10);
+        m->getAtaques()[0].setQuantidadeAtual(10);
         std::streambuf* cinBackup = std::cin.rdbuf();
         std::stringstream fakeInput;
         fakeInput << 1; // Replace with your input
@@ -161,11 +161,11 @@ TEST_CASE("Testando o uso da Estamina", "[Estamina][Item][use]"){
         e.usarItem(m);
         std::cin.rdbuf(cinBackup);
 
-        REQUIRE(a->getQuantidadeAtual() == a->getQuantidade());
+        REQUIRE(a.getQuantidadeAtual() == a.getQuantidade());
     }
     SECTION("Uso da Estamina realizado com sucesso (Media)"){
         e.setEnergia(10);
-        a->setQuantidadeAtual(10);
+        m->getAtaques()[0].setQuantidadeAtual(10);
         std::streambuf* cinBackup = std::cin.rdbuf();
         std::stringstream fakeInput;
         fakeInput << 1; // Replace with your input
@@ -174,11 +174,11 @@ TEST_CASE("Testando o uso da Estamina", "[Estamina][Item][use]"){
         e.usarItem(m);
         std::cin.rdbuf(cinBackup);
 
-        REQUIRE(a->getQuantidadeAtual() == 20);
+        REQUIRE(m->getAtaques()[0].getQuantidadeAtual() == 20);
     }
     SECTION("Uso da Estamina realizado com sucesso (Pequena)"){
         e.setEnergia(5);
-        a->setQuantidadeAtual(10);
+        m->getAtaques()[0].setQuantidadeAtual(10);
         std::streambuf* cinBackup = std::cin.rdbuf();
         std::stringstream fakeInput;
         fakeInput << 1; // Replace with your input
@@ -187,7 +187,7 @@ TEST_CASE("Testando o uso da Estamina", "[Estamina][Item][use]"){
         e.usarItem(m);
         std::cin.rdbuf(cinBackup);
 
-        REQUIRE(a->getQuantidadeAtual() == 15);
+        REQUIRE(m->getAtaques()[0].getQuantidadeAtual() == 15);
     }
     SECTION("Usuario voltou"){
         std::streambuf* cinBackup = std::cin.rdbuf();
@@ -217,8 +217,8 @@ TEST_CASE("Jogador recebeu o item","[Item][Jogador][add]"){
 
 TEST_CASE("Jogador usa o item","[Item][Jogador][use]"){
     vector<string> tipo = {"teste1","teste2"};
-    Ataque* a = new Ataque(1, "teste", "teste", 10, "teste",50, 10);
-    vector<Ataque*> ataques;
+    Ataque a = Ataque(1, "teste", "teste", 10, "teste",50, 10);
+    vector<Ataque> ataques;
     ataques.push_back(a);
     Monstrinho* m = new Monstrinho(1, "teste", "teste", tipo, 100 , 10, 10, 3, ataques);
     Jogador j = Jogador(1, "teste",{m});
@@ -263,7 +263,7 @@ TEST_CASE("Jogador usa o item","[Item][Jogador][use]"){
         dynamic_cast<Estamina*>(c)->setEnergia(100);
         c->setTipo("Estamina");
         m->setHPAtual(100);
-        a->setQuantidadeAtual(5);
+        m->getAtaques()[0].setQuantidadeAtual(5);
         j.adicionarItem(c);
         std::streambuf* cinBackup = std::cin.rdbuf();
         std::stringstream fakeInput;
@@ -273,7 +273,7 @@ TEST_CASE("Jogador usa o item","[Item][Jogador][use]"){
         bool usou = j.usarItem();
         std::cin.rdbuf(cinBackup);
 
-        REQUIRE(a->getQuantidadeAtual() == a->getQuantidade());
+        REQUIRE(m->getAtaques()[0].getQuantidadeAtual() == m->getAtaques()[0].getQuantidade());
         REQUIRE(j.getInventario().size() == 0);
         REQUIRE(usou == 1);
     }
@@ -292,7 +292,7 @@ TEST_CASE("Jogador usa o item","[Item][Jogador][use]"){
         dynamic_cast<Estamina*>(c)->setEnergia(100);
         c->setTipo("Estamina");
         m->setHPAtual(100);
-        a->setQuantidadeAtual(5);
+        a.setQuantidadeAtual(5);
         j.adicionarItem(c);
         std::streambuf* cinBackup = std::cin.rdbuf();
         std::stringstream fakeInput;
@@ -316,6 +316,6 @@ TEST_CASE("Jogador usa o item","[Item][Jogador][use]"){
 
     std::string errorMessage = output.str();
     errorMessage.erase(std::remove(errorMessage.begin(), errorMessage.end(), '\n'), errorMessage.end());
-    REQUIRE(errorMessage == "Você não possui itens");
+    REQUIRE(errorMessage == "------------------------------------------------------------Você não possui itens------------------------------------------------------------");
     }
 }
