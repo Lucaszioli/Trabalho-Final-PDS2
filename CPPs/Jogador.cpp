@@ -77,6 +77,7 @@ void Jogador::receberItem(){
                 item -> pegarItem();
             }
             adicionarItem(item);
+            cout<< "Você recebeu: "<<item->getNome()<<" - "<<item->getDescricao()<<endl;;
             erro = 0;
         }catch(const std::exception& e){
             erro = 1; 
