@@ -102,7 +102,7 @@ vector <Monstrinho> Monstrinho::construirMonstrinhos() {
         stringstream ssAtaques(dados[7]);
         string ataqueStr;
         while (getline(ssAtaques, ataqueStr, ';')) { // Separa os IDs dos ataques
-            for (Ataque ataque : Ataque::construirAtaques()) { // Procura os ataques com os IDs
+            for (Ataque ataque : todosAtaques) { // Procura os ataques com os IDs
                 if (ataque.getID() == stoi(ataqueStr)) { // Se o ID do ataque for igual ao ID do ataqueStr
                     ataques.push_back(ataque); // Adiciona o ataque ao vetor de ataques
                 }
