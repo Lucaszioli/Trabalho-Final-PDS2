@@ -6,6 +6,7 @@
 #include "Ataque.hpp"
 
 using namespace std;
+class Ataque; // Declaração antecipada da classe Ataque para evitar dependência circular.
 
 /**
  * @class Monstrinho
@@ -114,6 +115,14 @@ public:
      * @return Os ataques do monstrinho.
      */
     vector<Ataque> getAtaques();
+
+    /**
+     * @brief Ataca um monstrinho.
+     * 
+     * @param monstroAtacante O monstrinho que está atacando.
+     * @param monstroAtacado O monstrinho que está sendo atacado.
+     */
+    void atacar(Monstrinho* monstroAtacante, Monstrinho* monstroAtacado);
 
     /**
      * @brief Constrói uma lista de monstrinhos a partir de um arquivo CSV.

@@ -6,8 +6,10 @@
  */
 
 #include <vector>
+#include "Monstrinho.hpp"
 
 using namespace std;
+class Monstrinho; // Declaração antecipada da classe Monstrinho para evitar dependência circular
 
 /**
  * @class Ataque
