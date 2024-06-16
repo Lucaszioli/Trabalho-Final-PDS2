@@ -6,6 +6,7 @@
  */
 
 #include <vector>
+#include <unordered_map>
 #include "Monstrinho.hpp"
 
 using namespace std;
@@ -27,6 +28,9 @@ private:
     int quantidade; ///< A quantidade de vezes que o ataque pode ser usado.
     int quantidadeAtual; ///< A quantidade atual de vezes que o ataque pode ser usado.
     double chanceAcerto; ///< A chance de acerto do ataque.
+    static unordered_map<string, unordered_map<string, double>> TabelaEfetividade; ///< A tabela de efetividade dos tipos de ataques.
+    static unordered_map<string, unordered_map<string, double>> gerarTabelaEfetividade(); ///< Gera a tabela de efetividade dos tipos de ataques.
+
 
 public:
     /**
