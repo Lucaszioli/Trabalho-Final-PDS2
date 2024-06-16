@@ -42,8 +42,8 @@ int Monstrinho::getTier() {
     return tier;
 }
 
-vector<Ataque> Monstrinho::getAtaques() {
-    return ataques;
+vector<Ataque>& Monstrinho::getAtaques() {
+    return this->ataques;
 }
 
 void Monstrinho :: atacar(Monstrinho* monstroAtacante, Monstrinho* monstroAtacado){
