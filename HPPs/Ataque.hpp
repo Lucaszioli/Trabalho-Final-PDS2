@@ -123,6 +123,16 @@ public:
      * @return bool true se o monstrinho conseguiu realizar o ataque, false caso contrário.
      */
     bool fazerAtaque(Monstrinho &inimigo);
+
+    /**
+     * @brief Calcula a efetividade de um ataque.
+     * 
+     * @param tipoAtaque O tipo do ataque.
+     * @param tiposMonstrinho Os tipos do monstrinho que será atacado.
+     * @return double A efetividade do ataque.
+     */
+    static double calcularEfetividade(string tipoAtaque, vector<string> tiposMonstrinho);
 };
+
 
 #endif

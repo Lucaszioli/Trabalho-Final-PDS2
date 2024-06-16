@@ -182,16 +182,14 @@ bool Ataque::fazerAtaque(Monstrinho &inimigo) {
         std::cout << "O Monstrinho já está cansado desse ataque!" << std::endl;
         return false;
     }
+double Ataque::calcularEfetividade(string tipoAtaque, vector<string> tiposMonstrinho) {
+    double multiplicador = 1.0;
 
-    double randomValue = (double)rand() / RAND_MAX; 
-    if(randomValue <= chanceAcerto) {
-        std::cout << "O ataque acertou!" << std::endl;
-        inimigo.setHPAtual(inimigo.getHPAtual() - dano);
-        std::cout << inimigo.getNome() << " sofreu " << dano << " de dano!" << std::endl;
+    for (const auto& tipoMonstrinho : tiposMonstrinho) {
+        if (TabelaEfetividade[tipoAtaque].find(tipoMonstrinho) != TabelaEfetividade[tipoAtaque].end()) {
+            multiplicador *= TabelaEfetividade[tipoAtaque][tipoMonstrinho];
+        }
     }
-    else {
-        std::cout << "O ataque errou!" << std::endl;
-    }
-    quantidadeAtual--;
-    return true;
+
+    return multiplicador;
 }
