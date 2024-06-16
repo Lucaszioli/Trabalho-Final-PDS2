@@ -6,6 +6,7 @@
  */
 
 #include <vector>
+#include <unordered_map>
 #include "Monstrinho.hpp"
 
 using namespace std;
@@ -27,6 +28,9 @@ private:
     int quantidade; ///< A quantidade de vezes que o ataque pode ser usado.
     int quantidadeAtual; ///< A quantidade atual de vezes que o ataque pode ser usado.
     double chanceAcerto; ///< A chance de acerto do ataque.
+    static unordered_map<string, unordered_map<string, double>> TabelaEfetividade; ///< A tabela de efetividade dos tipos de ataques.
+    static unordered_map<string, unordered_map<string, double>> gerarTabelaEfetividade(); ///< Gera a tabela de efetividade dos tipos de ataques.
+
 
 public:
     /**
@@ -119,6 +123,16 @@ public:
      * @return bool true se o monstrinho conseguiu realizar o ataque, false caso contrário.
      */
     bool fazerAtaque(Monstrinho &inimigo);
+
+    /**
+     * @brief Calcula a efetividade de um ataque.
+     * 
+     * @param tipoAtaque O tipo do ataque.
+     * @param tiposMonstrinho Os tipos do monstrinho que será atacado.
+     * @return double A efetividade do ataque.
+     */
+    static double calcularEfetividade(string tipoAtaque, vector<string> tiposMonstrinho);
 };
+
 
 #endif

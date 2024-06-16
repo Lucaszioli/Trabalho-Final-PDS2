@@ -42,8 +42,8 @@ int Monstrinho::getTier() {
     return tier;
 }
 
-vector<Ataque> Monstrinho::getAtaques() {
-    return ataques;
+vector<Ataque>& Monstrinho::getAtaques() {
+    return this->ataques;
 }
 
 void Monstrinho :: atacar(Monstrinho* monstroAtacante, Monstrinho* monstroAtacado){
@@ -102,7 +102,7 @@ vector <Monstrinho> Monstrinho::construirMonstrinhos() {
         stringstream ssAtaques(dados[7]);
         string ataqueStr;
         while (getline(ssAtaques, ataqueStr, ';')) { // Separa os IDs dos ataques
-            for (Ataque ataque : Ataque::construirAtaques()) { // Procura os ataques com os IDs
+            for (Ataque ataque : todosAtaques) { // Procura os ataques com os IDs
                 if (ataque.getID() == stoi(ataqueStr)) { // Se o ID do ataque for igual ao ID do ataqueStr
                     ataques.push_back(ataque); // Adiciona o ataque ao vetor de ataques
                 }
@@ -110,13 +110,6 @@ vector <Monstrinho> Monstrinho::construirMonstrinhos() {
         }
         
 
-        for (int i = 7; i < dados.size(); i++) { // Para cada ataque do monstrinho
-            for (Ataque ataque : Ataque::construirAtaques()) { // Procura os ataques com os IDs
-                if (ataque.getID() == stoi(dados[i])) { // Se o ID do ataque for igual ao ID do ataqueStr
-                    ataques.push_back(ataque); // Adiciona o ataque ao vetor de ataques
-                }
-            }
-        }
 
         monstrinhos.push_back(Monstrinho(ID, nome, descricao, tipo, HP, HPAtual, velocidade, tier, ataques));
     }

@@ -114,7 +114,7 @@ public:
      * 
      * @return Os ataques do monstrinho.
      */
-    vector<Ataque> getAtaques();
+    vector<Ataque>& getAtaques();
 
     /**
      * @brief Ataca um monstrinho.
