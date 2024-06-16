@@ -43,12 +43,14 @@ bool Estamina::usarItem(Monstrinho* monstro){
             vector<Ataque>& ataques = monstro -> getAtaques();
             int i = 1;
             int escolha;
+            cout<<"------------------------------------------------------------"<<endl;
             for(auto& ataque:ataques){
                 cout<<i<<"- "<<ataque.getNome()<<"Estamina: "<<ataque.getQuantidadeAtual()<<"/"<<ataque.getQuantidade()<<endl;
                 i++;
             }
             cout<<i<<"- Voltar"<<endl;
             cout<<"Escolha um ataque para recuperar Estamina"<<endl;
+            cout<<"------------------------------------------------------------"<<endl;
             cin>>escolha;
             if(escolha>i || escolha<1){
                 throw EscolhaError("Escolha diferente do numero possível de opções");

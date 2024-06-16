@@ -1,4 +1,5 @@
 #include "../HPPs/Jogador.hpp"
+#include <limits>
 #include <iostream>
 #include "../HPPs/Cura.hpp"
 #include "../HPPs/Revive.hpp"
@@ -95,6 +96,7 @@ bool Jogador::usarItem(){
         if(inventario.size() == 0){
             throw BadRequestError("Você não possui itens");
         }
+        cout<<"------------------------------------------------------------"<<endl;
         for(auto& item:inventario){
             cout<<i<<"- "<<item->getNome()<<endl;
             i++;
@@ -102,6 +104,7 @@ bool Jogador::usarItem(){
         cout<<i<<"- Voltar"<<endl; 
         int escolhaItem;
         cout<<"Qual item você quer usar?"<<endl;
+        cout<<"------------------------------------------------------------"<<endl;
         cin>>escolhaItem;
 
         if(escolhaItem > i || escolhaItem<1){
@@ -116,12 +119,14 @@ bool Jogador::usarItem(){
             do{
                 int j = 1;
                 int escolhaMonstro;
+                cout<<"------------------------------------------------------------"<<endl;
                 for(auto& monstro:equipe){
                     cout<<j<<"- "<<monstro->getNome()<<" HP:"<<monstro->getHPAtual()<<"/"<<monstro->getHP()<<endl;
                     j++;
                 }
                 cout<<j<<"- Voltar"<<endl; 
                 cout<< "Em qual monstro você deseja usar o item?"<<endl;
+                cout<<"------------------------------------------------------------"<<endl;
                 cin >> escolhaMonstro;
                 if(escolhaMonstro > j){
                     throw EscolhaError("Escolha maior que o numero possível de opções");
@@ -160,14 +165,24 @@ bool Jogador::usarItem(){
         }
         
         }catch(const BadRequestError& e){
+            cout<<"------------------------------------------------------------"<<endl;  
             cout<<e.what()<<endl;
+            cout<<"------------------------------------------------------------"<<endl;  
             erro = 0;
             usou = false;
         }catch(const EscolhaError& e){
+            cout<<"------------------------------------------------------------"<<endl;  
             cout<<e.what()<<endl;
+            cout<<"------------------------------------------------------------"<<endl;  
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.get();
             erro = 1;
         }catch(const ItemError& e){
+            cout<<"------------------------------------------------------------"<<endl;  
             cout<<e.what()<<endl;
+            cout<<"------------------------------------------------------------"<<endl;
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.get();
             erro = 1;
         }
     }while(erro == 1);
