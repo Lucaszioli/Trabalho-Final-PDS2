@@ -103,7 +103,7 @@ bool Jogador::usarItem(){
         cout<<"Qual item você quer usar?"<<endl;
         cin>>escolhaItem;
 
-        if(escolhaItem > i){
+        if(escolhaItem > i || escolhaItem<1){
             throw EscolhaError("Escolha maior que o numero possível de opções");
         }
         if(escolhaItem != i){
