@@ -1,46 +1,86 @@
 ID,Nome,Tipo,Dano,Descricao,Quantidade,chanceAcerto
-1,Mordida Inseto,Inseto,50,Um ataque de mordida de inseto.,30,0.95
-2,Pó de Estrela,Inseto,80,Um ataque com pó mágico de inseto.,15,0.8
-3,Ferrão Venenoso,Inseto,100,Um ataque com um ferrão venenoso.,10,0.7
-4,Cauda Dragão,Dragão,60,Um golpe com a cauda de dragão.,20,0.8
-5,Chama Dragão,Dragão,100,Um ataque de fogo de dragão.,8,0.65
-6,Chama Azul,Dragão,130,Um ataque de fogo de dragão intenso.,4,0.55
-7,Choque do Trovão,Elétrico,40,Um choque elétrico fraco.,25,0.9
-8,Raio Trovão,Elétrico,90,Uma forte descarga elétrica.,10,0.7
-9,Trovão,Elétrico,110,Um raio elétrico poderoso.,6,0.65
-10,Soco Firme,Lutador,50,Um soco forte.,30,0.95
-11,Punho de Ferro,Lutador,75,Um soco potente.,15,0.8
-12,Megachute,Lutador,120,Um chute devastador.,5,0.6
-13,Brasa,Fogo,40,Um ataque de fogo fraco.,25,0.9
-14,Lança-Chamas,Fogo,90,Um poderoso ataque de fogo.,10,0.7
-15,Lança de Fogo,Fogo,120,Um ataque de fogo devastador.,5,0.6
-16,Golpe de Asa,Voador,40,Um golpe com asas.,25,0.9
-17,Esfera Aérea,Voador,60,Um ataque aéreo.,20,0.85
-18,Vendaval,Voador,100,Um ataque com um forte vendaval.,8,0.75
-19,Sombra Noturna,Fantasma,50,Um ataque sombrio.,30,0.95
-20,Esfera Fantasma,Fantasma,80,Um ataque com esfera de energia fantasma.,15,0.8
-21,Toque Assombrado,Fantasma,100,Um ataque fantasmagórico.,10,0.7
-22,Folha Afiada,Grama,45,Um ataque cortante com folhas.,25,0.9
-23,Vinha Poderosa,Grama,70,Um ataque com vinhas fortes.,15,0.8
-24,Raio Solar,Grama,120,Um ataque solar.,5,0.5
-25,Soco de Lama,Terra,20,Um soco com lama.,30,0.9
-26,Terra Quente,Terra,60,Um ataque de terra aquecida.,20,0.85
-27,Terremoto,Terra,100,Um ataque que causa terremoto.,8,0.75
-28,Gelo Estilhaçado,Gelo,50,Um ataque com fragmentos de gelo.,30,0.95
-29,Raio de Gelo,Gelo,90,Um ataque gelado.,10,0.7
-30,Nevasca,Gelo,120,Um ataque de neve.,5,0.6
-31,Furacão,Normal,40,Um ataque com vento forte.,25,0.9
-32,Corte,Normal,50,Um golpe cortante.,30,0.95
-33,Hiper-Raio,Normal,150,Um ataque muito poderoso.,3,0.3
-34,Pancada Venenosa,Veneno,40,Um ataque de veneno fraco.,25,0.9
-35,Explosão de Veneno,Veneno,90,Um ataque de veneno forte.,10,0.7
-36,Golpe Tóxico,Veneno,120,Um golpe venenoso devastador.,5,0.6
-37,Confusão,Psiquico,50,Um ataque com poder psíquico fraco.,30,0.95
-38,Golpe Psíquico,Psiquico,75,Um ataque com poder psíquico.,15,0.8
-39,Explosão Psíquica,Psiquico,130,Um ataque psíquico devastador.,4,0.55
-40,Faca de Pedra,Pedra,60,Um ataque cortante com pedra.,20,0.85
-41,Deslizamento de Pedras,Pedra,75,Um ataque com pedras rolando.,15,0.8
-42,Golpe de Rocha,Pedra,100,Um golpe com uma rocha.,8,0.75
-43,Espuma,Água,20,Um ataque com bolhas de água.,30,0.9
-44,Jato de Água,Água,40,Um ataque de água fraco.,20,0.85
-45,Hidro Bomba,Água,110,Um ataque de água poderoso.,6,0.65
+1,Mordida Inseto,Inseto,50,Um ataque de mordida de inseto.,30,0.9
+2,Pó de Estrela,Inseto,80,Um ataque com pó mágico de inseto.,15,0.7
+3,Ferrão Venenoso,Inseto,100,Um ataque com um ferrão venenoso.,5,0.65
+4,Golpe de Antena,Inseto,40,Um golpe rápido com antenas.,25,0.95
+5,Lança de Seda,Inseto,60,Um ataque que envolve o oponente em seda.,20,0.85
+6,Cauda Dragão,Dragão,60,Um golpe com a cauda de dragão.,20,0.85
+7,Chama Dragão,Dragão,100,Um ataque de fogo de dragão.,5,0.65
+8,Chama Azul,Dragão,130,Um ataque de fogo de dragão intenso.,3,0.55
+9,Garras de Dragão,Dragão,40,Um ataque rápido com garras de dragão.,30,0.95
+10,Sopro de Dragão,Dragão,80,Um ataque com sopro de dragão.,15,0.7
+11,Choque do Trovão,Elétrico,40,Um choque elétrico fraco.,30,0.95
+12,Raio Trovão,Elétrico,90,Uma forte descarga elétrica.,10,0.7
+13,Trovão,Elétrico,110,Um raio elétrico poderoso.,3,0.65
+14,Fulgor Elétrico,Elétrico,50,Um ataque de luz elétrica.,25,0.9
+15,Faísca,Elétrico,70,Uma faísca elétrica forte.,20,0.75
+16,Soco Firme,Lutador,50,Um soco forte.,30,0.9
+17,Punho de Ferro,Lutador,80,Um soco potente.,15,0.7
+18,Megachute,Lutador,120,Um chute devastador.,5,0.6
+19,Soco Rápido,Lutador,40,Um soco rápido e ágil.,30,0.95
+20,Chute Alto,Lutador,70,Um chute alto e poderoso.,20,0.75
+21,Brasa,Fogo,40,Um ataque de fogo fraco.,30,0.95
+22,Lança-Chamas,Fogo,90,Um poderoso ataque de fogo.,10,0.7
+23,Lança de Fogo,Fogo,120,Um ataque de fogo devastador.,3,0.6
+24,Faísca Ardente,Fogo,50,Uma faísca de fogo.,25,0.9
+25,Explosão de Calor,Fogo,70,Um ataque de calor intenso.,20,0.75
+26,Golpe de Asa,Voador,40,Um golpe com asas.,30,0.95
+27,Esfera Aérea,Voador,60,Um ataque aéreo.,20,0.85
+28,Vendaval,Voador,100,Um ataque com um forte vendaval.,5,0.65
+29,Brisa Cortante,Voador,50,Um ataque com uma brisa cortante.,25,0.9
+30,Investida Aérea,Voador,70,Um ataque com uma investida aérea.,20,0.75
+31,Sombra Noturna,Fantasma,50,Um ataque sombrio.,30,0.9
+32,Esfera Fantasma,Fantasma,80,Um ataque com esfera de energia fantasma.,15,0.7
+33,Toque Assombrado,Fantasma,100,Um ataque fantasmagórico.,5,0.65
+34,Vulto,Fantasma,40,Um ataque rápido e sombrio.,30,0.95
+35,Garra Sombria,Fantasma,60,Um ataque com garras fantasmagóricas.,20,0.85
+36,Folha Afiada,Grama,50,Um ataque cortante com folhas.,30,0.9
+37,Vinha Poderosa,Grama,70,Um ataque com vinhas fortes.,15,0.75
+38,Raio Solar,Grama,120,Um ataque solar.,3,0.6
+39,Corte de Folha,Grama,40,Um corte rápido com folhas.,30,0.95
+40,Explosão Floral,Grama,80,Um ataque com uma explosão de flores.,10,0.7
+41,Soco de Lama,Terra,40,Um soco com lama.,30,0.95
+42,Terra Quente,Terra,60,Um ataque de terra aquecida.,20,0.85
+43,Terremoto,Terra,100,Um ataque que causa terremoto.,5,0.65
+44,Pedra Lançada,Terra,50,Um ataque com uma pedra lançada.,25,0.9
+45,Desmoronamento,Terra,80,Um ataque com desmoronamento de terra.,10,0.7
+46,Gelo Estilhaçado,Gelo,50,Um ataque com fragmentos de gelo.,30,0.9
+47,Raio de Gelo,Gelo,90,Um ataque gelado.,10,0.7
+48,Nevasca,Gelo,120,Um ataque de neve.,3,0.6
+49,Congelamento,Gelo,40,Um ataque que causa congelamento.,30,0.95
+50,Punhal de Gelo,Gelo,70,Um ataque com punhal de gelo.,20,0.75
+51,Furacão,Normal,40,Um ataque com vento forte.,30,0.95
+52,Corte,Normal,50,Um golpe cortante.,30,0.9
+53,Hiper-Raio,Normal,150,Um ataque muito poderoso.,3,0.5
+54,Golpe de Cabeça,Normal,60,Um ataque com a cabeça.,25,0.85
+55,Investida,Normal,70,Um ataque com uma investida poderosa.,20,0.75
+56,Pancada Venenosa,Veneno,40,Um ataque de veneno fraco.,30,0.95
+57,Explosão de Veneno,Veneno,90,Um ataque de veneno forte.,10,0.7
+58,Golpe Tóxico,Veneno,120,Um golpe venenoso devastador.,3,0.6
+59,Mordida Venenosa,Veneno,50,Uma mordida envenenada.,30,0.9
+60,Jato Tóxico,Veneno,70,Um jato de veneno tóxico.,20,0.75
+61,Confusão,Psiquico,50,Um ataque com poder psíquico fraco.,30,0.9
+62,Golpe Psíquico,Psiquico,80,Um ataque com poder psíquico.,15,0.7
+63,Explosão Psíquica,Psiquico,130,Um ataque psíquico devastador.,3,0.55
+64,Choque Mental,Psiquico,40,Um ataque com um choque mental.,30,0.95
+65,Impacto Psíquico,Psiquico,70,Um impacto com poder psíquico.,20,0.75
+66,Faca de Pedra,Pedra,60,Um ataque cortante com pedra.,20,0.85
+67,Deslizamento de Pedras,Pedra,80,Um ataque com pedras rolando.,15,0.7
+68,Golpe de Rocha,Pedra,100,Um golpe com uma rocha.,5,0.65
+69,Punho de Pedra,Pedra,50,Um soco com punho de pedra.,30,0.9
+70,Investida de Rocha,Pedra,70,Uma investida com uma rocha.,20,0.75
+71,Espuma,Água,40,Um ataque com bolhas de água.,30,0.95
+72,Jato de Água,Água,70,Um ataque de jato de água.,30,0.75
+73,Hidro Bomba,Água,110,Um ataque de água poderoso.,3,0.65
+74,Chuva de Bolhas,Água,50,Um ataque com bolhas de água.,25,0.9
+75,Ondas,Água,90,Um ataque com ondas de água.,10,0.7
+76,Cauda de Aço,Aço,40,Um ataque com uma cauda metálica.,25,0.95
+77,Punho Metálico,Aço,80,Um soco poderoso utilizando um punho de aço.,15,0.7
+78,Chuva de Aço,Aço,130,O monstrinho arremessa projéteis metálicos.,5,0.55
+79,Garras de Aço,Aço,50,Um ataque com garras metálicas.,30,0.9
+80,Lâmina de Aço,Aço,70,Um ataque com uma lâmina metálica.,20,0.75
+81,Mordida,Sombrio,50,Uma mordida feroz.,25,0.9
+82,Bola Sombria,Sombrio,90,Um ataque que lança uma bola de energia sombria.,10,0.75
+83,Escuridão Total,Sombrio,100,Uma escuridão envolve um monstrinho e algo o ataca.,5,0.7
+84,Garras Negras,Sombrio,40,Um ataque com garras negras.,30,0.95
+85,Sombra da Noite,Sombrio,70,Um ataque que envolve sombras.,20,0.75
