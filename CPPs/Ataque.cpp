@@ -5,6 +5,7 @@
 #include <exception>
 #include <stdexcept>
 #include <cstdlib>
+#include <ctime>
 #include <iostream>
 
 unordered_map<string, unordered_map<string, double>> Ataque::TabelaEfetividade = Ataque::gerarTabelaEfetividade();
@@ -179,9 +180,43 @@ vector<Ataque> Ataque::construirAtaques() {
 
 bool Ataque::fazerAtaque(Monstrinho &inimigo) {
     if (quantidadeAtual <= 0) {
-        std::cout << "O Monstrinho já está cansado desse ataque!" << std::endl;
+        cout << "Ataque esgotado!" << endl;
         return false;
     }
+    srand(time(NULL));
+    double chance = static_cast<double>(rand()) / RAND_MAX;
+        cout << "Chance: " << chance << endl;
+
+    if (chance <= chanceAcerto) {
+        cout << "O ataque acertou!";
+
+        vector<string> tiposInimigo = inimigo.getTipo();
+        double multiplicador = calcularEfetividade(tipo, tiposInimigo);
+
+        if (multiplicador > 1.0) {
+            cout << " E foi super efetivo!" << endl;
+        } 
+        else if (multiplicador == 0.0) {
+            cout << " " << inimigo.getNome() << " é imune a esse tipo de ataque!" << endl;
+        }
+        else if (multiplicador < 1.0) {
+            cout << " mas foi pouco efetivo..." << endl;
+        }
+        int danoTotal = static_cast<int>(dano * multiplicador);
+        int hpAtualInimigo = inimigo.getHPAtual();
+        cout << endl;
+        inimigo.setHPAtual(hpAtualInimigo - danoTotal);
+        cout << "O inimigo perdeu " << danoTotal << " de HP!" << endl;
+
+        quantidadeAtual--;
+        return true;
+    } else {
+        cout << "O ataque falhou!" << endl;
+        quantidadeAtual--;
+        return false;
+    }
+}
+
 double Ataque::calcularEfetividade(string tipoAtaque, vector<string> tiposMonstrinho) {
     double multiplicador = 1.0;
 
