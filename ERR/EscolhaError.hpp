@@ -4,7 +4,7 @@
 
 class EscolhaError : public std::invalid_argument{
     public:
-        EscolhaError(const std::string& message): std::runtime_error(message){};
+        EscolhaError(const std::string& message): std::invalid_argument(message){};
 };
 
 
