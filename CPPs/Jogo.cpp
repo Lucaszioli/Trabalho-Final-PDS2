@@ -80,36 +80,42 @@ void Jogo :: geraTurno(Jogador* jogador, Bot* bot){
         switch (opcao)
         {
         case 1:
-            if(jogador->getEquipe()[0]->getVelocidade() >= bot->getEquipe()[0]->getVelocidade()){
-                state = jogador->getEquipe()[0]->atacar(jogador->getEquipe()[0], bot->getEquipe()[0]);
-                if(bot->getEquipe()[0]->getHPAtual() <= 0){
-                    bot->mudaEquipe();
-                    jogador->receberItem();
-                }else{
-                    bot->getEquipe()[0]->atacar(bot->getEquipe()[0], jogador->getEquipe()[0]);
-                    if(jogador->getEquipe()[0]->getHPAtual() <= 0){
-                        jogador->mudaEquipe();
-                        cout<<jogador->getEquipe()[0]->getNome();
-                    }
-                }
-            }else{
-                bot->getEquipe()[0]->atacar(bot->getEquipe()[0], jogador->getEquipe()[0]);
-                if(jogador->getEquipe()[0]->getHPAtual() <= 0){
-                    jogador->mudaEquipe();
-                }else{
-                    jogador->getEquipe()[0]->atacar(jogador->getEquipe()[0], bot->getEquipe()[0]);
+            escolha = jogador->getEquipe()[0]->escolhaAtaque();
+            if(escolha != 4){
+                if(jogador->getEquipe()[0]->getVelocidade() >= bot->getEquipe()[0]->getVelocidade()){
+                    state = jogador->getEquipe()[0]->atacar(bot->getEquipe()[0],escolha);
                     if(bot->getEquipe()[0]->getHPAtual() <= 0){
                         bot->mudaEquipe();
                         jogador->receberItem();
+                    }else{
+                        bot->getEquipe()[0]->atacar(jogador->getEquipe()[0],1);
+                        if(jogador->getEquipe()[0]->getHPAtual() <= 0){
+                            jogador->mudaEquipe();
+                            cout<<jogador->getEquipe()[0]->getNome();
+                        }
+                    }
+                    state = true;
+                }else{
+                    bot->getEquipe()[0]->atacar(jogador->getEquipe()[0],escolha);
+                    if(jogador->getEquipe()[0]->getHPAtual() <= 0){
+                        jogador->mudaEquipe();
+                    }else{
+                        jogador->getEquipe()[0]->atacar(bot->getEquipe()[0],1);
+                        if(bot->getEquipe()[0]->getHPAtual() <= 0){
+                            bot->mudaEquipe();
+                            jogador->receberItem();
+                        }
                     }
                 }
+            }else{
+                state = false;
             }
             break;
         
         case 2:
             state = jogador->mudaEquipe();
-            if(state = true){
-                bot->getEquipe()[0]->atacar(bot->getEquipe()[0], jogador->getEquipe()[0]);
+            if(state == true){
+                bot->getEquipe()[0]->atacar(jogador->getEquipe()[0],1);
                 if(jogador->getEquipe()[0]->getHPAtual() <= 0){
                     jogador->mudaEquipe();
                 }
@@ -119,7 +125,7 @@ void Jogo :: geraTurno(Jogador* jogador, Bot* bot){
         case 3:
             state = jogador->usarItem();
             if(state == true){
-                bot->getEquipe()[0]->atacar(bot->getEquipe()[0], jogador->getEquipe()[0]);
+                bot->getEquipe()[0]->atacar(jogador->getEquipe()[0],1);
                 if(jogador->getEquipe()[0]->getHPAtual() <= 0){
                     jogador->mudaEquipe();
                 }
