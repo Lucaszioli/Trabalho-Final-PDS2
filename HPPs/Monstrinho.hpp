@@ -122,7 +122,7 @@ public:
      * @param monstroAtacante O monstrinho que está atacando.
      * @param monstroAtacado O monstrinho que está sendo atacado.
      */
-    void atacar(Monstrinho* monstroAtacante, Monstrinho* monstroAtacado);
+    bool atacar(Monstrinho* monstroAtacante, Monstrinho* monstroAtacado);
 
     /**
      * @brief Constrói uma lista de monstrinhos a partir de um arquivo CSV.

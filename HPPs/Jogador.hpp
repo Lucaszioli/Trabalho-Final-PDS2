@@ -30,7 +30,7 @@ public:
      * Esta função é uma sobrescrita da função mudaEquipe da classe Treinador.
      * Ela permite ao jogador mudar sua equipe de monstrinhos.
      */
-    void mudaEquipe() override;
+    bool mudaEquipe() override;
     /**
      * @brief Função que permite o jogador receber um item aleatório ao fim de uma rodada
      */

@@ -5,6 +5,7 @@
 #include <exception>
 #include <stdexcept>
 #include <iostream>
+#include "../ERR/EscolhaError.hpp"
 
 int Monstrinho::getID() {
     return ID;
@@ -46,19 +47,42 @@ vector<Ataque>& Monstrinho::getAtaques() {
     return this->ataques;
 }
 
-void Monstrinho :: atacar(Monstrinho* monstroAtacante, Monstrinho* monstroAtacado){
+bool Monstrinho :: atacar(Monstrinho* monstroAtacante, Monstrinho* monstroAtacado){
     int opcao;
-    cout<<"Escolha um ataque:"<<endl;
-    for(int i = 0; i < monstroAtacante->getAtaques().size(); i++){
-        cout<<monstroAtacante->getAtaques()[i].getID()<<"-"<<monstroAtacante->getAtaques()[i].getNome()<<endl;
-    }
-    cin>>opcao;    
-    for(int i = 0; i < monstroAtacante->getAtaques().size(); i++){
-        if(opcao == monstroAtacante->getAtaques()[i].getID()){
-            monstroAtacante->getAtaques()[i].fazerAtaque(monstroAtacado[0]);
-            break;
+    bool state = false;
+    while(!state){
+        try{
+            cout<<"O Monstrinho "<<monstroAtacante->getNome()<<" esta atacando"<<endl;
+            cout<<"Escolha um ataque:"<<endl;
+            int i = 1;
+            for(auto& ataque:monstroAtacante->getAtaques()){
+                cout<<i<<"-"<<monstroAtacante->getAtaques()[i-1].getNome()<<endl;
+                i++;
+            }
+            cout<<i<<"- Voltar"<<endl;
+            cin>>opcao;    
+            if(std::cin.fail()) { // Se a entrada falhar (por exemplo, o usuário digitou uma string)
+                std::cin.clear(); // Limpa o estado de falha
+                throw EscolhaError("Escolha diferente do numero possível de opções");
+            }
+            if(opcao > i || opcao < 1){
+                throw EscolhaError("Escolha diferente do numero possível de opções");
+            }
+            else if(opcao == i){
+                return false;
+            }else{
+                state = monstroAtacante->getAtaques()[opcao-1].fazerAtaque(monstroAtacado[0]);    
+            }
+                
+        }catch(EscolhaError& e){
+            cout<<e.what()<<endl;
+            state = false;
+        }catch(std::exception& e){
+            cout<<e.what()<<endl;
+            state = false;
         }
     }
+    return state;
 }
 
 vector <Monstrinho> Monstrinho::construirMonstrinhos() {
