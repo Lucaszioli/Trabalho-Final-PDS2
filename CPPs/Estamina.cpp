@@ -3,6 +3,7 @@
 #include "../ERR/EscolhaError.hpp"
 #include "../HPPs/Ataque.hpp"
 #include <iostream>
+#include <limits>
 
 void Estamina::setEnergia(int e){
     energia = e;
@@ -74,7 +75,12 @@ bool Estamina::usarItem(Monstrinho* monstro){
             erro = 0;
         }catch(EscolhaError& e){
             erro = 1;
+            cout<<"------------------------------------------------------------"<<endl;  
             cout<<e.what()<<endl;
+            cout<<"------------------------------------------------------------"<<endl;  
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.get();
+            erro = 1;
         }
     }while(erro == 1);
     return false;
