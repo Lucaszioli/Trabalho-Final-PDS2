@@ -23,13 +23,6 @@ TEST_CASE("Testes para a classe Monstrinho", "[Monstrinho]") {
         monstroTeste.setHPAtual(80);
         REQUIRE(monstroTeste.getHPAtual() == 80);
     }
-
-    /*SECTION("Testando contruirMonstrinhos", "[Monstrinho]"){
-        1- criar um csv teste
-
-        vector<Monstrinho> monstrinhos = Monstrinho::construirMonstrinhos();
-        REQUIRE(monstrinhos.size() > 0);
-    }*/
     
     SECTION("Testando atacar", "[Monstrinho]") {
         vector<string> tipos = {"Fogo", "Água"};
