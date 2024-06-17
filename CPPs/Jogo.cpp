@@ -29,18 +29,58 @@ vector<Monstrinho*> Jogo :: escolherMonstrinho(Jogador* jogador){
     }
    
     int opcao;
-    
+    int moedas = 12;
+    std::set<int> indicesAdicionados;
     for(int i = 0; i < 4; i++){
-        cout<<"Digite o ID do Monstrinho para adiciona-lo ao seu time."<<endl;
-        cin>>opcao;
-        for(int j = 0; j < monstrinhos.size(); j++){
-            if(opcao == monstrinhos[j].getID()){
-                jogador->colocaMonstrinho(monstrinhos[j]);
-                //equipe.push_back(new Monstrinho(monstrinhos[j]));
-                cout<<"Monstrinho adicionado com sucesso!"<<endl;                
-                break;
+        bool erro = 0;
+        do{
+            try{
+            cout<<"Digite o ID do Monstrinho para adicioná-lo ao seu time."<<endl;
+            cout<<"Você tem "<<moedas<<" moedas, use-as para adicionar os Monstrinhos ao seu time"<<endl;
+            cout<<"--------------------------------------------------------------------------------"<<endl;
+            cin>>opcao;
+            if(std::cin.fail()) { // Se a entrada falhar (por exemplo, o usuário digitou uma string)
+                std::cin.clear(); // Limpa o estado de falha
+                throw EscolhaError("Escolha diferente do número possível de opções");
             }
-        }    
+            if(opcao < 1 || opcao >monstrinhos.size()){
+                throw EscolhaError("Escolha diferente do número possível de opções");
+            }
+            for(int j = 0; j < monstrinhos.size(); j++){
+                if(opcao == monstrinhos[j].getID()){
+                    if(monstrinhos[j].getTier() > moedas){
+                        cout<<"Você não tem moedas o suficiente para esse monstrinho, escolha outro"<<endl;
+                        cout<<"Você tem "<<moedas<<" moedas restantes"<<endl;
+                        erro = 1;
+                        break;
+                    }else if(indicesAdicionados.find(opcao) != indicesAdicionados.end()){
+                        cout<<"Você já escolheu esse monstrinho, escolha outro"<<endl;
+                        erro = 1;
+                        break;
+                    }else{
+                        jogador->colocaMonstrinho(monstrinhos[j]);
+                        moedas -= monstrinhos[j].getTier();
+                        indicesAdicionados.insert(opcao);
+                        cout<<"Monstrinho adicionado com sucesso!"<<endl;
+                        cout<<"Você tem "<<moedas<<" moedas restantes"<<endl;
+                        erro = 0;             
+                        break;
+                    }
+                }
+            }
+            
+            }catch(EscolhaError& e){
+                cout<<"------------------------------------------------------------"<<endl;  
+                cout<<e.what()<<endl;
+                cout<<"------------------------------------------------------------"<<endl;  
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cin.get();
+                erro = 1;
+            }
+        }while(erro == 1);
+        if(moedas == 0){
+            break;
+        }
     }
     return equipe; 
 }
