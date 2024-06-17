@@ -150,7 +150,7 @@ void Jogo :: geraTurno(Jogador* jogador, Bot* bot){
                             cout<<jogador->getEquipe()[0]->getNome();
                         }
                     }
-                    
+                   
                 }else{
                     bot->getEquipe()[0]->atacar(jogador->getEquipe()[0],ataqueBot);
                     if(jogador->getEquipe()[0]->getHPAtual() <= 0){
@@ -163,6 +163,8 @@ void Jogo :: geraTurno(Jogador* jogador, Bot* bot){
                         }
                     }
                 }
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cin.get();
                 state = true;
             }else{
                 state = false;

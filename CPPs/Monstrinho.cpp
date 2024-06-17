@@ -53,8 +53,10 @@ bool Monstrinho :: atacar(Monstrinho* monstroAtacado, int escolha){
     bool state = false;
     while(!state){
         try{
+            cout<<"--------------------------------------------------------------------------------"<<endl;
             cout<<getNome()<<" usou ";
-            state = getAtaques()[escolha].fazerAtaque(monstroAtacado[0]);    
+            state = getAtaques()[escolha].fazerAtaque(monstroAtacado[0]);
+        cout<<"--------------------------------------------------------------------------------"<<endl;
         }   catch(std::exception& e){
                 cout<<e.what()<<endl;
                 state = false;
