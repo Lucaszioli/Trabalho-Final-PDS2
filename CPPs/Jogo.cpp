@@ -226,7 +226,7 @@ void Jogo :: iniciar(){
             cout<<"Escolha um nome para o seu Personagem."<<endl;
             cin>>nome;
             Jogador* jogador = new Jogador(1, nome, equipe);
-            Bot* bot = new Bot(0, "ChatGPT", equipeBot, {"facil"});
+            Bot* bot = new Bot(0, "ChatGPT", equipeBot, {"ChatGPT : achei facil >-<", "ChatGPT : eh... foi so porque eu deixei"});
             
             escolherMonstrinho(jogador);
             criaEquipeBot(bot);
@@ -238,8 +238,10 @@ void Jogo :: iniciar(){
             }
             if(jogador->verificaEquipe()){
                 cout<<"Parabéns você venceu!"<<endl;
+                cout<<bot->getFala()[1]<<endl;
             }else{
                 cout<<"Você perdeu!"<<endl;
+                cout<<bot->getFala()[0]<<endl;
             }
             cout<<"Digite start para jogar novamente ou qualquer outra coisa para sair."<<endl;
             cin>>start;

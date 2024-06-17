@@ -12,7 +12,7 @@ using std::vector;
 using std::string;
 /**
  * @class Jogo
- * 
+ * @file Jogo.hpp
  * @brief Classe que representa toda a lógica do jogo.
  * 
  * A classe cria as equipes de cada treinador e gera os turnos de batalha 
