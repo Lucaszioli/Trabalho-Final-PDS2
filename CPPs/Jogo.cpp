@@ -150,7 +150,7 @@ void Jogo :: geraTurno(Jogador* jogador, Bot* bot){
                             cout<<jogador->getEquipe()[0]->getNome();
                         }
                     }
-                    state = true;
+                    
                 }else{
                     bot->getEquipe()[0]->atacar(jogador->getEquipe()[0],ataqueBot);
                     if(jogador->getEquipe()[0]->getHPAtual() <= 0){
@@ -163,6 +163,7 @@ void Jogo :: geraTurno(Jogador* jogador, Bot* bot){
                         }
                     }
                 }
+                state = true;
             }else{
                 state = false;
             }
@@ -192,6 +193,7 @@ void Jogo :: geraTurno(Jogador* jogador, Bot* bot){
 }
 
 void Jogo :: iniciar(){
+    system("clear");
     vector<Monstrinho*> equipe;
     vector<Monstrinho*> equipeBot;
     string nome;
