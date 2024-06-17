@@ -95,6 +95,20 @@ unordered_map<string, unordered_map<string, double>> Ataque::gerarTabelaEfetivid
     tabela["Gelo"]["Voador"] = 2.0;
     tabela["Dragão"]["Aço"] = 0.5;
     tabela["Dragão"]["Dragão"] = 2.0;
+    tabela["Aço"]["Fogo"] = 0.5;
+    tabela["Aço"]["Água"] = 0.5;
+    tabela["Aço"]["Elétrico"] = 0.5;
+    tabela["Aço"]["Aço"] = 0.5;
+    tabela["Aço"]["Gelo"] = 2.0;
+    tabela["Aço"]["Pedra"] = 2.0;
+    tabela["Sombrio"]["Lutador"] = 0.5;
+    tabela["Sombrio"]["Psíquico"] = 2.0;
+    tabela["Sombrio"]["Sombrio"] = 0.5;
+    tabela["Sombrio"]["Fantasma"] = 2.0;
+    tabela["Lutador"]["Sombrio"] = 2.0;
+    tabela["Psíquico"]["Sombrio"] = 0.0;
+    tabela["Sombrio"]["Sombrio"] = 0.5;
+    tabela["Fantasma"]["Sombrio"] = 0.5;
 
     return tabela;
 }
