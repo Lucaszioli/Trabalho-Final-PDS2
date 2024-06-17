@@ -193,19 +193,18 @@ vector<Ataque> Ataque::construirAtaques() {
     }
 
 bool Ataque::fazerAtaque(Monstrinho &inimigo) {
-    if (quantidadeAtual <= 0) {
-        cout << "Ataque esgotado!" << endl;
-        return false;
-    }
-    srand(time(NULL));
     double chance = static_cast<double>(rand()) / RAND_MAX;
 
     if (chance <= chanceAcerto) {
-        cout << "O ataque acertou!";
-
         vector<string> tiposInimigo = inimigo.getTipo();
+        cout << "Tipo do Ataque" << tipo << endl;
+        for(auto& tipo:tiposInimigo){
+            cout<<"Tipo Inimigo: "<<tipo<<" ";
+        }
+        cout<<endl;
         double multiplicador = calcularEfetividade(tipo, tiposInimigo);
-
+            cout << getNome() << "!";
+        cout << "Multiplicador" << multiplicador << endl;
         if (multiplicador > 1.0) {
             cout << " E foi super efetivo!" << endl;
         } 
@@ -215,19 +214,23 @@ bool Ataque::fazerAtaque(Monstrinho &inimigo) {
         else if (multiplicador < 1.0) {
             cout << " mas foi pouco efetivo..." << endl;
         }
+        else{
+            cout << endl;
+        }
+        cout << dano << endl;
         int danoTotal = static_cast<int>(dano * multiplicador);
         int hpAtualInimigo = inimigo.getHPAtual();
         cout << endl;
         inimigo.setHPAtual(hpAtualInimigo - danoTotal);
-        cout << "O inimigo perdeu " << danoTotal << " de HP!" << endl;
+        cout << inimigo.getNome() << " perdeu " << danoTotal << " de HP!" << endl;
         if (inimigo.getHPAtual() <= 0) {
-            cout << "O inimigo foi derrotado!" << endl;
+            cout << "O " <<inimigo.getNome()<< " foi derrotado!" << endl;
             inimigo.setHPAtual(0);
         }
         quantidadeAtual--;
         return true;
     } else {
-        cout << "O ataque falhou!" << endl;
+        cout << "O ataque errou!" << endl;
         quantidadeAtual--;
         return true;
     }

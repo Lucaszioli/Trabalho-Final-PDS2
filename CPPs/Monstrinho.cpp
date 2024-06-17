@@ -125,7 +125,7 @@ int Monstrinho::escolhaAtaque(){
     bool erro;
     do{
         try{
-            cout<<"------------------------------------------------------------"<<endl;
+            cout<<"--------------------------------------------------------------------------------"<<endl;
             cout<<"O Monstrinho "<<getNome()<<" esta atacando"<<endl;
             cout<<"Escolha um ataque:"<<endl;
             int i = 1;
@@ -134,31 +134,31 @@ int Monstrinho::escolhaAtaque(){
                 i++;
             }
             cout<<i<<"- Voltar"<<endl;
-            cout<<"------------------------------------------------------------"<<endl;
+            cout<<"--------------------------------------------------------------------------------"<<endl;
             cin>>opcao;    
             if(std::cin.fail()) { // Se a entrada falhar (por exemplo, o usuário digitou uma string)
                 std::cin.clear(); // Limpa o estado de falha
-                throw EscolhaError("Escolha diferente do numero possível de opções");
+                throw EscolhaError("Escolha diferente do número possível de opções");
             }
             if(opcao > i || opcao < 1){
                 erro = 1;
-                throw EscolhaError("Escolha diferente do numero possível de opções");
+                throw EscolhaError("Escolha diferente do número possível de opções");
             }
             if(getAtaques()[opcao-1].getQuantidadeAtual()<=0 && opcao != i ){
                 throw AtaqueError("Ataque sem energia, por favor escolha outro");
             }
             erro = false;
         }catch(EscolhaError& e){
-            cout<<"------------------------------------------------------------"<<endl;  
+            cout<<"--------------------------------------------------------------------------------"<<endl; 
             cout<<e.what()<<endl;
-            cout<<"------------------------------------------------------------"<<endl;  
+            cout<<"--------------------------------------------------------------------------------"<<endl; 
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin.get();
             erro = 1;
         }catch(AtaqueError& e){
-            cout<<"------------------------------------------------------------"<<endl;  
+            cout<<"--------------------------------------------------------------------------------"<<endl; 
             cout<<e.what()<<endl;
-            cout<<"------------------------------------------------------------"<<endl;  
+            cout<<"--------------------------------------------------------------------------------"<<endl;  
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin.get();
             erro = 1;
