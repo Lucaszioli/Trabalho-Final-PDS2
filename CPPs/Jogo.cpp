@@ -54,6 +54,7 @@ vector<Monstrinho*> Jogo :: criaEquipeBot(Bot* bot){
         bool state = true;
         int opcao;
         while(state){
+            opcao = rand() % 42;
             if((monstrinhos[opcao].getTier() == 1 || monstrinhos[opcao].getTier() == 2) && indicesAdicionados.find(opcao) == indicesAdicionados.end() && i == 0){        
                 bot->colocaMonstrinho(monstrinhos[opcao]);
                 indicesAdicionados.insert(opcao);
