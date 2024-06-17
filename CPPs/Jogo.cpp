@@ -3,6 +3,7 @@
 #include <vector>
 #include <set>
 #include <limits>
+#include <iomanip>
 #include "../HPPs/Jogo.hpp"
 #include "../HPPs/Treinador.hpp"
 #include "../HPPs/Jogador.hpp"
@@ -24,11 +25,19 @@ vector<Monstrinho*> Jogo :: escolherMonstrinho(Jogador* jogador){
     vector<Monstrinho*> equipe;
     vector<Monstrinho> monstrinhos;
     monstrinhos = Monstrinho::construirMonstrinhos();
-    cout<<"--------------------------------Escolha seu time--------------------------------"<<endl;
-    for(int i = 0; i < monstrinhos.size(); i++){
-        cout<<monstrinhos[i].getID()<<"-"<<monstrinhos[i].getNome()<<" - Custo: "<<monstrinhos[i].getTier()<<endl;
+    cout<<"-------------------- Escolha seu Time --------------------"<<endl;
+    cout<<endl;
+  
+    cout << left << setw(5) << "ID" << setw(15) << "Nome" << setw(7) << "Custo" << "|    " << setw(5) << "ID" << setw(15) << "Nome" << setw(5) << "Custo" <<endl;
+    cout << "----------------------------------------------------------" << endl;
+    for(int i = 0; i < monstrinhos.size()/2; i += 1){
+        cout << left << setw(5) << monstrinhos[i].getID() << setw(15) << monstrinhos[i].getNome() << setw(7) << monstrinhos[i].getTier();
+        if(i + 21 < monstrinhos.size()) {
+            cout << "|" << "    " << setw(5) << monstrinhos[i + 21].getID() << setw(15) << monstrinhos[i + 21].getNome() << setw(5) << monstrinhos[i + 21].getTier();
+        }
+        cout << endl;
     }
-   
+    
     int opcao;
     int moedas = 12;
     std::set<int> indicesAdicionados;
