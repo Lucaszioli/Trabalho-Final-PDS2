@@ -42,19 +42,26 @@ Clone o repositório utilizando o link
 ```
 https://github.com/Lucaszioli/Trabalho-Final-PDS2
 ```
-Em seguida vá para o diretório build
+Crie um diretório de build 
 ```
-cd Tests
+mkdir build
 ```
+Acesse o diretório criado 
 ```
 cd build
 ```
-Para executar os comandos no terminal:
-- `make` ou `make all` compila 
-- `make clean` apaga o executável 
-- `make run` executa 
-- `make rebuild` após fazer alguma alteração no código, esse comando vai apagar o executável, recompilar
-e executar o novo 
+Execute o comando 
+```
+cmake .. 
+```
+Compile o projeto usando o makefile gerado 
+```
+make
+```
+Execute o programa criado 
+```
+./Monstrinhos
+```
 
 ## Autores
 - [Henrique Dias](https://github.com/Henrique-Dias15)
