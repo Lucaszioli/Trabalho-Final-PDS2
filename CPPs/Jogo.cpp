@@ -26,7 +26,7 @@ vector<Monstrinho*> Jogo :: escolherMonstrinho(Jogador* jogador){
     monstrinhos = Monstrinho::construirMonstrinhos();
     cout<<"--------------------------------Escolha seu time--------------------------------"<<endl;
     for(int i = 0; i < monstrinhos.size(); i++){
-        cout<<monstrinhos[i].getID()<<"-"<<monstrinhos[i].getNome()<<"-"<<monstrinhos[i].getTier()<<endl;
+        cout<<monstrinhos[i].getID()<<"-"<<monstrinhos[i].getNome()<<" - Custo: "<<monstrinhos[i].getTier()<<endl;
     }
    
     int opcao;
