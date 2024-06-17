@@ -221,7 +221,10 @@ bool Ataque::fazerAtaque(Monstrinho &inimigo) {
         cout << endl;
         inimigo.setHPAtual(hpAtualInimigo - danoTotal);
         cout << "O inimigo perdeu " << danoTotal << " de HP!" << endl;
-
+        if (inimigo.getHPAtual() <= 0) {
+            cout << "O inimigo foi derrotado!" << endl;
+            inimigo.setHPAtual(0);
+        }
         quantidadeAtual--;
         return true;
     } else {
