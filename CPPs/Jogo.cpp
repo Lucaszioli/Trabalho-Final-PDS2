@@ -69,6 +69,7 @@ vector<Monstrinho*> Jogo :: criaEquipeBot(Bot* bot){
 
 void Jogo :: geraTurno(Jogador* jogador, Bot* bot){
     bool state = false;
+    int escolha;
     while(!state){   
         int opcao;
         int ataqueBot = rand() % 4;
@@ -95,7 +96,7 @@ void Jogo :: geraTurno(Jogador* jogador, Bot* bot){
                         bot->mudaEquipe();
                         jogador->receberItem();
                     }else{
-                        bot->getEquipe()[0]->atacar(jogador->getEquipe()[0],1);
+                        bot->getEquipe()[0]->atacar(jogador->getEquipe()[0],ataqueBot);
                         if(jogador->getEquipe()[0]->getHPAtual() <= 0){
                             jogador->mudaEquipe();
                             cout<<jogador->getEquipe()[0]->getNome();
@@ -103,11 +104,11 @@ void Jogo :: geraTurno(Jogador* jogador, Bot* bot){
                     }
                     state = true;
                 }else{
-                    bot->getEquipe()[0]->atacar(jogador->getEquipe()[0],escolha);
+                    bot->getEquipe()[0]->atacar(jogador->getEquipe()[0],ataqueBot);
                     if(jogador->getEquipe()[0]->getHPAtual() <= 0){
                         jogador->mudaEquipe();
                     }else{
-                        jogador->getEquipe()[0]->atacar(bot->getEquipe()[0],1);
+                        jogador->getEquipe()[0]->atacar(bot->getEquipe()[0],escolha);
                         if(bot->getEquipe()[0]->getHPAtual() <= 0){
                             bot->mudaEquipe();
                             jogador->receberItem();
@@ -122,7 +123,7 @@ void Jogo :: geraTurno(Jogador* jogador, Bot* bot){
         case 2:
             state = jogador->mudaEquipe();
             if(state == true){
-                bot->getEquipe()[0]->atacar(jogador->getEquipe()[0],1);
+                bot->getEquipe()[0]->atacar(jogador->getEquipe()[0],ataqueBot);
                 if(jogador->getEquipe()[0]->getHPAtual() <= 0){
                     jogador->mudaEquipe();
                 }
@@ -132,7 +133,7 @@ void Jogo :: geraTurno(Jogador* jogador, Bot* bot){
         case 3:
             state = jogador->usarItem();
             if(state == true){
-                bot->getEquipe()[0]->atacar(jogador->getEquipe()[0],1);
+                bot->getEquipe()[0]->atacar(jogador->getEquipe()[0],ataqueBot);
                 if(jogador->getEquipe()[0]->getHPAtual() <= 0){
                     jogador->mudaEquipe();
                 }
@@ -152,7 +153,7 @@ void Jogo :: iniciar(){
 
     if(start == "start"){
         do{
-            cout<<"--------------------------------Bem vindo ao Monstrinhos--------------------------------"<<endl;
+            cout<<"----------------------------Bem vindo ao Monstrinhos----------------------------"<<endl;
         
             cout<<"Escolha um nome para o seu Personagem."<<endl;
             cin>>nome;
@@ -175,5 +176,5 @@ void Jogo :: iniciar(){
             cout<<"Digite start para jogar novamente ou qualquer outra coisa para sair."<<endl;
             cin>>start;
         } while(start == "start");
-       }
+    }
 }
