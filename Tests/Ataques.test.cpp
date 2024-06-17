@@ -7,7 +7,7 @@ TEST_CASE("Testando fazer os ataques","[Ataque][use]"){
     vector<Ataque> ataques;
     Ataque a = Ataque(1, "teste", "Psíquico", 10 ,"teste", 10, 10);
     Ataque b = Ataque(1, "teste", "Lutador", 10 ,"teste", 10, 10);
-    Monstrinho* m = new Monstrinho(1, "teste", "teste", tipo, 100 , 100, 10, 3, {});
+    Monstrinho* m = new Monstrinho(1, "teste", tipo, "teste", 100 , 100, 10, 3, {});
     SECTION("Ataque funciona (2x)"){
         bool retorno = a.fazerAtaque(m[0]);
         REQUIRE(retorno == true);
@@ -21,7 +21,7 @@ TEST_CASE("Testando fazer os ataques","[Ataque][use]"){
         REQUIRE(b.getQuantidadeAtual() == b.getQuantidade()-1);
     }
     SECTION("Ataque Imune"){
-        Monstrinho* m = new Monstrinho(1, "teste", "teste", {"Fantasma"}, 100 , 100, 10, 3, {});
+        Monstrinho* m = new Monstrinho(1, "teste",{"Fantasma"},"teste", 100 , 100, 10, 3, {});
         b.setQuantidadeAtual(b.getQuantidade());
         bool retorno = b.fazerAtaque(m[0]);
         REQUIRE(retorno == true);

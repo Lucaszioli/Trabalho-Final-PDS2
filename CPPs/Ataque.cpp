@@ -26,17 +26,17 @@ unordered_map<string, unordered_map<string, double>> Ataque::gerarTabelaEfetivid
     tabela["Voador"]["Pedra"] = 0.5;
     tabela["Voador"]["Aço"] = 0.5;
     tabela["Voador"]["Elétrico"] = 0.5;
-    tabela["Voador"]["Planta"] = 2.0;
+    tabela["Voador"]["Grama"] = 2.0;
     tabela["Voador"]["Lutador"] = 2.0;
     tabela["Voador"]["Inseto"] = 2.0;
     tabela["Veneno"]["Fantasma"] = 0.5;
     tabela["Veneno"]["Terra"] = 0.5;
     tabela["Veneno"]["Pedra"] = 0.5;
-    tabela["Veneno"]["Planta"] = 2.0;
+    tabela["Veneno"]["Grama"] = 2.0;
     tabela["Veneno"]["Inseto"] = 2.0;
     tabela["Terra"]["Voador"] = 0.0;
     tabela["Terra"]["Inseto"] = 0.5;
-    tabela["Terra"]["Planta"] = 0.5;
+    tabela["Terra"]["Grama"] = 0.5;
     tabela["Terra"]["Veneno"] = 2.0;
     tabela["Terra"]["Pedra"] = 2.0;
     tabela["Terra"]["Fogo"] = 2.0;
@@ -50,7 +50,7 @@ unordered_map<string, unordered_map<string, double>> Ataque::gerarTabelaEfetivid
     tabela["Inseto"]["Voador"] = 0.5;
     tabela["Inseto"]["Fantasma"] = 0.5;
     tabela["Inseto"]["Fogo"] = 0.5;
-    tabela["Inseto"]["Planta"] = 2.0;
+    tabela["Inseto"]["Grama"] = 2.0;
     tabela["Inseto"]["Psíquico"] = 2.0;
     tabela["Fantasma"]["Normal"] = 0.0;
     tabela["Fantasma"]["Psíquico"] = 0.0;
@@ -60,25 +60,25 @@ unordered_map<string, unordered_map<string, double>> Ataque::gerarTabelaEfetivid
     tabela["Fogo"]["Água"] = 0.5;
     tabela["Fogo"]["Dragão"] = 0.5;
     tabela["Fogo"]["Inseto"] = 2.0;
-    tabela["Fogo"]["Planta"] = 2.0;
+    tabela["Fogo"]["Grama"] = 2.0;
     tabela["Fogo"]["Gelo"] = 2.0;
     tabela["Água"]["Água"] = 0.5;
     tabela["Água"]["Dragão"] = 0.5;
-    tabela["Água"]["Planta"] = 0.5;
+    tabela["Água"]["Grama"] = 0.5;
     tabela["Água"]["Fogo"] = 2.0;
     tabela["Água"]["Terra"] = 2.0;
     tabela["Água"]["Pedra"] = 2.0;
-    tabela["Planta"]["Planta"] = 0.5;
-    tabela["Planta"]["Dragão"] = 0.5;
-    tabela["Planta"]["Fogo"] = 0.5;
-    tabela["Planta"]["Voador"] = 0.5;
-    tabela["Planta"]["Inseto"] = 0.5;
-    tabela["Planta"]["Água"] = 2.0;
-    tabela["Planta"]["Terra"] = 2.0;
-    tabela["Planta"]["Pedra"] = 2.0;
+    tabela["Grama"]["Grama"] = 0.5;
+    tabela["Grama"]["Dragão"] = 0.5;
+    tabela["Grama"]["Fogo"] = 0.5;
+    tabela["Grama"]["Voador"] = 0.5;
+    tabela["Grama"]["Inseto"] = 0.5;
+    tabela["Grama"]["Água"] = 2.0;
+    tabela["Grama"]["Terra"] = 2.0;
+    tabela["Grama"]["Pedra"] = 2.0;
     tabela["Elétrico"]["Dragão"] = 0.5;
     tabela["Elétrico"]["Elétrico"] = 0.5;
-    tabela["Elétrico"]["Planta"] = 0.5;
+    tabela["Elétrico"]["Grama"] = 0.5;
     tabela["Elétrico"]["Terra"] = 0.0;
     tabela["Elétrico"]["Água"] = 2.0;
     tabela["Elétrico"]["Voador"] = 2.0;
@@ -90,7 +90,7 @@ unordered_map<string, unordered_map<string, double>> Ataque::gerarTabelaEfetivid
     tabela["Gelo"]["Água"] = 0.5;
     tabela["Gelo"]["Aço"] = 0.5;
     tabela["Gelo"]["Gelo"] = 0.5;
-    tabela["Gelo"]["Planta"] = 2.0;
+    tabela["Gelo"]["Grama"] = 2.0;
     tabela["Gelo"]["Dragão"] = 2.0;
     tabela["Gelo"]["Voador"] = 2.0;
     tabela["Dragão"]["Aço"] = 0.5;
@@ -193,18 +193,12 @@ vector<Ataque> Ataque::construirAtaques() {
     }
 
 bool Ataque::fazerAtaque(Monstrinho &inimigo) {
-    if (quantidadeAtual <= 0) {
-        cout << "Ataque esgotado!" << endl;
-        return false;
-    }
-    srand(time(NULL));
     double chance = static_cast<double>(rand()) / RAND_MAX;
 
     if (chance <= chanceAcerto) {
-        cout << "O ataque acertou!";
-
         vector<string> tiposInimigo = inimigo.getTipo();
         double multiplicador = calcularEfetividade(tipo, tiposInimigo);
+            cout << getNome() << "!";
 
         if (multiplicador > 1.0) {
             cout << " E foi super efetivo!" << endl;
@@ -215,19 +209,24 @@ bool Ataque::fazerAtaque(Monstrinho &inimigo) {
         else if (multiplicador < 1.0) {
             cout << " mas foi pouco efetivo..." << endl;
         }
+        else{
+            cout << endl;
+        }
         int danoTotal = static_cast<int>(dano * multiplicador);
         int hpAtualInimigo = inimigo.getHPAtual();
         cout << endl;
         inimigo.setHPAtual(hpAtualInimigo - danoTotal);
-        cout << "O inimigo perdeu " << danoTotal << " de HP!" << endl;
+        cout << inimigo.getNome() << " perdeu " << danoTotal << " de HP!" << endl;
         if (inimigo.getHPAtual() <= 0) {
-            cout << "O inimigo foi derrotado!" << endl;
+            cout << "O " <<inimigo.getNome()<< " foi derrotado!" << endl;
             inimigo.setHPAtual(0);
         }
         quantidadeAtual--;
         return true;
     } else {
-        cout << "O ataque falhou!" << endl;
+        cout << getNome() << "!";
+        cout << " O ataque errou!" << endl;
+        cout << endl;
         quantidadeAtual--;
         return true;
     }

@@ -16,7 +16,6 @@
 
 int main(){
     srand(static_cast<unsigned int>(time(0)));
-    std::cout<<"Foi"<<std::endl;
     Jogo jogo;
     jogo.iniciar();
 }

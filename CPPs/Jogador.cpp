@@ -18,51 +18,60 @@ bool Jogador::mudaEquipe()
 {
     while (true)
     {
-        if (verificaEquipe())
-        {
-            if (equipe[0]->getHPAtual() <= 0)
-            {
-                cout << "O " << equipe[0]->getNome() << " foi derrotado!" << endl;
-                cout << "Escolha um monstrinho para substituir o que foi derrotado: " << endl;
+        try{
+            if (verificaEquipe())
+            {   cout<<"--------------------------------------------------------------------------------"<<endl;
+                if (equipe[0]->getHPAtual() <= 0)
+                {
+                    cout << "Escolha um monstrinho para substituir o que foi derrotado: " << endl;
+                }
+                else
+                {
+                    cout << "Escolha outro monstrinho: " << endl;
+                }
+                cout<<"--------------------------------------------------------------------------------"<<endl;
+                imprimeEquipe();
+                cout<<equipe.size()+1<<" - Voltar"<<endl;
+                cout<<"--------------------------------------------------------------------------------"<<endl;
+                int escolha;
+                cin >> escolha;
+                if(std::cin.fail()) { // Se a entrada falhar (por exemplo, o usuário digitou uma string)
+                    std::cin.clear(); // Limpa o estado de falha
+                    throw EscolhaError("Escolha diferente do número possível de opções");
+                }
+                if (escolha < 1 || escolha > equipe.size()+1)
+                {
+                    cout << "Escolha inválida!" << endl;
+                    continue;
+                }
+                if(escolha == equipe.size()+1){
+                    return false;
+                }
+                if (equipe[escolha - 1]->getHPAtual() <= 0)
+                {
+                    cout << "Esse monstrinho está desmaiado!" << endl;
+                    continue;
+                }
+                if (equipe[escolha - 1] == equipe[0] && equipe[0]->getHPAtual() > 0)
+                {
+                    cout << "Esse monstrinho já está em batalha!" << endl;
+                    continue;
+                }
+                if (escolha >= 1 && escolha <= equipe.size() && equipe[escolha - 1]->getHPAtual() > 0 && equipe[escolha - 1] != equipe[0])
+                {
+                    equipe.push_back(equipe[0]);
+                    equipe[0] = equipe[escolha - 1];
+                    equipe.erase(equipe.begin() + escolha - 1);
+                    std::cout << "Agora o Monstrinho: " << equipe[0]->getNome() << " está em batalha!" << std::endl;
+                    break;
+                }
             }
-            else
-            {
-                cout << "Escolha outro monstrinho: " << endl;
-            }
-            imprimeEquipe();
-            cout<<equipe.size()+1<<"- Voltar"<<endl;
-            int escolha;
-            cin >> escolha;
-            if(std::cin.fail()) { // Se a entrada falhar (por exemplo, o usuário digitou uma string)
-                std::cin.clear(); // Limpa o estado de falha
-                throw EscolhaError("Escolha diferente do numero possível de opções");
-            }
-            if (escolha < 1 || escolha > equipe.size()+1)
-            {
-                cout << "Escolha inválida!" << endl;
-                continue;
-            }
-            if(escolha == equipe.size()+1){
-                return false;
-            }
-            if (equipe[escolha - 1]->getHPAtual() <= 0)
-            {
-                cout << "Esse monstrinho está desmaiado!" << endl;
-                continue;
-            }
-            if (equipe[escolha - 1] == equipe[0] && equipe[0]->getHPAtual() > 0)
-            {
-                cout << "Esse monstrinho já está em batalha!" << endl;
-                continue;
-            }
-            if (escolha >= 1 && escolha <= equipe.size() && equipe[escolha - 1]->getHPAtual() > 0 && equipe[escolha - 1] != equipe[0])
-            {
-                equipe.push_back(equipe[0]);
-                equipe[0] = equipe[escolha - 1];
-                equipe.erase(equipe.begin() + escolha - 1);
-                std::cout << "Agora o Montrinho: " << equipe[0]->getNome() << " está em batalha!" << std::endl;
-                break;
-            }
+        }catch(EscolhaError& e){
+            cout<<"--------------------------------------------------------------------------------"<<endl;
+            cout<<e.what()<<endl;
+            cout<<"--------------------------------------------------------------------------------"<<endl; 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.get();
         }
     }
     return true;
@@ -106,7 +115,7 @@ bool Jogador::usarItem(){
         if(inventario.size() == 0){
             throw BadRequestError("Você não possui itens");
         }
-        cout<<"------------------------------------------------------------"<<endl;
+        cout<<"--------------------------------------------------------------------------------"<<endl;
         for(auto& item:inventario){
             cout<<i<<"- "<<item->getNome()<<endl;
             i++;
@@ -114,14 +123,14 @@ bool Jogador::usarItem(){
         cout<<i<<"- Voltar"<<endl; 
         int escolhaItem;
         cout<<"Qual item você quer usar?"<<endl;
-        cout<<"------------------------------------------------------------"<<endl;
+        cout<<"--------------------------------------------------------------------------------"<<endl;
         cin>>escolhaItem;
         if(std::cin.fail()) { // Se a entrada falhar (por exemplo, o usuário digitou uma string)
             std::cin.clear(); // Limpa o estado de falha
-            throw EscolhaError("Escolha diferente do numero possível de opções");
+            throw EscolhaError("Escolha diferente do número possível de opções");
         }
         if(escolhaItem > i || escolhaItem<1){
-            throw EscolhaError("Escolha diferente do numero possível de opções");
+            throw EscolhaError("Escolha diferente do número possível de opções");
         }
         if(escolhaItem != i){
             Item* item = inventario[escolhaItem-1];
@@ -132,18 +141,18 @@ bool Jogador::usarItem(){
             do{
                 int j = 1;
                 int escolhaMonstro;
-                cout<<"------------------------------------------------------------"<<endl;
+                cout<<"--------------------------------------------------------------------------------"<<endl;
                 for(auto& monstro:equipe){
                     cout<<j<<"- "<<monstro->getNome()<<" HP:"<<monstro->getHPAtual()<<"/"<<monstro->getHP()<<endl;
                     j++;
                 }
                 cout<<j<<"- Voltar"<<endl; 
                 cout<< "Em qual monstro você deseja usar o item?"<<endl;
-                cout<<"------------------------------------------------------------"<<endl;
+                cout<<"--------------------------------------------------------------------------------"<<endl;
                 cin >> escolhaMonstro;
                 if(std::cin.fail()) { // Se a entrada falhar (por exemplo, o usuário digitou uma string)
                     std::cin.clear(); // Limpa o estado de falha
-                    throw EscolhaError("Escolha diferente do numero possível de opções");
+                    throw EscolhaError("Escolha diferente do número possível de opções");
                 }
                 if(escolhaMonstro > j || escolhaMonstro < 1){
                     throw EscolhaError("Escolha diferente do numero possível de opções");
@@ -181,29 +190,31 @@ bool Jogador::usarItem(){
         }
         
         }catch(const BadRequestError& e){
-            cout<<"------------------------------------------------------------"<<endl;  
+            cout<<"--------------------------------------------------------------------------------"<<endl; 
             cout<<e.what()<<endl;
-            cout<<"------------------------------------------------------------"<<endl;  
+            cout<<"--------------------------------------------------------------------------------"<<endl;
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.get();
             erro = 0;
             usou = false;
         }catch(const EscolhaError& e){
-            cout<<"------------------------------------------------------------"<<endl;  
+            cout<<"--------------------------------------------------------------------------------"<<endl; 
             cout<<e.what()<<endl;
-            cout<<"------------------------------------------------------------"<<endl;  
+            cout<<"--------------------------------------------------------------------------------"<<endl;  
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin.get();
             erro = 1;
         }catch(const ItemError& e){
-            cout<<"------------------------------------------------------------"<<endl;  
+            cout<<"--------------------------------------------------------------------------------"<<endl;  
             cout<<e.what()<<endl;
-            cout<<"------------------------------------------------------------"<<endl;
+            cout<<"--------------------------------------------------------------------------------"<<endl;
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin.get();
             erro = 1;
         }catch(const std::exception& e){
-            cout<<"-----------------------------------------------------------"<<endl;  
+            cout<<"--------------------------------------------------------------------------------"<<endl; 
             cout<<e.what()<<endl;
-            cout<<"------------------------------------------------------------"<<endl;
+            cout<<"--------------------------------------------------------------------------------"<<endl;
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin.get();
             erro = 1;

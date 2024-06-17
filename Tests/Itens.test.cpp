@@ -84,7 +84,7 @@ TEST_CASE("Testando o uso da Cura", "[Cura][Item][use]"){
     Cura c;
     vector<string> tipo = {"teste1","teste2"};
     vector<Ataque> ataques = {};
-    Monstrinho* m = new Monstrinho(1, "teste", "teste", tipo, 100 , 10, 10, 3, ataques);
+    Monstrinho* m = new Monstrinho(1, "teste", tipo, "teste", 100 , 10, 10, 3, ataques);
     SECTION("Cura realizada com sucesso(Max)"){
         c.setCura(100);
         c.usarItem(m);
@@ -122,7 +122,7 @@ TEST_CASE("Testando o uso do Revive", "[Revive][Item][use]"){
     Revive r;
     vector<string> tipo = {"teste1","teste2"};
     vector<Ataque> ataques = {};
-    Monstrinho* m = new Monstrinho(1, "teste", "teste", tipo, 100 , 0, 10, 3, ataques);
+    Monstrinho* m = new Monstrinho(1, "teste", tipo, "teste", 100 , 0, 10, 3, ataques);
     SECTION("Revive realizado com sucesso (Max)"){
         r.setRaridade("Max");
         m->setHPAtual(0);
@@ -147,7 +147,7 @@ TEST_CASE("Testando o uso da Estamina", "[Estamina][Item][use]"){
     Ataque a =  Ataque(1, "teste", "teste", 10, "teste",50, 10);
     vector<Ataque> ataques;
     ataques.push_back(a);
-    Monstrinho* m = new Monstrinho(1, "teste", "teste", tipo, 100 , 100, 10, 3, ataques);
+    Monstrinho* m = new Monstrinho(1, "teste", tipo, "teste", 100 , 100, 10, 3, ataques);
 
 
     SECTION("Uso da Estamina realizado com sucesso (Max)"){
@@ -220,7 +220,7 @@ TEST_CASE("Jogador usa o item","[Item][Jogador][use]"){
     Ataque a = Ataque(1, "teste", "teste", 10, "teste",50, 10);
     vector<Ataque> ataques;
     ataques.push_back(a);
-    Monstrinho* m = new Monstrinho(1, "teste", "teste", tipo, 100 , 10, 10, 3, ataques);
+    Monstrinho* m = new Monstrinho(1, "teste", tipo,"teste", 100 , 10, 10, 3, ataques);
     Jogador j = Jogador(1, "teste",{m});
     Item* c;
     SECTION("Jogador usa o item (Cura)"){
