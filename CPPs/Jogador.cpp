@@ -65,6 +65,8 @@ bool Jogador::mudaEquipe()
                     std::cout << "Agora o Monstrinho: " << equipe[0]->getNome() << " está em batalha!" << std::endl;
                     break;
                 }
+            }else{
+                break;
             }
         }catch(EscolhaError& e){
             cout<<"--------------------------------------------------------------------------------"<<endl;
