@@ -71,11 +71,18 @@ void Jogo :: geraTurno(Jogador* jogador, Bot* bot){
     bool state = false;
     while(!state){   
         int opcao;
+        int ataqueBot = rand() % 4;
+        float vidaBot = static_cast<float>(bot->getEquipe()[0]->getHPAtual())/bot->getEquipe()[0]->getHP(); 
+        vidaBot = static_cast<int>(vidaBot * 1000) / 10.0f;
+         
         cout<<"--------------------------------Turno do Jogador--------------------------------"<<endl;
+        cout<<"Monstrinho adversário: " << bot->getEquipe()[0]->getNome()<<" - HP: "<<vidaBot<<"%"<<endl;
+        cout<<"--------------------------------------------------------------------------------"<<endl;
         cout<<"Escolha uma opção:"<<endl;
         cout<<"1 - Atacar"<<endl;
         cout<<"2 - Mudar monstrinho"<<endl;
         cout<<"3 - Usar item"<<endl;
+        cout<<"--------------------------------------------------------------------------------"<<endl;
         cin>>opcao;
         switch (opcao)
         {
