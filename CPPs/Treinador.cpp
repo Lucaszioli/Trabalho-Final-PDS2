@@ -23,7 +23,7 @@ vector<Monstrinho *> Treinador::getEquipe()
 bool Treinador::verificaEquipe()
 {
     return count_if(equipe.begin(), equipe.end(), [](Monstrinho *monstrinho)
-                    { return monstrinho->getHP() > 0; }) > 0;
+                    { return monstrinho->getHPAtual() > 0; }) > 0;
 }
 
 void Treinador::imprimeEquipe()
