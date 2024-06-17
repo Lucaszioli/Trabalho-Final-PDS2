@@ -39,7 +39,8 @@ public:
      *
      * Esta função substitui a função mudaEquipe() da classe base.
      */
-    void mudaEquipe() override;
+    bool mudaEquipe() override;
+
 };
 ;
 

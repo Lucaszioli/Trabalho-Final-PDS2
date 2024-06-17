@@ -199,7 +199,6 @@ bool Ataque::fazerAtaque(Monstrinho &inimigo) {
     }
     srand(time(NULL));
     double chance = static_cast<double>(rand()) / RAND_MAX;
-        cout << "Chance: " << chance << endl;
 
     if (chance <= chanceAcerto) {
         cout << "O ataque acertou!";
@@ -230,7 +229,7 @@ bool Ataque::fazerAtaque(Monstrinho &inimigo) {
     } else {
         cout << "O ataque falhou!" << endl;
         quantidadeAtual--;
-        return false;
+        return true;
     }
 }
 

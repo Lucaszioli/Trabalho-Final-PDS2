@@ -26,14 +26,14 @@ bool Treinador::verificaEquipe()
                     { return monstrinho->getHP() > 0; }) > 0;
 }
 
-void Treinador::mudaEquipe()
-{
-}
-
 void Treinador::imprimeEquipe()
 {
     for (int i = 0; i < equipe.size(); i++)
     {
-        cout << i + 1 << " - " << equipe[i]->getNome() << " | Vida: " << equipe[i]->getHP() << endl;
+        cout << i + 1 << " - " << equipe[i]->getNome() << " | Vida: " << equipe[i]->getHPAtual() << "/" << equipe[i]->getHP()<< endl;
     }
+}
+
+void Treinador :: colocaMonstrinho(Monstrinho monstrinho){
+    equipe.push_back(new Monstrinho(monstrinho));
 }
