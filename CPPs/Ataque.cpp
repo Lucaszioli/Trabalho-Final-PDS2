@@ -197,14 +197,9 @@ bool Ataque::fazerAtaque(Monstrinho &inimigo) {
 
     if (chance <= chanceAcerto) {
         vector<string> tiposInimigo = inimigo.getTipo();
-        cout << "Tipo do Ataque" << tipo << endl;
-        for(auto& tipo:tiposInimigo){
-            cout<<"Tipo Inimigo: "<<tipo<<" ";
-        }
-        cout<<endl;
         double multiplicador = calcularEfetividade(tipo, tiposInimigo);
             cout << getNome() << "!";
-        cout << "Multiplicador" << multiplicador << endl;
+
         if (multiplicador > 1.0) {
             cout << " E foi super efetivo!" << endl;
         } 
@@ -217,7 +212,6 @@ bool Ataque::fazerAtaque(Monstrinho &inimigo) {
         else{
             cout << endl;
         }
-        cout << dano << endl;
         int danoTotal = static_cast<int>(dano * multiplicador);
         int hpAtualInimigo = inimigo.getHPAtual();
         cout << endl;
@@ -230,7 +224,9 @@ bool Ataque::fazerAtaque(Monstrinho &inimigo) {
         quantidadeAtual--;
         return true;
     } else {
-        cout << "O ataque errou!" << endl;
+        cout << getNome() << "!";
+        cout << " O ataque errou!" << endl;
+        cout << endl;
         quantidadeAtual--;
         return true;
     }
