@@ -192,6 +192,7 @@ void Jogo :: geraTurno(Jogador* jogador, Bot* bot){
 }
 
 void Jogo :: iniciar(){
+    system("clear");
     vector<Monstrinho*> equipe;
     vector<Monstrinho*> equipeBot;
     string nome;
