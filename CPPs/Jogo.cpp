@@ -196,8 +196,17 @@ void Jogo :: iniciar(){
     vector<Monstrinho*> equipeBot;
     string nome;
     std::string start;
-    cout<<"Digite start no terminal para iniciar o jogo."<<endl;
-    cin>>start;
+    cout << "___  ___                _        _       _               " << endl;
+    cout << "|  \\/  |               | |      (_)     | |              " << endl;
+    cout << "| .  . | ___  _ __  ___| |_ _ __ _ _ __ | |__   ___  ___ " << endl;
+    cout << "| |\\/| |/ _ \\| '_ \\/ __| __| '__| | '_ \\| '_ \\ / _ \\/ __|" << endl;
+    cout << "| |  | | (_) | | | \\__ \\ |_| |  | | | | | | | | (_) \\__ \\" << endl;
+    cout << "\\_|  |_/\\___/|_| |_|___/\\__|_|  |_|_| |_|_| |_|\\___/|___/" << endl;
+    cout << "                                                         " << endl;
+    cout << "Um Projeto por: Otávio Serafim, Malu Lauar, Lucas Zioli, Matheus Gregor e Henrique Joaquim!" << endl;
+    cout <<endl;
+    cout << "Digite 'start' para iniciar o jogo." << endl;
+    cin >> start;
 
     if(start == "start"){
         do{
