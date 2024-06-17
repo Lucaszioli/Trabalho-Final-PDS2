@@ -1,11 +1,13 @@
 #include "../HPPs/Monstrinho.hpp"
 #include "../HPPs/Ataque.hpp"
 #include <fstream>
+#include <limits>
 #include <sstream>
 #include <exception>
 #include <stdexcept>
 #include <iostream>
 #include "../ERR/EscolhaError.hpp"
+#include "../ERR/AtaqueError.hpp"
 
 int Monstrinho::getID() {
     return ID;
@@ -84,9 +86,9 @@ vector <Monstrinho> Monstrinho::construirMonstrinhos() {
 
         int ID = stoi(dados[0]);
         string nome = dados[1];
-        string descricao = dados[2];
         vector<string> tipo;
-        stringstream ssTipo(dados[3]);
+        stringstream ssTipo(dados[2]);
+        string descricao = dados[3];
         string tipoStr;
         while (getline(ssTipo, tipoStr, ';')) { // Separa os tipos
             tipo.push_back(tipoStr); // Adiciona cada tipo ao vetor de tipos
@@ -111,7 +113,7 @@ vector <Monstrinho> Monstrinho::construirMonstrinhos() {
         
 
 
-        monstrinhos.push_back(Monstrinho(ID, nome, descricao, tipo, HP, HPAtual, velocidade, tier, ataques));
+        monstrinhos.push_back(Monstrinho(ID, nome, tipo, descricao, HP, HPAtual, velocidade, tier, ataques));
     }
 
     return monstrinhos;
