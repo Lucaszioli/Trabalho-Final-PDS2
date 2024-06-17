@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <set>
+#include <limits>
 #include "../HPPs/Jogo.hpp"
 #include "../HPPs/Treinador.hpp"
 #include "../HPPs/Jogador.hpp"
@@ -12,7 +13,7 @@
 #include "../HPPs/Cura.hpp"
 #include "../HPPs/Revive.hpp"
 #include "../HPPs/Estamina.hpp"
-
+#include "../ERR/EscolhaError.hpp"
 
 using std::vector;
 using std::cout;
