@@ -125,6 +125,8 @@ void Jogo :: geraTurno(Jogador* jogador, Bot* bot){
         cout<<"--------------------------------Turno do Jogador--------------------------------"<<endl;
         cout<<"Monstrinho adversário: " << bot->getEquipe()[0]->getNome()<<" - HP: "<<vidaBot<<"%"<<endl;
         cout<<"--------------------------------------------------------------------------------"<<endl;
+        cout<<"Seu Monstrinho: " << jogador->getEquipe()[0]->getNome()<<" - HP: "<<jogador->getEquipe()[0]->getHPAtual()<<"/"<<jogador->getEquipe()[0]->getHP()<<endl;
+        cout<<"--------------------------------------------------------------------------------"<<endl;
         cout<<"Escolha uma opção:"<<endl;
         cout<<"1 - Atacar"<<endl;
         cout<<"2 - Mudar monstrinho"<<endl;
