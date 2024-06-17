@@ -9,14 +9,15 @@ vector<std::string> Bot::getFala()
     return fala;
 }
 
-void Bot::mudaEquipe()
+bool Bot::mudaEquipe()
 {
     if (verificaEquipe())
     {
-        if (equipe[0]->getHP() <= 0)
+        if (equipe[0]->getHPAtual() <= 0)
         {
             equipe.push_back(equipe[0]);
             equipe.erase(equipe.begin());
         }
     }
+    return true;
 }

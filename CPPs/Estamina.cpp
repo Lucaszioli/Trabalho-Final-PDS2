@@ -40,15 +40,17 @@ bool Estamina::usarItem(Monstrinho* monstro){
             if(monstro->getHPAtual() == 0){
                 throw EstaminaError("O monstrinho já está morto, use um Revive ou escolha outro monstro");
             }
-            vector<Ataque*> ataques = monstro -> getAtaques();
+            vector<Ataque>& ataques = monstro -> getAtaques();
             int i = 1;
             int escolha;
+            cout<<"------------------------------------------------------------"<<endl;
             for(auto& ataque:ataques){
-                cout<<i<<"- "<<ataque->getNome()<<"Estamina: "<<ataque->getQuantidadeAtual()<<"/"<<ataque->getQuantidade()<<endl;
+                cout<<i<<"- "<<ataque.getNome()<<"Estamina: "<<ataque.getQuantidadeAtual()<<"/"<<ataque.getQuantidade()<<endl;
                 i++;
             }
             cout<<i<<"- Voltar"<<endl;
             cout<<"Escolha um ataque para recuperar Estamina"<<endl;
+            cout<<"------------------------------------------------------------"<<endl;
             cin>>escolha;
             if(escolha>i || escolha<1){
                 throw EscolhaError("Escolha diferente do numero possível de opções");
@@ -56,18 +58,18 @@ bool Estamina::usarItem(Monstrinho* monstro){
             if(escolha == i){
                 return true;
             }
-            Ataque* ataqueRenovado = ataques[escolha-1];
-            int atual = ataqueRenovado->getQuantidadeAtual();
-            int maximo = ataqueRenovado->getQuantidade();
+            Ataque& ataqueRenovado = ataques[escolha-1];
+            int atual = ataqueRenovado.getQuantidadeAtual();
+            int maximo = ataqueRenovado.getQuantidade();
             if(maximo == atual){
                 throw EscolhaError("O Ataque ja apresenta Estamina maxima");
             }
             int quantidade = getEnergia();
             int mudanca = quantidade + atual;
             if(mudanca > maximo){
-                ataqueRenovado->setQuantidadeAtual(maximo);
+                ataqueRenovado.setQuantidadeAtual(maximo);
             }else{
-                ataqueRenovado->setQuantidadeAtual(mudanca);
+                ataqueRenovado.setQuantidadeAtual(mudanca);
             }
             erro = 0;
         }catch(EscolhaError& e){

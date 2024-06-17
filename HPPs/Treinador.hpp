@@ -64,12 +64,19 @@ public:
      *
      * Este método deve ser implementado nas classes derivadas.
      */
-    virtual void mudaEquipe();
+    virtual bool mudaEquipe() = 0;
 
     /**
      * @brief Imprime a equipe de monstrinhos do treinador.
      */
     void imprimeEquipe();
+    
+    /**
+     * @brief Coloca um monstrinho na equipe do treinador.
+     *
+     * @param monstrinho O monstrinho a ser colocado na equipe.
+     */
+    void colocaMonstrinho(Monstrinho monstrinho);
 };
 
 #endif
