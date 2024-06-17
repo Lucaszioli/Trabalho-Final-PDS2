@@ -1,11 +1,13 @@
 #include "../HPPs/Monstrinho.hpp"
 #include "../HPPs/Ataque.hpp"
 #include <fstream>
+#include <limits>
 #include <sstream>
 #include <exception>
 #include <stdexcept>
 #include <iostream>
 #include "../ERR/EscolhaError.hpp"
+#include "../ERR/AtaqueError.hpp"
 
 int Monstrinho::getID() {
     return ID;
@@ -47,40 +49,16 @@ vector<Ataque>& Monstrinho::getAtaques() {
     return this->ataques;
 }
 
-bool Monstrinho :: atacar(Monstrinho* monstroAtacante, Monstrinho* monstroAtacado){
-    int opcao;
+bool Monstrinho :: atacar(Monstrinho* monstroAtacado, int escolha){
     bool state = false;
     while(!state){
         try{
-            cout<<"O Monstrinho "<<monstroAtacante->getNome()<<" esta atacando"<<endl;
-            cout<<"Escolha um ataque:"<<endl;
-            int i = 1;
-            for(auto& ataque:monstroAtacante->getAtaques()){
-                cout<<i<<"-"<<monstroAtacante->getAtaques()[i-1].getNome()<<endl;
-                i++;
+            cout<<getNome()<<" usou ";
+            state = getAtaques()[escolha].fazerAtaque(monstroAtacado[0]);    
+        }   catch(std::exception& e){
+                cout<<e.what()<<endl;
+                state = false;
             }
-            cout<<i<<"- Voltar"<<endl;
-            cin>>opcao;    
-            if(std::cin.fail()) { // Se a entrada falhar (por exemplo, o usuário digitou uma string)
-                std::cin.clear(); // Limpa o estado de falha
-                throw EscolhaError("Escolha diferente do numero possível de opções");
-            }
-            if(opcao > i || opcao < 1){
-                throw EscolhaError("Escolha diferente do numero possível de opções");
-            }
-            else if(opcao == i){
-                return false;
-            }else{
-                state = monstroAtacante->getAtaques()[opcao-1].fazerAtaque(monstroAtacado[0]);    
-            }
-                
-        }catch(EscolhaError& e){
-            cout<<e.what()<<endl;
-            state = false;
-        }catch(std::exception& e){
-            cout<<e.what()<<endl;
-            state = false;
-        }
     }
     return state;
 }
@@ -108,9 +86,9 @@ vector <Monstrinho> Monstrinho::construirMonstrinhos() {
 
         int ID = stoi(dados[0]);
         string nome = dados[1];
-        string descricao = dados[2];
         vector<string> tipo;
-        stringstream ssTipo(dados[3]);
+        stringstream ssTipo(dados[2]);
+        string descricao = dados[3];
         string tipoStr;
         while (getline(ssTipo, tipoStr, ';')) { // Separa os tipos
             tipo.push_back(tipoStr); // Adiciona cada tipo ao vetor de tipos
@@ -135,8 +113,57 @@ vector <Monstrinho> Monstrinho::construirMonstrinhos() {
         
 
 
-        monstrinhos.push_back(Monstrinho(ID, nome, descricao, tipo, HP, HPAtual, velocidade, tier, ataques));
+        monstrinhos.push_back(Monstrinho(ID, nome, tipo, descricao, HP, HPAtual, velocidade, tier, ataques));
     }
 
     return monstrinhos;
+}
+
+
+int Monstrinho::escolhaAtaque(){
+    int opcao;
+    bool erro;
+    do{
+        try{
+            cout<<"--------------------------------------------------------------------------------"<<endl;
+            cout<<"O Monstrinho "<<getNome()<<" esta atacando"<<endl;
+            cout<<"Escolha um ataque:"<<endl;
+            int i = 1;
+            for(auto& ataque:getAtaques()){
+                cout<<i<<"-"<<getAtaques()[i-1].getNome()<<" - Estamina: "<<getAtaques()[i-1].getQuantidadeAtual()<<"/"<<getAtaques()[i-1].getQuantidade()<<" Dano:"<<getAtaques()[i-1].getDano()<<endl;
+                i++;
+            }
+            cout<<i<<"- Voltar"<<endl;
+            cout<<"--------------------------------------------------------------------------------"<<endl;
+            cin>>opcao;    
+            if(std::cin.fail()) { // Se a entrada falhar (por exemplo, o usuário digitou uma string)
+                std::cin.clear(); // Limpa o estado de falha
+                throw EscolhaError("Escolha diferente do número possível de opções");
+            }
+            if(opcao > i || opcao < 1){
+                erro = 1;
+                throw EscolhaError("Escolha diferente do número possível de opções");
+            }
+            if(getAtaques()[opcao-1].getQuantidadeAtual()<=0 && opcao != i ){
+                throw AtaqueError("Ataque sem energia, por favor escolha outro");
+            }
+            erro = false;
+        }catch(EscolhaError& e){
+            cout<<"--------------------------------------------------------------------------------"<<endl; 
+            cout<<e.what()<<endl;
+            cout<<"--------------------------------------------------------------------------------"<<endl; 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.get();
+            erro = 1;
+        }catch(AtaqueError& e){
+            cout<<"--------------------------------------------------------------------------------"<<endl; 
+            cout<<e.what()<<endl;
+            cout<<"--------------------------------------------------------------------------------"<<endl;  
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.get();
+            erro = 1;
+        }
+    }while(erro == 1);
+    
+    return opcao-1;
 }

@@ -43,7 +43,7 @@ public:
      * 
      * @param ataques Os ataques do monstrinho.
      */
-    Monstrinho(int ID, string nome, string descricao, vector<string> tipo, int HP, int HPAtual, int velocidade, int tier, vector<Ataque> ataques)
+    Monstrinho(int ID, string nome, vector<string> tipo,string descricao, int HP, int HPAtual, int velocidade, int tier, vector<Ataque> ataques)
         : ID(ID), nome(nome), descricao(descricao), tipo(tipo), HP(HP), HPAtual(HPAtual), velocidade(velocidade), tier(tier), ataques(ataques) {}
 
     /**
@@ -119,10 +119,10 @@ public:
     /**
      * @brief Ataca um monstrinho.
      * 
-     * @param monstroAtacante O monstrinho que está atacando.
      * @param monstroAtacado O monstrinho que está sendo atacado.
+     * @param escolha Valor da escolha feita pelo usuário
      */
-    bool atacar(Monstrinho* monstroAtacante, Monstrinho* monstroAtacado);
+    bool atacar(Monstrinho* monstroAtacado, int escolha);
 
     /**
      * @brief Constrói uma lista de monstrinhos a partir de um arquivo CSV.
@@ -130,6 +130,13 @@ public:
      * @return Um vetor com todos os monstrinhos do arquivo CSV.
      */
     static vector<Monstrinho> construirMonstrinhos();
+
+    /**
+     * @brief Escolhe um ataque para ser utilizado.
+     *
+     * @return O valor de escolha de 0 a 4 
+     */
+    int escolhaAtaque();
 };
 
 #endif
