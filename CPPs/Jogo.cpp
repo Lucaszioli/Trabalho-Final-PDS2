@@ -182,6 +182,7 @@ void Jogo ::geraTurno(Jogador *jogador, Bot *bot)
                     bot->getEquipe()[0]->atacar(jogador->getEquipe()[0], ataqueBot);
                     if (jogador->getEquipe()[0]->getHPAtual() <= 0)
                     {
+
                         jogador->mudaEquipe();
                     }
                     else
@@ -194,6 +195,8 @@ void Jogo ::geraTurno(Jogador *jogador, Bot *bot)
                         }
                     }
                 }
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cin.get();
                 state = true;
             }
             else
@@ -211,6 +214,8 @@ void Jogo ::geraTurno(Jogador *jogador, Bot *bot)
                 {
                     jogador->mudaEquipe();
                 }
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cin.get();
             }
             break;
 
@@ -223,6 +228,8 @@ void Jogo ::geraTurno(Jogador *jogador, Bot *bot)
                 {
                     jogador->mudaEquipe();
                 }
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cin.get();
             }
             break;
         }
