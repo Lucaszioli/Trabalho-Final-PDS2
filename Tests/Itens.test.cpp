@@ -202,7 +202,7 @@ TEST_CASE("Testando o uso da Estamina", "[Estamina][Item][use]"){
     }
     SECTION("Monstro morto"){
         m->setHPAtual(0);
-        REQUIRE_THROWS_MATCHES(e.usarItem(m),EstaminaError,Catch::Matchers::Message("O monstrinho já está morto, use um Revive ou escolha outro monstro"));
+        REQUIRE_THROWS_MATCHES(e.usarItem(m),EstaminaError,Catch::Matchers::Message("O monstrinho já está morto, use um Revive ou escolha outro monstrinho"));
     }
 }
 
@@ -316,6 +316,6 @@ TEST_CASE("Jogador usa o item","[Item][Jogador][use]"){
 
     std::string errorMessage = output.str();
     errorMessage.erase(std::remove(errorMessage.begin(), errorMessage.end(), '\n'), errorMessage.end());
-    REQUIRE(errorMessage == "------------------------------------------------------------Você não possui itens------------------------------------------------------------");
+    REQUIRE(errorMessage == "--------------------------------------------------------------------------------Você não possui itens--------------------------------------------------------------------------------");
     }
 }
