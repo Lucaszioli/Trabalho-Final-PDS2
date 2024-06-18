@@ -64,4 +64,67 @@ TEST_CASE("Testando a geração de turno","[Jogo][Turno][create]"){
         REQUIRE(m2->getHPAtual() == 0);
         REQUIRE(m->getHPAtual() == 100);
     }
+    SECTION("Jogador Muda de Monstrinho"){
+        Ataque a = Ataque(1, "teste", "Psíquico", 10000 ,"teste", 10, 1000);
+        
+        Monstrinho* m = new Monstrinho(1, "teste", {"Veneno"}, "teste", 100 , 100, 1000, 3, {a,a,a,a});
+        Monstrinho* m2 = new Monstrinho(2, "teste1", {"Veneno"}, "teste", 100 , 10, 100, 3, {a,a,a,a});
+        Monstrinho* m3 = new Monstrinho(3, "teste2", {"Veneno"}, "teste", 100 , 10, 100, 3, {a,a,a,a});
+        vector<Monstrinho*> equipe2 = {m2,m3};
+        vector<Monstrinho*> equipe = {m};
+        Jogador* jogador = new Jogador(1, "teste", equipe2);
+        Bot* bot = new Bot(2, "teste", equipe,{});
+        std::streambuf* cinBackup = std::cin.rdbuf();
+        std::stringstream fakeInput;
+        fakeInput << "2 2 \n 2 \n";
+        std::cin.rdbuf(fakeInput.rdbuf());
+        j.geraTurno(jogador, bot);
+        std::cin.rdbuf(cinBackup);
+        REQUIRE(m3->getHPAtual() == 0);
+        REQUIRE(m->getHPAtual() == 100);
+        REQUIRE(m2->getHPAtual() == 10);
+    }
+
+    SECTION("Morre monstrinho e troca"){
+        Ataque a = Ataque(1, "teste", "Psíquico", 10000 ,"teste", 10, 1000);
+        
+        Monstrinho* m = new Monstrinho(1, "teste", {"Veneno"}, "teste", 100 , 100, 1000, 3, {a,a,a,a});
+        Monstrinho* m2 = new Monstrinho(2, "teste1", {"Veneno"}, "teste", 100 , 10, 100, 3, {a,a,a,a});
+        Monstrinho* m3 = new Monstrinho(3, "teste2", {"Veneno"}, "teste", 100 , 10, 100, 3, {a,a,a,a});
+        vector<Monstrinho*> equipe2 = {m2,m3};
+        vector<Monstrinho*> equipe = {m};
+        Jogador* jogador = new Jogador(1, "teste", equipe2);
+        Bot* bot = new Bot(2, "teste", equipe,{});
+        std::streambuf* cinBackup = std::cin.rdbuf();
+        std::stringstream fakeInput;
+        fakeInput << "1 1 \n 2 \n";
+        std::cin.rdbuf(fakeInput.rdbuf());
+        j.geraTurno(jogador, bot);
+        std::cin.rdbuf(cinBackup);
+        REQUIRE(m2->getHPAtual() == 0);
+        REQUIRE(m->getHPAtual() == 100);
+        REQUIRE(m3->getHPAtual() == 10);
+    }
+
+    SECTION("Ganha um item após matar"){
+        Ataque a = Ataque(1, "teste", "Psíquico", 10000 ,"teste", 10, 1000);
+        
+        Monstrinho* m = new Monstrinho(1, "teste", {"Veneno"}, "teste", 100 , 100, 1000, 3, {a,a,a,a});
+        Monstrinho* m2 = new Monstrinho(2, "teste1", {"Veneno"}, "teste", 100 , 10, 100, 3, {a,a,a,a});
+        Monstrinho* m3 = new Monstrinho(3, "teste2", {"Veneno"}, "teste", 100 , 10, 100, 3, {a,a,a,a});
+        vector<Monstrinho*> equipe2 = {m2,m3};
+        vector<Monstrinho*> equipe = {m};
+        Jogador* jogador = new Jogador(1, "teste", equipe);
+        Bot* bot = new Bot(2, "teste", equipe2,{});
+        std::streambuf* cinBackup = std::cin.rdbuf();
+        std::stringstream fakeInput;
+        fakeInput << "1 1 \n";
+        std::cin.rdbuf(fakeInput.rdbuf());
+        j.geraTurno(jogador, bot);
+        std::cin.rdbuf(cinBackup);
+        REQUIRE(m2->getHPAtual() == 0);
+        REQUIRE(m->getHPAtual() == 100);
+        REQUIRE(m3->getHPAtual() == 10);
+        REQUIRE(jogador->getInventario().size() == 1);
+    }
 }
