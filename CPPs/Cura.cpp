@@ -20,7 +20,6 @@ bool Cura::usarItem(Monstrinho* m){
     int vidaRestaurada = vidaFinal - vidaAtual;
     cout<<"--------------------------------------------------------------------------------"<<endl;
     cout << "A vida do seu "<< m->getNome() <<" foi restaurada em " << vidaRestaurada << " pontos" << endl;
-    cout<<"--------------------------------------------------------------------------------"<<endl;
     return false;
 }
 

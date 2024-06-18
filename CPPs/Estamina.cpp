@@ -75,7 +75,6 @@ bool Estamina::usarItem(Monstrinho* monstro){
             int estaminaRestaurada = ataqueRenovado.getQuantidadeAtual() - atual;
             cout<<"--------------------------------------------------------------------------------"<<endl;
             cout << "A estamina do ataque "<< ataqueRenovado.getNome() <<" foi restaurada em " << estaminaRestaurada << " pontos" << endl;
-            cout<<"--------------------------------------------------------------------------------"<<endl;
             erro = 0;
         }catch(EscolhaError& e){
             erro = 1;

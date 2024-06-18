@@ -30,6 +30,5 @@ bool Revive::usarItem(Monstrinho* monstro){
     }
     cout<<"--------------------------------------------------------------------------------"<<endl;
     cout <<"Seu "<< monstro->getNome() <<" foi revivido com sucesso!" << endl;
-    cout<<"--------------------------------------------------------------------------------"<<endl;
     return false;
 }
