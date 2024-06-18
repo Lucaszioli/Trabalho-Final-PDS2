@@ -3,12 +3,11 @@
 
 #include "Item.hpp"
 
-/*
-* @class Cura
-* 
-* @brief Classe que representa o item Cura.
-*
-*/
+/**
+ * @class Cura
+ * 
+ * @brief Classe que representa um item de cura
+ */
 class Cura: public Item{
     private:
         int cura; ///< A cura do item
