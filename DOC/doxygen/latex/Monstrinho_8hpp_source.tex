@@ -1,0 +1,61 @@
+\doxysection{Monstrinho.\+hpp}
+\hypertarget{Monstrinho_8hpp_source}{}\label{Monstrinho_8hpp_source}\index{HPPs/Monstrinho.hpp@{HPPs/Monstrinho.hpp}}
+\mbox{\hyperlink{Monstrinho_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MONSTRINHO\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MONSTRINHO\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Ataque_8hpp}{Ataque.hpp}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAtaque}{Ataque}};\ \textcolor{comment}{//\ Declaração\ antecipada\ da\ classe\ Ataque\ para\ evitar\ dependência\ circular.}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMonstrinho}{Monstrinho}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ ID;\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{string}\ nome;\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{string}\ descricao;\ }
+\DoxyCodeLine{00031\ \ \ \ \ vector<string>\ tipo;\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ HP;\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ HPAtual;\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ velocidade;\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ tier;\ }
+\DoxyCodeLine{00036\ \ \ \ \ vector<Ataque>\ ataques;\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{classMonstrinho_a8284b89ff7e998ba835b343f435f35f3}{Monstrinho}}(\textcolor{keywordtype}{int}\ ID,\ \textcolor{keywordtype}{string}\ nome,\ vector<string>\ tipo,\textcolor{keywordtype}{string}\ descricao,\ \textcolor{keywordtype}{int}\ HP,\ \textcolor{keywordtype}{int}\ HPAtual,\ \textcolor{keywordtype}{int}\ velocidade,\ \textcolor{keywordtype}{int}\ tier,\ vector<Ataque>\ ataques)}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ :\ ID(ID),\ nome(nome),\ descricao(descricao),\ tipo(tipo),\ HP(HP),\ HPAtual(HPAtual),\ velocidade(velocidade),\ tier(tier),\ ataques(ataques)\ \{\}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMonstrinho_a7512eb464fd259eb9cee8d1f9a2b6847}{getID}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classMonstrinho_aabba3bb574d7468cd34a75d9285411b3}{getNome}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classMonstrinho_ae544ed7ecdd5b7089f19ec13b1e37eca}{getDescricao}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ \ \ \ \ vector<string>\ \mbox{\hyperlink{classMonstrinho_a95fa50a25a89e4dd0e35120e20d6f7bf}{getTipo}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMonstrinho_a90140e688bac948cc7408fa8c26f343a}{getHP}}();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMonstrinho_a3f735d4b1f25777826b6b589eda0b216}{getHPAtual}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMonstrinho_a0992510a3a47d2a5767b09b2067c04dc}{setHPAtual}}(\textcolor{keywordtype}{int}\ HPAtual);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMonstrinho_a76ed44396ec8d76b4150f0314d3fe849}{getVelocidade}}();}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMonstrinho_a53ceffe0ee65b2ba60c5e3704fad377f}{getTier}}();}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00123\ \ \ \ \ vector<Ataque>\&\ \mbox{\hyperlink{classMonstrinho_a53ac7fc4e9c024d25451c030f6cb0c2f}{getAtaques}}();}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMonstrinho_aa4a27e2b13bd1b242d387e0f41ef3f6a}{atacar}}(\mbox{\hyperlink{classMonstrinho}{Monstrinho}}*\ monstroAtacado,\ \textcolor{keywordtype}{int}\ escolha);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keyword}{static}\ vector<Monstrinho>\ \mbox{\hyperlink{classMonstrinho_acb5fc65104ca9ec3f3951c3e5b45ac9f}{construirMonstrinhos}}();}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMonstrinho_a5ff60c2abf8f2b56ae140e7633f96e1f}{escolhaAtaque}}();}
+\DoxyCodeLine{00146\ \};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

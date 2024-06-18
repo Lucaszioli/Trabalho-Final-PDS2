@@ -1,0 +1,266 @@
+\doxysection{Referência da Classe Monstrinho}
+\hypertarget{classMonstrinho}{}\label{classMonstrinho}\index{Monstrinho@{Monstrinho}}
+
+
+Classe que representa um monstrinho.  
+
+
+
+
+{\ttfamily \#include $<$Monstrinho.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMonstrinho_a8284b89ff7e998ba835b343f435f35f3}{Monstrinho}} (int ID, string nome, vector$<$ string $>$ tipo, string descricao, int HP, int HPAtual, int velocidade, int tier, vector$<$ \mbox{\hyperlink{classAtaque}{Ataque}} $>$ ataques)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classMonstrinho}{Monstrinho}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMonstrinho_a7512eb464fd259eb9cee8d1f9a2b6847}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o ID do monstrinho. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classMonstrinho_aabba3bb574d7468cd34a75d9285411b3}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome do monstrinho. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classMonstrinho_ae544ed7ecdd5b7089f19ec13b1e37eca}{get\+Descricao}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a descrição do monstrinho. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{classMonstrinho_a95fa50a25a89e4dd0e35120e20d6f7bf}{get\+Tipo}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o tipo do monstrinho. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMonstrinho_a90140e688bac948cc7408fa8c26f343a}{get\+HP}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a quantidade de HP do monstrinho. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMonstrinho_a3f735d4b1f25777826b6b589eda0b216}{get\+HPAtual}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a quantidade de HP atual do monstrinho. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMonstrinho_a0992510a3a47d2a5767b09b2067c04dc}{set\+HPAtual}} (int HPAtual)
+\begin{DoxyCompactList}\small\item\em Define a quantidade de HP atual do monstrinho. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMonstrinho_a76ed44396ec8d76b4150f0314d3fe849}{get\+Velocidade}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a velocidade do monstrinho. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMonstrinho_a53ceffe0ee65b2ba60c5e3704fad377f}{get\+Tier}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o tier do monstrinho. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classAtaque}{Ataque}} $>$ \& \mbox{\hyperlink{classMonstrinho_a53ac7fc4e9c024d25451c030f6cb0c2f}{get\+Ataques}} ()
+\begin{DoxyCompactList}\small\item\em Obtém os ataques do monstrinho. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMonstrinho_aa4a27e2b13bd1b242d387e0f41ef3f6a}{atacar}} (\mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*}monstro\+Atacado, int escolha)
+\begin{DoxyCompactList}\small\item\em Ataca um monstrinho. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMonstrinho_a5ff60c2abf8f2b56ae140e7633f96e1f}{escolha\+Ataque}} ()
+\begin{DoxyCompactList}\small\item\em Escolhe um ataque para ser utilizado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} $>$ \mbox{\hyperlink{classMonstrinho_acb5fc65104ca9ec3f3951c3e5b45ac9f}{construir\+Monstrinhos}} ()
+\begin{DoxyCompactList}\small\item\em Constrói uma lista de monstrinhos a partir de um arquivo CSV. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa um monstrinho. 
+
+A classe \doxylink{classMonstrinho}{Monstrinho} representa um monstrinho com suas características, como ID, nome, descrição, tipo, HP, HP atual, velocidade e ataques. Ela também possui métodos para acessar e modificar essas características. Além disso, possui um método estático para construir uma lista de monstrinhos a partir de um arquivo CSV. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{classMonstrinho_a8284b89ff7e998ba835b343f435f35f3}\index{Monstrinho@{Monstrinho}!Monstrinho@{Monstrinho}}
+\index{Monstrinho@{Monstrinho}!Monstrinho@{Monstrinho}}
+\doxysubsubsection{\texorpdfstring{Monstrinho()}{Monstrinho()}}
+{\footnotesize\ttfamily \label{classMonstrinho_a8284b89ff7e998ba835b343f435f35f3} 
+Monstrinho\+::\+Monstrinho (\begin{DoxyParamCaption}\item[{int}]{ID}{, }\item[{string}]{nome}{, }\item[{vector$<$ string $>$}]{tipo}{, }\item[{string}]{descricao}{, }\item[{int}]{HP}{, }\item[{int}]{HPAtual}{, }\item[{int}]{velocidade}{, }\item[{int}]{tier}{, }\item[{vector$<$ \mbox{\hyperlink{classAtaque}{Ataque}} $>$}]{ataques}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor da classe \doxylink{classMonstrinho}{Monstrinho}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ID} & O ID do monstrinho. \\
+\hline
+{\em nome} & O nome do monstrinho. \\
+\hline
+{\em descricao} & A descrição do monstrinho. \\
+\hline
+{\em tipo} & O tipo do monstrinho. \\
+\hline
+{\em HP} & A quantidade de HP do monstrinho. \\
+\hline
+{\em HPAtual} & A quantidade de HP atual do monstrinho. \\
+\hline
+{\em velocidade} & A velocidade do monstrinho.\\
+\hline
+{\em ataques} & Os ataques do monstrinho. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classMonstrinho_aa4a27e2b13bd1b242d387e0f41ef3f6a}\index{Monstrinho@{Monstrinho}!atacar@{atacar}}
+\index{atacar@{atacar}!Monstrinho@{Monstrinho}}
+\doxysubsubsection{\texorpdfstring{atacar()}{atacar()}}
+{\footnotesize\ttfamily \label{classMonstrinho_aa4a27e2b13bd1b242d387e0f41ef3f6a} 
+bool Monstrinho\+::atacar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*}}]{monstro\+Atacado}{, }\item[{int}]{escolha}{}\end{DoxyParamCaption})}
+
+
+
+Ataca um monstrinho. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em monstro\+Atacado} & O monstrinho que está sendo atacado. \\
+\hline
+{\em escolha} & Valor da escolha feita pelo usuário \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMonstrinho_acb5fc65104ca9ec3f3951c3e5b45ac9f}\index{Monstrinho@{Monstrinho}!construirMonstrinhos@{construirMonstrinhos}}
+\index{construirMonstrinhos@{construirMonstrinhos}!Monstrinho@{Monstrinho}}
+\doxysubsubsection{\texorpdfstring{construirMonstrinhos()}{construirMonstrinhos()}}
+{\footnotesize\ttfamily \label{classMonstrinho_acb5fc65104ca9ec3f3951c3e5b45ac9f} 
+vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} $>$ Monstrinho\+::construir\+Monstrinhos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constrói uma lista de monstrinhos a partir de um arquivo CSV. 
+
+\begin{DoxyReturn}{Retorna}
+Um vetor com todos os monstrinhos do arquivo CSV. 
+\end{DoxyReturn}
+\Hypertarget{classMonstrinho_a5ff60c2abf8f2b56ae140e7633f96e1f}\index{Monstrinho@{Monstrinho}!escolhaAtaque@{escolhaAtaque}}
+\index{escolhaAtaque@{escolhaAtaque}!Monstrinho@{Monstrinho}}
+\doxysubsubsection{\texorpdfstring{escolhaAtaque()}{escolhaAtaque()}}
+{\footnotesize\ttfamily \label{classMonstrinho_a5ff60c2abf8f2b56ae140e7633f96e1f} 
+int Monstrinho\+::escolha\+Ataque (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Escolhe um ataque para ser utilizado. 
+
+\begin{DoxyReturn}{Retorna}
+O valor de escolha de 0 a 4 
+\end{DoxyReturn}
+\Hypertarget{classMonstrinho_a53ac7fc4e9c024d25451c030f6cb0c2f}\index{Monstrinho@{Monstrinho}!getAtaques@{getAtaques}}
+\index{getAtaques@{getAtaques}!Monstrinho@{Monstrinho}}
+\doxysubsubsection{\texorpdfstring{getAtaques()}{getAtaques()}}
+{\footnotesize\ttfamily \label{classMonstrinho_a53ac7fc4e9c024d25451c030f6cb0c2f} 
+vector$<$ \mbox{\hyperlink{classAtaque}{Ataque}} $>$ \& Monstrinho\+::get\+Ataques (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtém os ataques do monstrinho. 
+
+\begin{DoxyReturn}{Retorna}
+Os ataques do monstrinho. 
+\end{DoxyReturn}
+\Hypertarget{classMonstrinho_ae544ed7ecdd5b7089f19ec13b1e37eca}\index{Monstrinho@{Monstrinho}!getDescricao@{getDescricao}}
+\index{getDescricao@{getDescricao}!Monstrinho@{Monstrinho}}
+\doxysubsubsection{\texorpdfstring{getDescricao()}{getDescricao()}}
+{\footnotesize\ttfamily \label{classMonstrinho_ae544ed7ecdd5b7089f19ec13b1e37eca} 
+string Monstrinho\+::get\+Descricao (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtém a descrição do monstrinho. 
+
+\begin{DoxyReturn}{Retorna}
+A descrição do monstrinho. 
+\end{DoxyReturn}
+\Hypertarget{classMonstrinho_a90140e688bac948cc7408fa8c26f343a}\index{Monstrinho@{Monstrinho}!getHP@{getHP}}
+\index{getHP@{getHP}!Monstrinho@{Monstrinho}}
+\doxysubsubsection{\texorpdfstring{getHP()}{getHP()}}
+{\footnotesize\ttfamily \label{classMonstrinho_a90140e688bac948cc7408fa8c26f343a} 
+int Monstrinho\+::get\+HP (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtém a quantidade de HP do monstrinho. 
+
+\begin{DoxyReturn}{Retorna}
+A quantidade de HP do monstrinho. 
+\end{DoxyReturn}
+\Hypertarget{classMonstrinho_a3f735d4b1f25777826b6b589eda0b216}\index{Monstrinho@{Monstrinho}!getHPAtual@{getHPAtual}}
+\index{getHPAtual@{getHPAtual}!Monstrinho@{Monstrinho}}
+\doxysubsubsection{\texorpdfstring{getHPAtual()}{getHPAtual()}}
+{\footnotesize\ttfamily \label{classMonstrinho_a3f735d4b1f25777826b6b589eda0b216} 
+int Monstrinho\+::get\+HPAtual (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtém a quantidade de HP atual do monstrinho. 
+
+\begin{DoxyReturn}{Retorna}
+A quantidade de HP atual do monstrinho. 
+\end{DoxyReturn}
+\Hypertarget{classMonstrinho_a7512eb464fd259eb9cee8d1f9a2b6847}\index{Monstrinho@{Monstrinho}!getID@{getID}}
+\index{getID@{getID}!Monstrinho@{Monstrinho}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily \label{classMonstrinho_a7512eb464fd259eb9cee8d1f9a2b6847} 
+int Monstrinho\+::get\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtém o ID do monstrinho. 
+
+\begin{DoxyReturn}{Retorna}
+O ID do monstrinho. 
+\end{DoxyReturn}
+\Hypertarget{classMonstrinho_aabba3bb574d7468cd34a75d9285411b3}\index{Monstrinho@{Monstrinho}!getNome@{getNome}}
+\index{getNome@{getNome}!Monstrinho@{Monstrinho}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily \label{classMonstrinho_aabba3bb574d7468cd34a75d9285411b3} 
+string Monstrinho\+::get\+Nome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtém o nome do monstrinho. 
+
+\begin{DoxyReturn}{Retorna}
+O nome do monstrinho. 
+\end{DoxyReturn}
+\Hypertarget{classMonstrinho_a53ceffe0ee65b2ba60c5e3704fad377f}\index{Monstrinho@{Monstrinho}!getTier@{getTier}}
+\index{getTier@{getTier}!Monstrinho@{Monstrinho}}
+\doxysubsubsection{\texorpdfstring{getTier()}{getTier()}}
+{\footnotesize\ttfamily \label{classMonstrinho_a53ceffe0ee65b2ba60c5e3704fad377f} 
+int Monstrinho\+::get\+Tier (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtém o tier do monstrinho. 
+
+\begin{DoxyReturn}{Retorna}
+O tier do monstrinho. 
+\end{DoxyReturn}
+\Hypertarget{classMonstrinho_a95fa50a25a89e4dd0e35120e20d6f7bf}\index{Monstrinho@{Monstrinho}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!Monstrinho@{Monstrinho}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}}
+{\footnotesize\ttfamily \label{classMonstrinho_a95fa50a25a89e4dd0e35120e20d6f7bf} 
+vector$<$ string $>$ Monstrinho\+::get\+Tipo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtém o tipo do monstrinho. 
+
+\begin{DoxyReturn}{Retorna}
+O tipo do monstrinho. 
+\end{DoxyReturn}
+\Hypertarget{classMonstrinho_a76ed44396ec8d76b4150f0314d3fe849}\index{Monstrinho@{Monstrinho}!getVelocidade@{getVelocidade}}
+\index{getVelocidade@{getVelocidade}!Monstrinho@{Monstrinho}}
+\doxysubsubsection{\texorpdfstring{getVelocidade()}{getVelocidade()}}
+{\footnotesize\ttfamily \label{classMonstrinho_a76ed44396ec8d76b4150f0314d3fe849} 
+int Monstrinho\+::get\+Velocidade (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtém a velocidade do monstrinho. 
+
+\begin{DoxyReturn}{Retorna}
+A velocidade do monstrinho. 
+\end{DoxyReturn}
+\Hypertarget{classMonstrinho_a0992510a3a47d2a5767b09b2067c04dc}\index{Monstrinho@{Monstrinho}!setHPAtual@{setHPAtual}}
+\index{setHPAtual@{setHPAtual}!Monstrinho@{Monstrinho}}
+\doxysubsubsection{\texorpdfstring{setHPAtual()}{setHPAtual()}}
+{\footnotesize\ttfamily \label{classMonstrinho_a0992510a3a47d2a5767b09b2067c04dc} 
+void Monstrinho\+::set\+HPAtual (\begin{DoxyParamCaption}\item[{int}]{HPAtual}{}\end{DoxyParamCaption})}
+
+
+
+Define a quantidade de HP atual do monstrinho. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em HPAtual} & A quantidade de HP atual do monstrinho. \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+HPPs/\mbox{\hyperlink{Monstrinho_8hpp}{Monstrinho.\+hpp}}\item 
+CPPs/Monstrinho.\+cpp\end{DoxyCompactItemize}

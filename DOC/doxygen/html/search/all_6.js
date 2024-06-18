@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['geraturno_0',['geraTurno',['../classJogo.html#a688e71236a86340db9d763a23a8e8ad1',1,'Jogo']]],
+  ['getataques_1',['getAtaques',['../classMonstrinho.html#a53ac7fc4e9c024d25451c030f6cb0c2f',1,'Monstrinho']]],
+  ['getchanceacerto_2',['getChanceAcerto',['../classAtaque.html#a6d0f3982f138103e7188bd353e6b3c69',1,'Ataque']]],
+  ['getcura_3',['getCura',['../classCura.html#a8944bf5711ad812223f9ec7a3a4c65d4',1,'Cura']]],
+  ['getdano_4',['getDano',['../classAtaque.html#a4114aaa45f5a799848a6500d2196a65b',1,'Ataque']]],
+  ['getdescricao_5',['getDescricao',['../classAtaque.html#a657af4ce47ab28ad329d1ba65b78a65f',1,'Ataque::getDescricao()'],['../classItem.html#ac48f72f64f83be5c72aa459afec114ae',1,'Item::getDescricao()'],['../classMonstrinho.html#ae544ed7ecdd5b7089f19ec13b1e37eca',1,'Monstrinho::getDescricao()']]],
+  ['getequipe_6',['getEquipe',['../classTreinador.html#ab5de4240df3af144fcfb8c6acf2af333',1,'Treinador']]],
+  ['getfala_7',['getFala',['../classBot.html#a18fb420cc43b53ea5ce30bfda8fc0772',1,'Bot']]],
+  ['gethp_8',['getHP',['../classMonstrinho.html#a90140e688bac948cc7408fa8c26f343a',1,'Monstrinho']]],
+  ['gethpatual_9',['getHPAtual',['../classMonstrinho.html#a3f735d4b1f25777826b6b589eda0b216',1,'Monstrinho']]],
+  ['getid_10',['getID',['../classAtaque.html#a155848008c524865359c85d554e839f9',1,'Ataque::getID()'],['../classMonstrinho.html#a7512eb464fd259eb9cee8d1f9a2b6847',1,'Monstrinho::getID()'],['../classTreinador.html#a1a992332ab2ade9d2e8e676027091f3d',1,'Treinador::getID()']]],
+  ['getinventario_11',['getInventario',['../classJogador.html#aa6698547537e1692be55f2fa80329e04',1,'Jogador']]],
+  ['getnome_12',['getNome',['../classAtaque.html#a59399ec4d2d8dec25ac1d68e9fcfa2f3',1,'Ataque::getNome()'],['../classItem.html#aaa39325c2387ee3a9004b17b35757edd',1,'Item::getNome()'],['../classMonstrinho.html#aabba3bb574d7468cd34a75d9285411b3',1,'Monstrinho::getNome()'],['../classTreinador.html#a69f71f1da4bd4d215623183adc695deb',1,'Treinador::getNome()']]],
+  ['getquantidade_13',['getQuantidade',['../classAtaque.html#a2f2e676b785d6a27618386a0aa4a1b47',1,'Ataque']]],
+  ['getquantidadeatual_14',['getQuantidadeAtual',['../classAtaque.html#ae5fd4a907841e790edb15fd8880b3781',1,'Ataque']]],
+  ['getraridade_15',['getRaridade',['../classItem.html#a3ccff67ae0539df61a27c81ea89bd329',1,'Item']]],
+  ['gettier_16',['getTier',['../classMonstrinho.html#a53ceffe0ee65b2ba60c5e3704fad377f',1,'Monstrinho']]],
+  ['gettipo_17',['getTipo',['../classAtaque.html#ae0af6f38f487946484a1a3573f08955b',1,'Ataque::getTipo()'],['../classItem.html#aac4ada684809404557b4b5a2092aeb47',1,'Item::getTipo()'],['../classMonstrinho.html#a95fa50a25a89e4dd0e35120e20d6f7bf',1,'Monstrinho::getTipo()']]],
+  ['getvelocidade_18',['getVelocidade',['../classMonstrinho.html#a76ed44396ec8d76b4150f0314d3fe849',1,'Monstrinho']]]
+];

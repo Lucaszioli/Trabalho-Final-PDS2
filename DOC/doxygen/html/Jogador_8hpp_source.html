@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Monstrinhos: Código-Fonte de HPPs/Jogador.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Monstrinhos
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_39d5b5075838973ab2f8f2c7fc2e9276.html">HPPs</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">Jogador.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Jogador_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef JOGADOR_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define JOGADOR_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="Treinador_8hpp.html">Treinador.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="Item_8hpp.html">Item.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classJogador.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="classJogador.html">Jogador</a> : <span class="keyword">public</span> <a class="code hl_class" href="classTreinador.html">Treinador</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// Implementar inventário</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::vector&lt;Item*&gt; inventario;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_function" href="classJogador.html#a9837ab1f6948b3e314a592c62896b448">Jogador</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="classTreinador.html#a453d981c3d896a456c6df0dfd512d71f">ID</a>, <span class="keywordtype">string</span> <a class="code hl_variable" href="classTreinador.html#a10e003e240c62b0294aa709a049f788c">nome</a>, vector&lt;Monstrinho *&gt; <a class="code hl_variable" href="classTreinador.html#aef2eab6508ff79b1640aab5ec32bb9ea">equipe</a>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classJogador.html#a91c544398b54eaebf86424a22a854442">mudaEquipe</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classJogador.html#af33f41e3358db4900f96f8c070c12244">receberItem</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    vector&lt;Item*&gt; <a class="code hl_function" href="classJogador.html#aa6698547537e1692be55f2fa80329e04">getInventario</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classJogador.html#ab2a3f35f2dd2fda482000feafb98f253">adicionarItem</a>(<a class="code hl_class" href="classItem.html">Item</a>* item);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> removerItem(<span class="keywordtype">int</span> item);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">bool</span> usarItem();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aItem_8hpp_html"><div class="ttname"><a href="Item_8hpp.html">Item.hpp</a></div><div class="ttdoc">Classe que representa um item.</div></div>
+<div class="ttc" id="aTreinador_8hpp_html"><div class="ttname"><a href="Treinador_8hpp.html">Treinador.hpp</a></div><div class="ttdoc">Definição da classe Treinador e seus métodos.</div></div>
+<div class="ttc" id="aclassItem_html"><div class="ttname"><a href="classItem.html">Item</a></div><div class="ttdoc">Classe que representa um item.</div><div class="ttdef"><b>Definição</b> Item.hpp:21</div></div>
+<div class="ttc" id="aclassJogador_html"><div class="ttname"><a href="classJogador.html">Jogador</a></div><div class="ttdoc">Classe que representa um jogador no jogo.</div><div class="ttdef"><b>Definição</b> Jogador.hpp:19</div></div>
+<div class="ttc" id="aclassJogador_html_a91c544398b54eaebf86424a22a854442"><div class="ttname"><a href="classJogador.html#a91c544398b54eaebf86424a22a854442">Jogador::mudaEquipe</a></div><div class="ttdeci">bool mudaEquipe() override</div><div class="ttdoc">Função que permite ao jogador mudar sua equipe de monstrinhos.</div><div class="ttdef"><b>Definição</b> Jogador.cpp:17</div></div>
+<div class="ttc" id="aclassJogador_html_a9837ab1f6948b3e314a592c62896b448"><div class="ttname"><a href="classJogador.html#a9837ab1f6948b3e314a592c62896b448">Jogador::Jogador</a></div><div class="ttdeci">Jogador(int ID, string nome, vector&lt; Monstrinho * &gt; equipe)</div><div class="ttdoc">Construtor da classe Jogador.</div><div class="ttdef"><b>Definição</b> Jogador.cpp:14</div></div>
+<div class="ttc" id="aclassJogador_html_aa6698547537e1692be55f2fa80329e04"><div class="ttname"><a href="classJogador.html#aa6698547537e1692be55f2fa80329e04">Jogador::getInventario</a></div><div class="ttdeci">vector&lt; Item * &gt; getInventario()</div><div class="ttdoc">Função que permiter pegar o inventario do Jogador.</div><div class="ttdef"><b>Definição</b> Jogador.cpp:282</div></div>
+<div class="ttc" id="aclassJogador_html_ab2a3f35f2dd2fda482000feafb98f253"><div class="ttname"><a href="classJogador.html#ab2a3f35f2dd2fda482000feafb98f253">Jogador::adicionarItem</a></div><div class="ttdeci">void adicionarItem(Item *item)</div><div class="ttdoc">Adiciona um Item ao inventario do jogador.</div><div class="ttdef"><b>Definição</b> Jogador.cpp:272</div></div>
+<div class="ttc" id="aclassJogador_html_af33f41e3358db4900f96f8c070c12244"><div class="ttname"><a href="classJogador.html#af33f41e3358db4900f96f8c070c12244">Jogador::receberItem</a></div><div class="ttdeci">void receberItem()</div><div class="ttdoc">Função que permite o jogador receber um item aleatório ao fim de uma rodada.</div><div class="ttdef"><b>Definição</b> Jogador.cpp:90</div></div>
+<div class="ttc" id="aclassTreinador_html"><div class="ttname"><a href="classTreinador.html">Treinador</a></div><div class="ttdoc">Classe que representa um treinador de monstrinhos.</div><div class="ttdef"><b>Definição</b> Treinador.hpp:23</div></div>
+<div class="ttc" id="aclassTreinador_html_a10e003e240c62b0294aa709a049f788c"><div class="ttname"><a href="classTreinador.html#a10e003e240c62b0294aa709a049f788c">Treinador::nome</a></div><div class="ttdeci">std::string nome</div><div class="ttdef"><b>Definição</b> Treinador.hpp:27</div></div>
+<div class="ttc" id="aclassTreinador_html_a453d981c3d896a456c6df0dfd512d71f"><div class="ttname"><a href="classTreinador.html#a453d981c3d896a456c6df0dfd512d71f">Treinador::ID</a></div><div class="ttdeci">int ID</div><div class="ttdef"><b>Definição</b> Treinador.hpp:25</div></div>
+<div class="ttc" id="aclassTreinador_html_aef2eab6508ff79b1640aab5ec32bb9ea"><div class="ttname"><a href="classTreinador.html#aef2eab6508ff79b1640aab5ec32bb9ea">Treinador::equipe</a></div><div class="ttdeci">vector&lt; Monstrinho * &gt; equipe</div><div class="ttdef"><b>Definição</b> Treinador.hpp:26</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

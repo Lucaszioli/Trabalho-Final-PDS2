@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Monstrinhos: Código-Fonte de HPPs/Ataque.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Monstrinhos
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_39d5b5075838973ab2f8f2c7fc2e9276.html">HPPs</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">Ataque.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Ataque_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ATAQUE_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ATAQUE_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="Monstrinho_8hpp.html">Monstrinho.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span><a class="code hl_class" href="classMonstrinho.html">Monstrinho</a>; <span class="comment">// Declaração antecipada da classe Monstrinho para evitar dependência circular</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classAtaque.html">   22</a></span><span class="keyword">class </span><a class="code hl_class" href="classAtaque.html">Ataque</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">int</span> ID; </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">string</span> nome; </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">string</span> tipo; </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">int</span> dano; </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">string</span> descricao; </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">int</span> quantidade; </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">int</span> quantidadeAtual; </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">double</span> chanceAcerto; </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">static</span> unordered_map&lt;string, unordered_map&lt;string, double&gt;&gt; TabelaEfetividade; </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">static</span> unordered_map&lt;string, unordered_map&lt;string, double&gt;&gt; gerarTabelaEfetividade(); </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classAtaque.html#aa6abf43bb8c8536a229929bb737da6ec">   48</a></span>    <a class="code hl_function" href="classAtaque.html#aa6abf43bb8c8536a229929bb737da6ec">Ataque</a>(<span class="keywordtype">int</span> ID, <span class="keywordtype">string</span> nome, <span class="keywordtype">string</span> tipo, <span class="keywordtype">int</span> dano, <span class="keywordtype">string</span> descricao, <span class="keywordtype">int</span> quantidade, <span class="keywordtype">double</span> chanceAcerto)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        : ID(ID), nome(nome), tipo(tipo), dano(dano), descricao(descricao), quantidade(quantidade), quantidadeAtual(quantidade), chanceAcerto(chanceAcerto) {}</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classAtaque.html#a155848008c524865359c85d554e839f9">getID</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="classAtaque.html#a59399ec4d2d8dec25ac1d68e9fcfa2f3">getNome</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="classAtaque.html#ae0af6f38f487946484a1a3573f08955b">getTipo</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classAtaque.html#a4114aaa45f5a799848a6500d2196a65b">getDano</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="classAtaque.html#a657af4ce47ab28ad329d1ba65b78a65f">getDescricao</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classAtaque.html#a2f2e676b785d6a27618386a0aa4a1b47">getQuantidade</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classAtaque.html#ae5fd4a907841e790edb15fd8880b3781">getQuantidadeAtual</a>();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAtaque.html#aef8e38214324a03e335d1cf7d5e17c18">setQuantidadeAtual</a>(<span class="keywordtype">int</span> valor);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classAtaque.html#a6d0f3982f138103e7188bd353e6b3c69">getChanceAcerto</a>();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">static</span> vector&lt;Ataque&gt; <a class="code hl_function" href="classAtaque.html#ac78af6150e43756e5e002dc7a5c6372a">construirAtaques</a>();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classAtaque.html#abfbb638eb0f399c26a2fcd733a3748f1">fazerAtaque</a>(<a class="code hl_class" href="classMonstrinho.html">Monstrinho</a> &amp;inimigo);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classAtaque.html#aa43c5a8b24753a70e91d5e0090c8f090">calcularEfetividade</a>(<span class="keywordtype">string</span> tipoAtaque, vector&lt;string&gt; tiposMonstrinho);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>};</div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aMonstrinho_8hpp_html"><div class="ttname"><a href="Monstrinho_8hpp.html">Monstrinho.hpp</a></div><div class="ttdoc">Definição da classe Monstrinho e seus métodos.</div></div>
+<div class="ttc" id="aclassAtaque_html"><div class="ttname"><a href="classAtaque.html">Ataque</a></div><div class="ttdoc">Representa um ataque em um jogo.</div><div class="ttdef"><b>Definição</b> Ataque.hpp:22</div></div>
+<div class="ttc" id="aclassAtaque_html_a155848008c524865359c85d554e839f9"><div class="ttname"><a href="classAtaque.html#a155848008c524865359c85d554e839f9">Ataque::getID</a></div><div class="ttdeci">int getID()</div><div class="ttdoc">Retorna o ID do ataque.</div><div class="ttdef"><b>Definição</b> Ataque.cpp:116</div></div>
+<div class="ttc" id="aclassAtaque_html_a2f2e676b785d6a27618386a0aa4a1b47"><div class="ttname"><a href="classAtaque.html#a2f2e676b785d6a27618386a0aa4a1b47">Ataque::getQuantidade</a></div><div class="ttdeci">int getQuantidade()</div><div class="ttdoc">Retorna a quantidade máxima de vezes que o ataque pode ser usado.</div><div class="ttdef"><b>Definição</b> Ataque.cpp:137</div></div>
+<div class="ttc" id="aclassAtaque_html_a4114aaa45f5a799848a6500d2196a65b"><div class="ttname"><a href="classAtaque.html#a4114aaa45f5a799848a6500d2196a65b">Ataque::getDano</a></div><div class="ttdeci">int getDano()</div><div class="ttdoc">Retorna o dano causado pelo ataque.</div><div class="ttdef"><b>Definição</b> Ataque.cpp:128</div></div>
+<div class="ttc" id="aclassAtaque_html_a59399ec4d2d8dec25ac1d68e9fcfa2f3"><div class="ttname"><a href="classAtaque.html#a59399ec4d2d8dec25ac1d68e9fcfa2f3">Ataque::getNome</a></div><div class="ttdeci">string getNome()</div><div class="ttdoc">Retorna o nome do ataque.</div><div class="ttdef"><b>Definição</b> Ataque.cpp:120</div></div>
+<div class="ttc" id="aclassAtaque_html_a657af4ce47ab28ad329d1ba65b78a65f"><div class="ttname"><a href="classAtaque.html#a657af4ce47ab28ad329d1ba65b78a65f">Ataque::getDescricao</a></div><div class="ttdeci">string getDescricao()</div><div class="ttdoc">Retorna a descrição do ataque.</div><div class="ttdef"><b>Definição</b> Ataque.cpp:132</div></div>
+<div class="ttc" id="aclassAtaque_html_a6d0f3982f138103e7188bd353e6b3c69"><div class="ttname"><a href="classAtaque.html#a6d0f3982f138103e7188bd353e6b3c69">Ataque::getChanceAcerto</a></div><div class="ttdeci">double getChanceAcerto()</div><div class="ttdoc">Retorna a chance de acerto do ataque.</div><div class="ttdef"><b>Definição</b> Ataque.cpp:155</div></div>
+<div class="ttc" id="aclassAtaque_html_aa43c5a8b24753a70e91d5e0090c8f090"><div class="ttname"><a href="classAtaque.html#aa43c5a8b24753a70e91d5e0090c8f090">Ataque::calcularEfetividade</a></div><div class="ttdeci">static double calcularEfetividade(string tipoAtaque, vector&lt; string &gt; tiposMonstrinho)</div><div class="ttdoc">Calcula a efetividade de um ataque.</div><div class="ttdef"><b>Definição</b> Ataque.cpp:235</div></div>
+<div class="ttc" id="aclassAtaque_html_aa6abf43bb8c8536a229929bb737da6ec"><div class="ttname"><a href="classAtaque.html#aa6abf43bb8c8536a229929bb737da6ec">Ataque::Ataque</a></div><div class="ttdeci">Ataque(int ID, string nome, string tipo, int dano, string descricao, int quantidade, double chanceAcerto)</div><div class="ttdoc">Constrói um novo objeto Ataque.</div><div class="ttdef"><b>Definição</b> Ataque.hpp:48</div></div>
+<div class="ttc" id="aclassAtaque_html_abfbb638eb0f399c26a2fcd733a3748f1"><div class="ttname"><a href="classAtaque.html#abfbb638eb0f399c26a2fcd733a3748f1">Ataque::fazerAtaque</a></div><div class="ttdeci">bool fazerAtaque(Monstrinho &amp;inimigo)</div><div class="ttdoc">Realiza um ataque em um monstrinho.</div><div class="ttdef"><b>Definição</b> Ataque.cpp:195</div></div>
+<div class="ttc" id="aclassAtaque_html_ac78af6150e43756e5e002dc7a5c6372a"><div class="ttname"><a href="classAtaque.html#ac78af6150e43756e5e002dc7a5c6372a">Ataque::construirAtaques</a></div><div class="ttdeci">static vector&lt; Ataque &gt; construirAtaques()</div><div class="ttdoc">Constrói uma lista de ataques a partir de um arquivo CSV.</div><div class="ttdef"><b>Definição</b> Ataque.cpp:159</div></div>
+<div class="ttc" id="aclassAtaque_html_ae0af6f38f487946484a1a3573f08955b"><div class="ttname"><a href="classAtaque.html#ae0af6f38f487946484a1a3573f08955b">Ataque::getTipo</a></div><div class="ttdeci">string getTipo()</div><div class="ttdoc">Retorna o tipo do ataque.</div><div class="ttdef"><b>Definição</b> Ataque.cpp:124</div></div>
+<div class="ttc" id="aclassAtaque_html_ae5fd4a907841e790edb15fd8880b3781"><div class="ttname"><a href="classAtaque.html#ae5fd4a907841e790edb15fd8880b3781">Ataque::getQuantidadeAtual</a></div><div class="ttdeci">int getQuantidadeAtual()</div><div class="ttdoc">Retorna a quantidade atual de vezes que o ataque pode ser usado.</div><div class="ttdef"><b>Definição</b> Ataque.cpp:141</div></div>
+<div class="ttc" id="aclassAtaque_html_aef8e38214324a03e335d1cf7d5e17c18"><div class="ttname"><a href="classAtaque.html#aef8e38214324a03e335d1cf7d5e17c18">Ataque::setQuantidadeAtual</a></div><div class="ttdeci">void setQuantidadeAtual(int valor)</div><div class="ttdoc">Define a quantidade atual de vezes que o ataque pode ser usado.</div><div class="ttdef"><b>Definição</b> Ataque.cpp:145</div></div>
+<div class="ttc" id="aclassMonstrinho_html"><div class="ttname"><a href="classMonstrinho.html">Monstrinho</a></div><div class="ttdoc">Classe que representa um monstrinho.</div><div class="ttdef"><b>Definição</b> Monstrinho.hpp:26</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

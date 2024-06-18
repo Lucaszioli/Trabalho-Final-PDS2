@@ -1,0 +1,257 @@
+\doxysection{Referência da Classe Ataque}
+\hypertarget{classAtaque}{}\label{classAtaque}\index{Ataque@{Ataque}}
+
+
+Representa um ataque em um jogo.  
+
+
+
+
+{\ttfamily \#include $<$Ataque.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAtaque_aa6abf43bb8c8536a229929bb737da6ec}{Ataque}} (int ID, string nome, string tipo, int dano, string descricao, int quantidade, double chance\+Acerto)
+\begin{DoxyCompactList}\small\item\em Constrói um novo objeto \doxylink{classAtaque}{Ataque}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAtaque_a155848008c524865359c85d554e839f9}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o ID do ataque. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classAtaque_a59399ec4d2d8dec25ac1d68e9fcfa2f3}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o nome do ataque. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classAtaque_ae0af6f38f487946484a1a3573f08955b}{get\+Tipo}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o tipo do ataque. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAtaque_a4114aaa45f5a799848a6500d2196a65b}{get\+Dano}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o dano causado pelo ataque. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classAtaque_a657af4ce47ab28ad329d1ba65b78a65f}{get\+Descricao}} ()
+\begin{DoxyCompactList}\small\item\em Retorna a descrição do ataque. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAtaque_a2f2e676b785d6a27618386a0aa4a1b47}{get\+Quantidade}} ()
+\begin{DoxyCompactList}\small\item\em Retorna a quantidade máxima de vezes que o ataque pode ser usado. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAtaque_ae5fd4a907841e790edb15fd8880b3781}{get\+Quantidade\+Atual}} ()
+\begin{DoxyCompactList}\small\item\em Retorna a quantidade atual de vezes que o ataque pode ser usado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAtaque_aef8e38214324a03e335d1cf7d5e17c18}{set\+Quantidade\+Atual}} (int valor)
+\begin{DoxyCompactList}\small\item\em Define a quantidade atual de vezes que o ataque pode ser usado. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classAtaque_a6d0f3982f138103e7188bd353e6b3c69}{get\+Chance\+Acerto}} ()
+\begin{DoxyCompactList}\small\item\em Retorna a chance de acerto do ataque. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAtaque_abfbb638eb0f399c26a2fcd733a3748f1}{fazer\+Ataque}} (\mbox{\hyperlink{classMonstrinho}{Monstrinho}} \&inimigo)
+\begin{DoxyCompactList}\small\item\em Realiza um ataque em um monstrinho. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{classAtaque}{Ataque}} $>$ \mbox{\hyperlink{classAtaque_ac78af6150e43756e5e002dc7a5c6372a}{construir\+Ataques}} ()
+\begin{DoxyCompactList}\small\item\em Constrói uma lista de ataques a partir de um arquivo CSV. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classAtaque_aa43c5a8b24753a70e91d5e0090c8f090}{calcular\+Efetividade}} (string tipo\+Ataque, vector$<$ string $>$ tipos\+Monstrinho)
+\begin{DoxyCompactList}\small\item\em Calcula a efetividade de um ataque. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Representa um ataque em um jogo. 
+
+Cada ataque tem um ID, nome, tipo, dano, descrição e quantidade. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{classAtaque_aa6abf43bb8c8536a229929bb737da6ec}\index{Ataque@{Ataque}!Ataque@{Ataque}}
+\index{Ataque@{Ataque}!Ataque@{Ataque}}
+\doxysubsubsection{\texorpdfstring{Ataque()}{Ataque()}}
+{\footnotesize\ttfamily \label{classAtaque_aa6abf43bb8c8536a229929bb737da6ec} 
+Ataque\+::\+Ataque (\begin{DoxyParamCaption}\item[{int}]{ID}{, }\item[{string}]{nome}{, }\item[{string}]{tipo}{, }\item[{int}]{dano}{, }\item[{string}]{descricao}{, }\item[{int}]{quantidade}{, }\item[{double}]{chance\+Acerto}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constrói um novo objeto \doxylink{classAtaque}{Ataque}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ID} & O ID do ataque. \\
+\hline
+{\em nome} & O nome do ataque. \\
+\hline
+{\em tipo} & O tipo do ataque. \\
+\hline
+{\em dano} & O dano causado pelo ataque. \\
+\hline
+{\em descricao} & A descrição do ataque. \\
+\hline
+{\em quantidade} & A quantidade de vezes que o ataque pode ser usado. \\
+\hline
+{\em chance\+Acerto} & A chance de acerto do ataque. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classAtaque_aa43c5a8b24753a70e91d5e0090c8f090}\index{Ataque@{Ataque}!calcularEfetividade@{calcularEfetividade}}
+\index{calcularEfetividade@{calcularEfetividade}!Ataque@{Ataque}}
+\doxysubsubsection{\texorpdfstring{calcularEfetividade()}{calcularEfetividade()}}
+{\footnotesize\ttfamily \label{classAtaque_aa43c5a8b24753a70e91d5e0090c8f090} 
+double Ataque\+::calcular\+Efetividade (\begin{DoxyParamCaption}\item[{string}]{tipo\+Ataque}{, }\item[{vector$<$ string $>$}]{tipos\+Monstrinho}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calcula a efetividade de um ataque. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tipo\+Ataque} & O tipo do ataque. \\
+\hline
+{\em tipos\+Monstrinho} & Os tipos do monstrinho que será atacado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+double A efetividade do ataque. 
+\end{DoxyReturn}
+\Hypertarget{classAtaque_ac78af6150e43756e5e002dc7a5c6372a}\index{Ataque@{Ataque}!construirAtaques@{construirAtaques}}
+\index{construirAtaques@{construirAtaques}!Ataque@{Ataque}}
+\doxysubsubsection{\texorpdfstring{construirAtaques()}{construirAtaques()}}
+{\footnotesize\ttfamily \label{classAtaque_ac78af6150e43756e5e002dc7a5c6372a} 
+vector$<$ \mbox{\hyperlink{classAtaque}{Ataque}} $>$ Ataque\+::construir\+Ataques (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constrói uma lista de ataques a partir de um arquivo CSV. 
+
+\begin{DoxyReturn}{Retorna}
+vector$<$\+Ataque$>$ Um vetor com todos os ataques do arquivo CSV. 
+\end{DoxyReturn}
+\Hypertarget{classAtaque_abfbb638eb0f399c26a2fcd733a3748f1}\index{Ataque@{Ataque}!fazerAtaque@{fazerAtaque}}
+\index{fazerAtaque@{fazerAtaque}!Ataque@{Ataque}}
+\doxysubsubsection{\texorpdfstring{fazerAtaque()}{fazerAtaque()}}
+{\footnotesize\ttfamily \label{classAtaque_abfbb638eb0f399c26a2fcd733a3748f1} 
+bool Ataque\+::fazer\+Ataque (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMonstrinho}{Monstrinho}} \&}]{inimigo}{}\end{DoxyParamCaption})}
+
+
+
+Realiza um ataque em um monstrinho. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em inimigo} & O monstrinho que será atacado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+bool true se o monstrinho conseguiu realizar o ataque, false caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classAtaque_a6d0f3982f138103e7188bd353e6b3c69}\index{Ataque@{Ataque}!getChanceAcerto@{getChanceAcerto}}
+\index{getChanceAcerto@{getChanceAcerto}!Ataque@{Ataque}}
+\doxysubsubsection{\texorpdfstring{getChanceAcerto()}{getChanceAcerto()}}
+{\footnotesize\ttfamily \label{classAtaque_a6d0f3982f138103e7188bd353e6b3c69} 
+double Ataque\+::get\+Chance\+Acerto (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna a chance de acerto do ataque. 
+
+\begin{DoxyReturn}{Retorna}
+double A chance de acerto do ataque. 
+\end{DoxyReturn}
+\Hypertarget{classAtaque_a4114aaa45f5a799848a6500d2196a65b}\index{Ataque@{Ataque}!getDano@{getDano}}
+\index{getDano@{getDano}!Ataque@{Ataque}}
+\doxysubsubsection{\texorpdfstring{getDano()}{getDano()}}
+{\footnotesize\ttfamily \label{classAtaque_a4114aaa45f5a799848a6500d2196a65b} 
+int Ataque\+::get\+Dano (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna o dano causado pelo ataque. 
+
+\begin{DoxyReturn}{Retorna}
+int O dano causado pelo ataque. 
+\end{DoxyReturn}
+\Hypertarget{classAtaque_a657af4ce47ab28ad329d1ba65b78a65f}\index{Ataque@{Ataque}!getDescricao@{getDescricao}}
+\index{getDescricao@{getDescricao}!Ataque@{Ataque}}
+\doxysubsubsection{\texorpdfstring{getDescricao()}{getDescricao()}}
+{\footnotesize\ttfamily \label{classAtaque_a657af4ce47ab28ad329d1ba65b78a65f} 
+string Ataque\+::get\+Descricao (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna a descrição do ataque. 
+
+\begin{DoxyReturn}{Retorna}
+string A descrição do ataque. 
+\end{DoxyReturn}
+\Hypertarget{classAtaque_a155848008c524865359c85d554e839f9}\index{Ataque@{Ataque}!getID@{getID}}
+\index{getID@{getID}!Ataque@{Ataque}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily \label{classAtaque_a155848008c524865359c85d554e839f9} 
+int Ataque\+::get\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna o ID do ataque. 
+
+\begin{DoxyReturn}{Retorna}
+int O ID do ataque. 
+\end{DoxyReturn}
+\Hypertarget{classAtaque_a59399ec4d2d8dec25ac1d68e9fcfa2f3}\index{Ataque@{Ataque}!getNome@{getNome}}
+\index{getNome@{getNome}!Ataque@{Ataque}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily \label{classAtaque_a59399ec4d2d8dec25ac1d68e9fcfa2f3} 
+string Ataque\+::get\+Nome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna o nome do ataque. 
+
+\begin{DoxyReturn}{Retorna}
+string O nome do ataque. 
+\end{DoxyReturn}
+\Hypertarget{classAtaque_a2f2e676b785d6a27618386a0aa4a1b47}\index{Ataque@{Ataque}!getQuantidade@{getQuantidade}}
+\index{getQuantidade@{getQuantidade}!Ataque@{Ataque}}
+\doxysubsubsection{\texorpdfstring{getQuantidade()}{getQuantidade()}}
+{\footnotesize\ttfamily \label{classAtaque_a2f2e676b785d6a27618386a0aa4a1b47} 
+int Ataque\+::get\+Quantidade (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna a quantidade máxima de vezes que o ataque pode ser usado. 
+
+\begin{DoxyReturn}{Retorna}
+int A quantidade de vezes que o ataque pode ser usado. 
+\end{DoxyReturn}
+\Hypertarget{classAtaque_ae5fd4a907841e790edb15fd8880b3781}\index{Ataque@{Ataque}!getQuantidadeAtual@{getQuantidadeAtual}}
+\index{getQuantidadeAtual@{getQuantidadeAtual}!Ataque@{Ataque}}
+\doxysubsubsection{\texorpdfstring{getQuantidadeAtual()}{getQuantidadeAtual()}}
+{\footnotesize\ttfamily \label{classAtaque_ae5fd4a907841e790edb15fd8880b3781} 
+int Ataque\+::get\+Quantidade\+Atual (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna a quantidade atual de vezes que o ataque pode ser usado. 
+
+\begin{DoxyReturn}{Retorna}
+int A quantidade atual de vezes que o ataque pode ser usado. 
+\end{DoxyReturn}
+\Hypertarget{classAtaque_ae0af6f38f487946484a1a3573f08955b}\index{Ataque@{Ataque}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!Ataque@{Ataque}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}}
+{\footnotesize\ttfamily \label{classAtaque_ae0af6f38f487946484a1a3573f08955b} 
+string Ataque\+::get\+Tipo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna o tipo do ataque. 
+
+\begin{DoxyReturn}{Retorna}
+string O tipo do ataque. 
+\end{DoxyReturn}
+\Hypertarget{classAtaque_aef8e38214324a03e335d1cf7d5e17c18}\index{Ataque@{Ataque}!setQuantidadeAtual@{setQuantidadeAtual}}
+\index{setQuantidadeAtual@{setQuantidadeAtual}!Ataque@{Ataque}}
+\doxysubsubsection{\texorpdfstring{setQuantidadeAtual()}{setQuantidadeAtual()}}
+{\footnotesize\ttfamily \label{classAtaque_aef8e38214324a03e335d1cf7d5e17c18} 
+void Ataque\+::set\+Quantidade\+Atual (\begin{DoxyParamCaption}\item[{int}]{valor}{}\end{DoxyParamCaption})}
+
+
+
+Define a quantidade atual de vezes que o ataque pode ser usado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & A nova quantidade atual de vezes que o ataque pode ser usado. \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+HPPs/\mbox{\hyperlink{Ataque_8hpp}{Ataque.\+hpp}}\item 
+CPPs/Ataque.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,18 @@
+<map id="HPPs/Estamina.hpp" name="HPPs/Estamina.hpp">
+<area shape="rect" id="Node000001" title="Uma Classe herdando da Classe Item que representa o item Estamina." alt="" coords="9,5,150,31"/>
+<area shape="rect" id="Node000002" href="$Item_8hpp.html" title="Classe que representa um item." alt="" coords="43,79,116,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,31,82,65,77,65,77,31"/>
+<area shape="rect" id="Node000003" href="$Monstrinho_8hpp.html" title="Definição da classe Monstrinho e seus métodos." alt="" coords="71,152,181,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="89,103,113,139,109,142,85,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,225,60,251"/>
+<area shape="poly" id="edge9_Node000002_Node000004" title=" " alt="" coords="77,105,61,153,42,213,37,211,55,151,72,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="113,179,60,219,57,215,109,175"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="69,299,127,324"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="126,178,105,285,100,284,121,177"/>
+<area shape="rect" id="Node000006" href="$Ataque_8hpp.html" title="Definição da classe Ataque e seus métodos." alt="" coords="135,225,223,251"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="130,176,157,214,153,217,126,179"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="175,227,149,189,153,186,180,224"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="168,253,123,292,120,288,165,249"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="152,299,263,324"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="186,250,200,285,195,287,181,252"/>
+</map>

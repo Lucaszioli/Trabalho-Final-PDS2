@@ -1,0 +1,17 @@
+<map id="HPPs/Treinador.hpp" name="HPPs/Treinador.hpp">
+<area shape="rect" id="Node000001" title="Definição da classe Treinador e seus métodos." alt="" coords="5,5,145,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="56,152,111,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,31,85,138,79,138,73,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="105,225,163,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="70,32,56,59,42,96,36,137,39,157,46,176,66,200,94,218,91,223,63,204,41,179,33,159,31,137,37,95,51,57,66,30"/>
+<area shape="rect" id="Node000004" href="$Monstrinho_8hpp.html" title="Definição da classe Monstrinho e seus métodos." alt="" coords="113,79,224,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="92,29,144,68,141,72,89,33"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="157,106,109,145,106,141,153,102"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="168,105,143,213,137,211,163,104"/>
+<area shape="rect" id="Node000005" href="$Ataque_8hpp.html" title="Definição da classe Ataque e seus métodos." alt="" coords="186,152,274,177"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="174,103,205,141,201,144,170,106"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="216,180,162,219,159,215,213,175"/>
+<area shape="poly" id="edge9_Node000005_Node000004" title=" " alt="" coords="225,153,193,115,197,112,229,150"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="188,225,299,251"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="235,177,241,211,236,212,230,178"/>
+</map>

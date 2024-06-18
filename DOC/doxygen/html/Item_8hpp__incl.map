@@ -1,0 +1,16 @@
+<map id="HPPs/Item.hpp" name="HPPs/Item.hpp">
+<area shape="rect" id="Node000001" title="Classe que representa um item." alt="" coords="23,5,135,31"/>
+<area shape="rect" id="Node000002" href="$Monstrinho_8hpp.html" title="Definição da classe Monstrinho e seus métodos." alt="" coords="71,79,181,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,30,113,66,109,69,85,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,60,177"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="77,32,61,80,42,139,37,138,55,78,72,30"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,106,60,146,57,141,109,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="69,225,127,251"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="126,105,105,212,100,211,121,104"/>
+<area shape="rect" id="Node000005" href="$Ataque_8hpp.html" title="Definição da classe Ataque e seus métodos." alt="" coords="135,152,223,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="130,103,157,140,153,143,126,106"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="175,153,149,116,153,113,180,150"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="168,179,123,218,120,214,165,175"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="152,225,263,251"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="186,177,200,212,195,214,181,179"/>
+</map>

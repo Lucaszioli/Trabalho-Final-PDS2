@@ -1,0 +1,130 @@
+\doxysection{Referência da Classe Bot}
+\hypertarget{classBot}{}\label{classBot}\index{Bot@{Bot}}
+
+
+Representa um \doxylink{classBot}{Bot} em um jogo.  
+
+
+
+
+{\ttfamily \#include $<$Bot.\+hpp$>$}
+
+
+
+Diagrama de hierarquia da classe Bot\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=137pt]{classBot__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Bot\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classBot__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBot_a88541e23b345509d11582c2c14d35782}{Bot}} (int \mbox{\hyperlink{classTreinador_a453d981c3d896a456c6df0dfd512d71f}{ID}}, std\+::string \mbox{\hyperlink{classTreinador_a10e003e240c62b0294aa709a049f788c}{nome}}, vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classTreinador_aef2eab6508ff79b1640aab5ec32bb9ea}{equipe}}, vector$<$ std\+::string $>$ fala)
+\begin{DoxyCompactList}\small\item\em Constrói um novo objeto \doxylink{classBot}{Bot}. \end{DoxyCompactList}\item 
+vector$<$ std\+::string $>$ \mbox{\hyperlink{classBot_a18fb420cc43b53ea5ce30bfda8fc0772}{get\+Fala}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o discurso do \doxylink{classBot}{Bot}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBot_a3c9e362f54537310caeaf231d1e42907}{muda\+Equipe}} () override
+\begin{DoxyCompactList}\small\item\em Altera a equipe de objetos \doxylink{classMonstrinho}{Monstrinho}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classTreinador}{Treinador}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTreinador_aff273105364b55b4aa90c891a308137a}{Treinador}} (int \mbox{\hyperlink{classTreinador_a453d981c3d896a456c6df0dfd512d71f}{ID}}, std\+::string \mbox{\hyperlink{classTreinador_a10e003e240c62b0294aa709a049f788c}{nome}}, vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classTreinador_aef2eab6508ff79b1640aab5ec32bb9ea}{equipe}})
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classTreinador}{Treinador}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTreinador_a1a992332ab2ade9d2e8e676027091f3d}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o identificador do treinador. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTreinador_a69f71f1da4bd4d215623183adc695deb}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome do treinador. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classTreinador_ab5de4240df3af144fcfb8c6acf2af333}{get\+Equipe}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a equipe de monstrinhos do treinador. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTreinador_a573ae526296e0668c7712a119d717ab9}{verifica\+Equipe}} ()
+\begin{DoxyCompactList}\small\item\em Verifica se a equipe de monstrinhos do treinador está completa. \end{DoxyCompactList}\item 
+void {\bfseries imprime\+Equipe} ()
+\begin{DoxyCompactList}\small\item\em Imprime a equipe de monstrinhos do treinador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTreinador_a56d4b2f3ec8359a37cab2691c9f35303}{coloca\+Monstrinho}} (\mbox{\hyperlink{classMonstrinho}{Monstrinho}} monstrinho)
+\begin{DoxyCompactList}\small\item\em Coloca um monstrinho na equipe do treinador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Outros membros herdados}
+\doxysubsection*{Atributos Protegidos herdados de \mbox{\hyperlink{classTreinador}{Treinador}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classTreinador_a453d981c3d896a456c6df0dfd512d71f}{ID}}
+\item 
+vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classTreinador_aef2eab6508ff79b1640aab5ec32bb9ea}{equipe}}
+\item 
+std\+::string \mbox{\hyperlink{classTreinador_a10e003e240c62b0294aa709a049f788c}{nome}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Representa um \doxylink{classBot}{Bot} em um jogo. 
+
+A classe \doxylink{classBot}{Bot} é uma classe derivada da classe \doxylink{classTreinador}{Treinador} e representa um \doxylink{classBot}{Bot} em um jogo. Ela contém informações sobre o ID do \doxylink{classBot}{Bot}, nome, equipe de objetos \doxylink{classMonstrinho}{Monstrinho} e discurso. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{classBot_a88541e23b345509d11582c2c14d35782}\index{Bot@{Bot}!Bot@{Bot}}
+\index{Bot@{Bot}!Bot@{Bot}}
+\doxysubsubsection{\texorpdfstring{Bot()}{Bot()}}
+{\footnotesize\ttfamily \label{classBot_a88541e23b345509d11582c2c14d35782} 
+Bot\+::\+Bot (\begin{DoxyParamCaption}\item[{int}]{ID}{, }\item[{std\+::string}]{nome}{, }\item[{vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*} $>$}]{equipe}{, }\item[{vector$<$ std\+::string $>$}]{fala}{}\end{DoxyParamCaption})}
+
+
+
+Constrói um novo objeto \doxylink{classBot}{Bot}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ID} & O ID do \doxylink{classBot}{Bot}. \\
+\hline
+{\em nome} & O nome do \doxylink{classBot}{Bot}. \\
+\hline
+{\em equipe} & A equipe de objetos \doxylink{classMonstrinho}{Monstrinho}. \\
+\hline
+{\em fala} & O discurso do \doxylink{classBot}{Bot}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classBot_a18fb420cc43b53ea5ce30bfda8fc0772}\index{Bot@{Bot}!getFala@{getFala}}
+\index{getFala@{getFala}!Bot@{Bot}}
+\doxysubsubsection{\texorpdfstring{getFala()}{getFala()}}
+{\footnotesize\ttfamily \label{classBot_a18fb420cc43b53ea5ce30bfda8fc0772} 
+vector$<$ std\+::string $>$ Bot\+::get\+Fala (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtém o discurso do \doxylink{classBot}{Bot}. 
+
+\begin{DoxyReturn}{Retorna}
+O discurso do \doxylink{classBot}{Bot}. 
+\end{DoxyReturn}
+\Hypertarget{classBot_a3c9e362f54537310caeaf231d1e42907}\index{Bot@{Bot}!mudaEquipe@{mudaEquipe}}
+\index{mudaEquipe@{mudaEquipe}!Bot@{Bot}}
+\doxysubsubsection{\texorpdfstring{mudaEquipe()}{mudaEquipe()}}
+{\footnotesize\ttfamily \label{classBot_a3c9e362f54537310caeaf231d1e42907} 
+bool Bot\+::muda\+Equipe (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Altera a equipe de objetos \doxylink{classMonstrinho}{Monstrinho}. 
+
+Esta função substitui a função \doxylink{classBot_a3c9e362f54537310caeaf231d1e42907}{muda\+Equipe()} da classe base. 
+
+Implementa \mbox{\hyperlink{classTreinador_ae7b3f3777be0845242af0d1ed10dd490}{Treinador}}.
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+HPPs/\mbox{\hyperlink{Bot_8hpp}{Bot.\+hpp}}\item 
+CPPs/Bot.\+cpp\end{DoxyCompactItemize}

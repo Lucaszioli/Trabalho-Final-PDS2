@@ -1,0 +1,60 @@
+\doxysection{Ataque.\+hpp}
+\hypertarget{Ataque_8hpp_source}{}\label{Ataque_8hpp_source}\index{HPPs/Ataque.hpp@{HPPs/Ataque.hpp}}
+\mbox{\hyperlink{Ataque_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ATAQUE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ATAQUE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Monstrinho_8hpp}{Monstrinho.hpp}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMonstrinho}{Monstrinho}};\ \textcolor{comment}{//\ Declaração\ antecipada\ da\ classe\ Monstrinho\ para\ evitar\ dependência\ circular}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAtaque}{Ataque}}\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ ID;\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{string}\ nome;\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{string}\ tipo;\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ dano;\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{string}\ descricao;\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ quantidade;\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ quantidadeAtual;\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{double}\ chanceAcerto;\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{static}\ unordered\_map<string,\ unordered\_map<string,\ double>>\ TabelaEfetividade;\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{static}\ unordered\_map<string,\ unordered\_map<string,\ double>>\ gerarTabelaEfetividade();\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classAtaque_aa6abf43bb8c8536a229929bb737da6ec}{Ataque}}(\textcolor{keywordtype}{int}\ ID,\ \textcolor{keywordtype}{string}\ nome,\ \textcolor{keywordtype}{string}\ tipo,\ \textcolor{keywordtype}{int}\ dano,\ \textcolor{keywordtype}{string}\ descricao,\ \textcolor{keywordtype}{int}\ quantidade,\ \textcolor{keywordtype}{double}\ chanceAcerto)}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ :\ ID(ID),\ nome(nome),\ tipo(tipo),\ dano(dano),\ descricao(descricao),\ quantidade(quantidade),\ quantidadeAtual(quantidade),\ chanceAcerto(chanceAcerto)\ \{\}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classAtaque_a155848008c524865359c85d554e839f9}{getID}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classAtaque_a59399ec4d2d8dec25ac1d68e9fcfa2f3}{getNome}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classAtaque_ae0af6f38f487946484a1a3573f08955b}{getTipo}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classAtaque_a4114aaa45f5a799848a6500d2196a65b}{getDano}}();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classAtaque_a657af4ce47ab28ad329d1ba65b78a65f}{getDescricao}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classAtaque_a2f2e676b785d6a27618386a0aa4a1b47}{getQuantidade}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classAtaque_ae5fd4a907841e790edb15fd8880b3781}{getQuantidadeAtual}}();}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAtaque_aef8e38214324a03e335d1cf7d5e17c18}{setQuantidadeAtual}}(\textcolor{keywordtype}{int}\ valor);}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classAtaque_a6d0f3982f138103e7188bd353e6b3c69}{getChanceAcerto}}();}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{static}\ vector<Ataque>\ \mbox{\hyperlink{classAtaque_ac78af6150e43756e5e002dc7a5c6372a}{construirAtaques}}();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classAtaque_abfbb638eb0f399c26a2fcd733a3748f1}{fazerAtaque}}(\mbox{\hyperlink{classMonstrinho}{Monstrinho}}\ \&inimigo);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classAtaque_aa43c5a8b24753a70e91d5e0090c8f090}{calcularEfetividade}}(\textcolor{keywordtype}{string}\ tipoAtaque,\ vector<string>\ tiposMonstrinho);}
+\DoxyCodeLine{00136\ \};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

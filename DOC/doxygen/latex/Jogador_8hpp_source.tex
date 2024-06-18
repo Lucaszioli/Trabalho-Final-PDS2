@@ -1,0 +1,31 @@
+\doxysection{Jogador.\+hpp}
+\hypertarget{Jogador_8hpp_source}{}\label{Jogador_8hpp_source}\index{HPPs/Jogador.hpp@{HPPs/Jogador.hpp}}
+\mbox{\hyperlink{Jogador_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ JOGADOR\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ JOGADOR\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Treinador_8hpp}{Treinador.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Item_8hpp}{Item.hpp}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classJogador}{Jogador}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classTreinador}{Treinador}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Implementar\ inventário}}
+\DoxyCodeLine{00022\ \ \ \ \ std::vector<Item*>\ inventario;}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classJogador_a9837ab1f6948b3e314a592c62896b448}{Jogador}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTreinador_a453d981c3d896a456c6df0dfd512d71f}{ID}},\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classTreinador_a10e003e240c62b0294aa709a049f788c}{nome}},\ vector<Monstrinho\ *>\ \mbox{\hyperlink{classTreinador_aef2eab6508ff79b1640aab5ec32bb9ea}{equipe}});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJogador_a91c544398b54eaebf86424a22a854442}{mudaEquipe}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJogador_af33f41e3358db4900f96f8c070c12244}{receberItem}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ vector<Item*>\ \mbox{\hyperlink{classJogador_aa6698547537e1692be55f2fa80329e04}{getInventario}}();}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJogador_ab2a3f35f2dd2fda482000feafb98f253}{adicionarItem}}(\mbox{\hyperlink{classItem}{Item}}*\ item);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ removerItem(\textcolor{keywordtype}{int}\ item);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ usarItem();}
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

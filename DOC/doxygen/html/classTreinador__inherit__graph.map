@@ -1,0 +1,7 @@
+<map id="Treinador" name="Treinador">
+<area shape="rect" id="Node000001" title="Classe que representa um treinador de monstrinhos." alt="" coords="29,5,105,31"/>
+<area shape="rect" id="Node000002" href="$classBot.html" title="Representa um Bot em um jogo." alt="" coords="5,79,48,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,44,35,80,31,77,51,42"/>
+<area shape="rect" id="Node000003" href="$classJogador.html" title="Classe que representa um jogador no jogo." alt="" coords="73,79,141,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="82,42,103,77,98,80,78,44"/>
+</map>

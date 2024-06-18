@@ -1,0 +1,142 @@
+\doxysection{Referência da Classe Jogador}
+\hypertarget{classJogador}{}\label{classJogador}\index{Jogador@{Jogador}}
+
+
+Classe que representa um jogador no jogo.  
+
+
+
+
+{\ttfamily \#include $<$Jogador.\+hpp$>$}
+
+
+
+Diagrama de hierarquia da classe Jogador\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=137pt]{classJogador__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Jogador\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classJogador__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJogador_a9837ab1f6948b3e314a592c62896b448}{Jogador}} (int \mbox{\hyperlink{classTreinador_a453d981c3d896a456c6df0dfd512d71f}{ID}}, string \mbox{\hyperlink{classTreinador_a10e003e240c62b0294aa709a049f788c}{nome}}, vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classTreinador_aef2eab6508ff79b1640aab5ec32bb9ea}{equipe}})
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classJogador}{Jogador}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJogador_a91c544398b54eaebf86424a22a854442}{muda\+Equipe}} () override
+\begin{DoxyCompactList}\small\item\em Função que permite ao jogador mudar sua equipe de monstrinhos. \end{DoxyCompactList}\item 
+\Hypertarget{classJogador_af33f41e3358db4900f96f8c070c12244}\label{classJogador_af33f41e3358db4900f96f8c070c12244} 
+void {\bfseries receber\+Item} ()
+\begin{DoxyCompactList}\small\item\em Função que permite o jogador receber um item aleatório ao fim de uma rodada. \end{DoxyCompactList}\item 
+\Hypertarget{classJogador_aa6698547537e1692be55f2fa80329e04}\label{classJogador_aa6698547537e1692be55f2fa80329e04} 
+vector$<$ \mbox{\hyperlink{classItem}{Item}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries get\+Inventario} ()
+\begin{DoxyCompactList}\small\item\em Função que permiter pegar o inventario do \doxylink{classJogador}{Jogador}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJogador_ab2a3f35f2dd2fda482000feafb98f253}{adicionar\+Item}} (\mbox{\hyperlink{classItem}{Item}} \texorpdfstring{$\ast$}{*}item)
+\begin{DoxyCompactList}\small\item\em Adiciona um \doxylink{classItem}{Item} ao inventario do jogador. \end{DoxyCompactList}\item 
+\Hypertarget{classJogador_a23af89e9d1797471d6a479145ea3692a}\label{classJogador_a23af89e9d1797471d6a479145ea3692a} 
+void {\bfseries remover\+Item} (int item)
+\item 
+\Hypertarget{classJogador_aa2b971646a94a48503754afa77baa7c3}\label{classJogador_aa2b971646a94a48503754afa77baa7c3} 
+bool {\bfseries usar\+Item} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classTreinador}{Treinador}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTreinador_aff273105364b55b4aa90c891a308137a}{Treinador}} (int \mbox{\hyperlink{classTreinador_a453d981c3d896a456c6df0dfd512d71f}{ID}}, std\+::string \mbox{\hyperlink{classTreinador_a10e003e240c62b0294aa709a049f788c}{nome}}, vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classTreinador_aef2eab6508ff79b1640aab5ec32bb9ea}{equipe}})
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classTreinador}{Treinador}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTreinador_a1a992332ab2ade9d2e8e676027091f3d}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o identificador do treinador. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTreinador_a69f71f1da4bd4d215623183adc695deb}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome do treinador. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classTreinador_ab5de4240df3af144fcfb8c6acf2af333}{get\+Equipe}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a equipe de monstrinhos do treinador. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTreinador_a573ae526296e0668c7712a119d717ab9}{verifica\+Equipe}} ()
+\begin{DoxyCompactList}\small\item\em Verifica se a equipe de monstrinhos do treinador está completa. \end{DoxyCompactList}\item 
+void {\bfseries imprime\+Equipe} ()
+\begin{DoxyCompactList}\small\item\em Imprime a equipe de monstrinhos do treinador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTreinador_a56d4b2f3ec8359a37cab2691c9f35303}{coloca\+Monstrinho}} (\mbox{\hyperlink{classMonstrinho}{Monstrinho}} monstrinho)
+\begin{DoxyCompactList}\small\item\em Coloca um monstrinho na equipe do treinador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Outros membros herdados}
+\doxysubsection*{Atributos Protegidos herdados de \mbox{\hyperlink{classTreinador}{Treinador}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classTreinador_a453d981c3d896a456c6df0dfd512d71f}{ID}}
+\item 
+vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classTreinador_aef2eab6508ff79b1640aab5ec32bb9ea}{equipe}}
+\item 
+std\+::string \mbox{\hyperlink{classTreinador_a10e003e240c62b0294aa709a049f788c}{nome}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa um jogador no jogo. 
+
+Esta classe herda da classe \doxylink{classTreinador}{Treinador} e representa um jogador no jogo. Um jogador possui um ID, um nome e uma equipe de monstrinhos. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{classJogador_a9837ab1f6948b3e314a592c62896b448}\index{Jogador@{Jogador}!Jogador@{Jogador}}
+\index{Jogador@{Jogador}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{Jogador()}{Jogador()}}
+{\footnotesize\ttfamily \label{classJogador_a9837ab1f6948b3e314a592c62896b448} 
+Jogador\+::\+Jogador (\begin{DoxyParamCaption}\item[{int}]{ID}{, }\item[{string}]{nome}{, }\item[{vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*} $>$}]{equipe}{}\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{classJogador}{Jogador}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ID} & O ID do jogador. \\
+\hline
+{\em nome} & O nome do jogador. \\
+\hline
+{\em equipe} & A equipe de monstrinhos do jogador. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classJogador_ab2a3f35f2dd2fda482000feafb98f253}\index{Jogador@{Jogador}!adicionarItem@{adicionarItem}}
+\index{adicionarItem@{adicionarItem}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{adicionarItem()}{adicionarItem()}}
+{\footnotesize\ttfamily \label{classJogador_ab2a3f35f2dd2fda482000feafb98f253} 
+void Jogador\+::adicionar\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} \texorpdfstring{$\ast$}{*}}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Adiciona um \doxylink{classItem}{Item} ao inventario do jogador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em item} & \doxylink{classItem}{Item} adicionado no inventario \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classJogador_a91c544398b54eaebf86424a22a854442}\index{Jogador@{Jogador}!mudaEquipe@{mudaEquipe}}
+\index{mudaEquipe@{mudaEquipe}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{mudaEquipe()}{mudaEquipe()}}
+{\footnotesize\ttfamily \label{classJogador_a91c544398b54eaebf86424a22a854442} 
+bool Jogador\+::muda\+Equipe (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Função que permite ao jogador mudar sua equipe de monstrinhos. 
+
+Esta função é uma sobrescrita da função muda\+Equipe da classe \doxylink{classTreinador}{Treinador}. Ela permite ao jogador mudar sua equipe de monstrinhos. 
+
+Implementa \mbox{\hyperlink{classTreinador_ae7b3f3777be0845242af0d1ed10dd490}{Treinador}}.
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+HPPs/\mbox{\hyperlink{Jogador_8hpp}{Jogador.\+hpp}}\item 
+CPPs/Jogador.\+cpp\end{DoxyCompactItemize}

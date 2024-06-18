@@ -1,0 +1,11 @@
+<map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,55,109,80"/>
+<area shape="rect" id="Node000001" href="$classItemError.html" title=" " alt="" coords="157,55,233,80"/>
+<area shape="poly" id="edge4_Node000000_Node000001" title=" " alt="" coords="123,65,157,65,157,70,123,70"/>
+<area shape="rect" id="Node000002" href="$classCuraError.html" title=" " alt="" coords="295,5,373,31"/>
+<area shape="poly" id="edge5_Node000001_Node000002" title=" " alt="" coords="244,47,296,28,298,33,245,52"/>
+<area shape="rect" id="Node000003" href="$classEstaminaError.html" title=" " alt="" coords="281,55,387,80"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="247,65,281,65,281,70,247,70"/>
+<area shape="rect" id="Node000004" href="$classReviveError.html" title=" " alt="" coords="289,104,379,129"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="245,82,298,101,296,106,244,87"/>
+</map>

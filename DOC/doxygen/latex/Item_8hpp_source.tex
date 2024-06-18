@@ -1,0 +1,44 @@
+\doxysection{Item.\+hpp}
+\hypertarget{Item_8hpp_source}{}\label{Item_8hpp_source}\index{HPPs/Item.hpp@{HPPs/Item.hpp}}
+\mbox{\hyperlink{Item_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ITEM}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ITEM}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Monstrinho_8hpp}{Monstrinho.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ }std::string;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classItem}{Item}}\{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ nome;\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ descricao;\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ tipo;\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ raridade;\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classItem_a37dcc2898aacb609fffcc938918f73af}{usarItem}}(\mbox{\hyperlink{classMonstrinho}{Monstrinho}}*\ monstro)\ =\ 0;\ \textcolor{comment}{//mudar\ dependendo\ se\ for\ ponteiro\ ou\ não}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classItem_aac4ada684809404557b4b5a2092aeb47}{getTipo}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classItem_a8dc4e5f40cb7a03f2af984843a7c035b}{setTipo}}(\textcolor{keywordtype}{string}\ tipo);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classItem_a7729c9696d8029d8df921eeda0957a49}{pegarItem}}()\ =\ 0;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classItem_a3ccff67ae0539df61a27c81ea89bd329}{getRaridade}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classItem_a2e43f8d8603c5aa7d3d90542223e8882}{setRaridade}}(\textcolor{keywordtype}{string}\ raridade);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classItem_aaa39325c2387ee3a9004b17b35757edd}{getNome}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classItem_aaa2418320634eb4ba13d4a074cf2102a}{setNome}}(\textcolor{keywordtype}{string}\ nome);\ \textcolor{comment}{//\ <=\ Muda\ o\ nome}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classItem_ac48f72f64f83be5c72aa459afec114ae}{getDescricao}}();\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classItem_a503485b1e5e1ad7cc27cf581bd69014c}{setDescricao}}(\textcolor{keywordtype}{string}\ descricao);\ \textcolor{comment}{//<=\ Muda\ a\ descrição}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

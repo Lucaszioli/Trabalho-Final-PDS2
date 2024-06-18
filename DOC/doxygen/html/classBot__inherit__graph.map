@@ -1,0 +1,5 @@
+<map id="Bot" name="Bot">
+<area shape="rect" id="Node000001" title="Representa um Bot em um jogo." alt="" coords="22,79,65,104"/>
+<area shape="rect" id="Node000002" href="$classTreinador.html" title="Classe que representa um treinador de monstrinhos." alt="" coords="5,5,81,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="46,44,46,79,41,79,41,44"/>
+</map>

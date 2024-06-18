@@ -1,0 +1,26 @@
+<map id="HPPs/Monstrinho.hpp" name="HPPs/Monstrinho.hpp">
+<area shape="rect" id="Node000001" title="Definição da classe Monstrinho e seus métodos." alt="" coords="330,5,481,31"/>
+<area shape="rect" id="Node000002" href="$Ataque_8hpp.html" title="Definição da classe Ataque e seus métodos." alt="" coords="198,79,325,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="364,39,279,81,277,76,362,34"/>
+<area shape="rect" id="Node000003" href="$Item_8hpp.html" title="Classe que representa um item." alt="" coords="349,79,461,104"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="408,44,408,79,403,79,403,44"/>
+<area shape="rect" id="Node000007" href="$Jogo_8hpp.html" title="Definição da classe Jogo e seus métodos." alt="" coords="620,225,735,251"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="495,17,572,26,614,35,656,48,696,65,733,87,765,116,790,151,795,164,793,177,776,199,748,215,718,228,716,223,746,211,773,195,788,175,790,165,786,153,761,119,730,92,693,70,654,53,613,40,571,31,494,22"/>
+<area shape="rect" id="Node000009" href="$Treinador_8hpp.html" title="Definição da classe Treinador e seus métodos." alt="" coords="511,79,651,104"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="447,33,554,76,552,81,445,38"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="303,70,388,28,390,33,305,75"/>
+<area shape="rect" id="Node000004" href="$Cura_8hpp.html" title="Uma Classe herdando da Classe Item que representa o item Cura." alt="" coords="323,152,437,177"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="399,118,387,153,382,151,394,116"/>
+<area shape="rect" id="Node000005" href="$Estamina_8hpp.html" title="Uma Classe herdando da Classe Item que representa o item Estamina." alt="" coords="5,152,147,177"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="340,109,130,154,129,149,339,104"/>
+<area shape="rect" id="Node000006" href="$Jogador_8hpp.html" title="Uma Classe herdando da Classe Treinador que representa o Jogador." alt="" coords="462,152,594,177"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="438,108,509,149,507,154,435,113"/>
+<area shape="rect" id="Node000008" href="$Revive_8hpp.html" title="Uma Classe herdando da Classe Item que representa o item Revive." alt="" coords="171,152,298,177"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="366,112,264,154,262,149,364,107"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="565,181,654,223,652,228,563,186"/>
+<area shape="poly" id="edge13_Node000009_Node000006" title=" " alt="" coords="567,117,539,153,535,150,562,113"/>
+<area shape="poly" id="edge14_Node000009_Node000007" title=" " alt="" coords="599,114,672,224,667,227,595,117"/>
+<area shape="rect" id="Node000010" href="$Bot_8hpp.html" title="Uma Classe herdando da Classe Treinador que representa o Bot." alt="" coords="669,152,776,177"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="617,108,701,149,698,154,615,112"/>
+<area shape="poly" id="edge12_Node000010_Node000007" title=" " alt="" coords="710,191,687,227,682,224,706,188"/>
+</map>

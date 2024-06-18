@@ -1,0 +1,160 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {brazil}{}\relax 
+\contentsline {chapter}{\numberline {1}Trabalho-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Final-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PDS2}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introdução}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Como jogar}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Dicas}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Instruções de Compilação e Execução}{2}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Autores}{2}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Índice Hierárquico}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Hierarquia de Classes}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Índice dos Componentes}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Lista de Classes}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Índice dos Arquivos}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Lista de Arquivos}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Classes}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Referência da Classe Ataque}{9}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Descrição detalhada}{10}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Construtores e Destrutores}{10}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}Ataque()}{10}{subsubsection.5.1.2.1}%
+\contentsline {subsection}{\numberline {5.1.3}Documentação das funções}{10}{subsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.1}calcularEfetividade()}{10}{subsubsection.5.1.3.1}%
+\contentsline {subsubsection}{\numberline {5.1.3.2}construirAtaques()}{11}{subsubsection.5.1.3.2}%
+\contentsline {subsubsection}{\numberline {5.1.3.3}fazerAtaque()}{11}{subsubsection.5.1.3.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.4}getChanceAcerto()}{11}{subsubsection.5.1.3.4}%
+\contentsline {subsubsection}{\numberline {5.1.3.5}getDano()}{12}{subsubsection.5.1.3.5}%
+\contentsline {subsubsection}{\numberline {5.1.3.6}getDescricao()}{12}{subsubsection.5.1.3.6}%
+\contentsline {subsubsection}{\numberline {5.1.3.7}getID()}{12}{subsubsection.5.1.3.7}%
+\contentsline {subsubsection}{\numberline {5.1.3.8}getNome()}{12}{subsubsection.5.1.3.8}%
+\contentsline {subsubsection}{\numberline {5.1.3.9}getQuantidade()}{12}{subsubsection.5.1.3.9}%
+\contentsline {subsubsection}{\numberline {5.1.3.10}getQuantidadeAtual()}{13}{subsubsection.5.1.3.10}%
+\contentsline {subsubsection}{\numberline {5.1.3.11}getTipo()}{13}{subsubsection.5.1.3.11}%
+\contentsline {subsubsection}{\numberline {5.1.3.12}setQuantidadeAtual()}{13}{subsubsection.5.1.3.12}%
+\contentsline {section}{\numberline {5.2}Referência da Classe Ataque\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error}{14}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Referência da Classe Bad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Request\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error}{15}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Referência da Classe Bot}{15}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Descrição detalhada}{17}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Construtores e Destrutores}{17}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}Bot()}{17}{subsubsection.5.4.2.1}%
+\contentsline {subsection}{\numberline {5.4.3}Documentação das funções}{18}{subsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.3.1}getFala()}{18}{subsubsection.5.4.3.1}%
+\contentsline {subsubsection}{\numberline {5.4.3.2}mudaEquipe()}{18}{subsubsection.5.4.3.2}%
+\contentsline {section}{\numberline {5.5}Referência da Classe Cura}{18}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Descrição detalhada}{19}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Documentação das funções}{20}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}getCura()}{20}{subsubsection.5.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.5.2.2}pegarItem()}{20}{subsubsection.5.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.3}setCura()}{20}{subsubsection.5.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.5.2.4}usarItem()}{20}{subsubsection.5.5.2.4}%
+\contentsline {section}{\numberline {5.6}Referência da Classe Cura\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error}{21}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Referência da Classe Escolha\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error}{22}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Referência da Classe Estamina}{22}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Descrição detalhada}{24}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Documentação das funções}{24}{subsection.5.8.2}%
+\contentsline {subsubsection}{\numberline {5.8.2.1}pegarItem()}{24}{subsubsection.5.8.2.1}%
+\contentsline {subsubsection}{\numberline {5.8.2.2}usarItem()}{24}{subsubsection.5.8.2.2}%
+\contentsline {section}{\numberline {5.9}Referência da Classe Estamina\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error}{25}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Referência da Classe Item}{26}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Descrição detalhada}{26}{subsection.5.10.1}%
+\contentsline {subsection}{\numberline {5.10.2}Documentação das funções}{27}{subsection.5.10.2}%
+\contentsline {subsubsection}{\numberline {5.10.2.1}getDescricao()}{27}{subsubsection.5.10.2.1}%
+\contentsline {subsubsection}{\numberline {5.10.2.2}getNome()}{27}{subsubsection.5.10.2.2}%
+\contentsline {subsubsection}{\numberline {5.10.2.3}getRaridade()}{27}{subsubsection.5.10.2.3}%
+\contentsline {subsubsection}{\numberline {5.10.2.4}getTipo()}{27}{subsubsection.5.10.2.4}%
+\contentsline {subsubsection}{\numberline {5.10.2.5}pegarItem()}{27}{subsubsection.5.10.2.5}%
+\contentsline {subsubsection}{\numberline {5.10.2.6}setDescricao()}{27}{subsubsection.5.10.2.6}%
+\contentsline {subsubsection}{\numberline {5.10.2.7}setNome()}{28}{subsubsection.5.10.2.7}%
+\contentsline {subsubsection}{\numberline {5.10.2.8}setRaridade()}{28}{subsubsection.5.10.2.8}%
+\contentsline {subsubsection}{\numberline {5.10.2.9}setTipo()}{28}{subsubsection.5.10.2.9}%
+\contentsline {subsubsection}{\numberline {5.10.2.10}usarItem()}{28}{subsubsection.5.10.2.10}%
+\contentsline {section}{\numberline {5.11}Referência da Classe Item\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error}{29}{section.5.11}%
+\contentsline {section}{\numberline {5.12}Referência da Classe Jogador}{30}{section.5.12}%
+\contentsline {subsection}{\numberline {5.12.1}Descrição detalhada}{31}{subsection.5.12.1}%
+\contentsline {subsection}{\numberline {5.12.2}Construtores e Destrutores}{32}{subsection.5.12.2}%
+\contentsline {subsubsection}{\numberline {5.12.2.1}Jogador()}{32}{subsubsection.5.12.2.1}%
+\contentsline {subsection}{\numberline {5.12.3}Documentação das funções}{33}{subsection.5.12.3}%
+\contentsline {subsubsection}{\numberline {5.12.3.1}adicionarItem()}{33}{subsubsection.5.12.3.1}%
+\contentsline {subsubsection}{\numberline {5.12.3.2}mudaEquipe()}{33}{subsubsection.5.12.3.2}%
+\contentsline {section}{\numberline {5.13}Referência da Classe Jogo}{33}{section.5.13}%
+\contentsline {subsection}{\numberline {5.13.1}Descrição detalhada}{34}{subsection.5.13.1}%
+\contentsline {subsection}{\numberline {5.13.2}Documentação das funções}{34}{subsection.5.13.2}%
+\contentsline {subsubsection}{\numberline {5.13.2.1}criaEquipeBot()}{34}{subsubsection.5.13.2.1}%
+\contentsline {subsubsection}{\numberline {5.13.2.2}escolherMonstrinho()}{34}{subsubsection.5.13.2.2}%
+\contentsline {subsubsection}{\numberline {5.13.2.3}geraTurno()}{34}{subsubsection.5.13.2.3}%
+\contentsline {section}{\numberline {5.14}Referência da Classe Monstrinho}{35}{section.5.14}%
+\contentsline {subsection}{\numberline {5.14.1}Descrição detalhada}{36}{subsection.5.14.1}%
+\contentsline {subsection}{\numberline {5.14.2}Construtores e Destrutores}{36}{subsection.5.14.2}%
+\contentsline {subsubsection}{\numberline {5.14.2.1}Monstrinho()}{36}{subsubsection.5.14.2.1}%
+\contentsline {subsection}{\numberline {5.14.3}Documentação das funções}{36}{subsection.5.14.3}%
+\contentsline {subsubsection}{\numberline {5.14.3.1}atacar()}{36}{subsubsection.5.14.3.1}%
+\contentsline {subsubsection}{\numberline {5.14.3.2}construirMonstrinhos()}{37}{subsubsection.5.14.3.2}%
+\contentsline {subsubsection}{\numberline {5.14.3.3}escolhaAtaque()}{37}{subsubsection.5.14.3.3}%
+\contentsline {subsubsection}{\numberline {5.14.3.4}getAtaques()}{37}{subsubsection.5.14.3.4}%
+\contentsline {subsubsection}{\numberline {5.14.3.5}getDescricao()}{37}{subsubsection.5.14.3.5}%
+\contentsline {subsubsection}{\numberline {5.14.3.6}getHP()}{38}{subsubsection.5.14.3.6}%
+\contentsline {subsubsection}{\numberline {5.14.3.7}getHPAtual()}{38}{subsubsection.5.14.3.7}%
+\contentsline {subsubsection}{\numberline {5.14.3.8}getID()}{38}{subsubsection.5.14.3.8}%
+\contentsline {subsubsection}{\numberline {5.14.3.9}getNome()}{38}{subsubsection.5.14.3.9}%
+\contentsline {subsubsection}{\numberline {5.14.3.10}getTier()}{38}{subsubsection.5.14.3.10}%
+\contentsline {subsubsection}{\numberline {5.14.3.11}getTipo()}{39}{subsubsection.5.14.3.11}%
+\contentsline {subsubsection}{\numberline {5.14.3.12}getVelocidade()}{39}{subsubsection.5.14.3.12}%
+\contentsline {subsubsection}{\numberline {5.14.3.13}setHPAtual()}{39}{subsubsection.5.14.3.13}%
+\contentsline {section}{\numberline {5.15}Referência da Classe Revive}{40}{section.5.15}%
+\contentsline {subsection}{\numberline {5.15.1}Descrição detalhada}{41}{subsection.5.15.1}%
+\contentsline {subsection}{\numberline {5.15.2}Documentação das funções}{41}{subsection.5.15.2}%
+\contentsline {subsubsection}{\numberline {5.15.2.1}pegarItem()}{41}{subsubsection.5.15.2.1}%
+\contentsline {subsubsection}{\numberline {5.15.2.2}usarItem()}{41}{subsubsection.5.15.2.2}%
+\contentsline {section}{\numberline {5.16}Referência da Classe Revive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error}{42}{section.5.16}%
+\contentsline {section}{\numberline {5.17}Referência da Classe Treinador}{43}{section.5.17}%
+\contentsline {subsection}{\numberline {5.17.1}Descrição detalhada}{44}{subsection.5.17.1}%
+\contentsline {subsection}{\numberline {5.17.2}Construtores e Destrutores}{44}{subsection.5.17.2}%
+\contentsline {subsubsection}{\numberline {5.17.2.1}Treinador()}{44}{subsubsection.5.17.2.1}%
+\contentsline {subsection}{\numberline {5.17.3}Documentação das funções}{44}{subsection.5.17.3}%
+\contentsline {subsubsection}{\numberline {5.17.3.1}colocaMonstrinho()}{44}{subsubsection.5.17.3.1}%
+\contentsline {subsubsection}{\numberline {5.17.3.2}getEquipe()}{45}{subsubsection.5.17.3.2}%
+\contentsline {subsubsection}{\numberline {5.17.3.3}getID()}{45}{subsubsection.5.17.3.3}%
+\contentsline {subsubsection}{\numberline {5.17.3.4}getNome()}{45}{subsubsection.5.17.3.4}%
+\contentsline {subsubsection}{\numberline {5.17.3.5}mudaEquipe()}{45}{subsubsection.5.17.3.5}%
+\contentsline {subsubsection}{\numberline {5.17.3.6}verificaEquipe()}{46}{subsubsection.5.17.3.6}%
+\contentsline {subsection}{\numberline {5.17.4}Atributos}{46}{subsection.5.17.4}%
+\contentsline {subsubsection}{\numberline {5.17.4.1}equipe}{46}{subsubsection.5.17.4.1}%
+\contentsline {subsubsection}{\numberline {5.17.4.2}ID}{46}{subsubsection.5.17.4.2}%
+\contentsline {subsubsection}{\numberline {5.17.4.3}nome}{46}{subsubsection.5.17.4.3}%
+\contentsline {chapter}{\numberline {6}Arquivos}{47}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Ataque\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{47}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Bad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Request\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{47}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Cura\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{47}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Escolha\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{48}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Estamina\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{48}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Item\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{48}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Revive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{48}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Referência do Arquivo HPPs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ataque.hpp}{49}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Descrição detalhada}{49}{subsection.6.8.1}%
+\contentsline {section}{\numberline {6.9}Ataque.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{50}{section.6.9}%
+\contentsline {section}{\numberline {6.10}Referência do Arquivo HPPs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bot.hpp}{50}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Descrição detalhada}{51}{subsection.6.10.1}%
+\contentsline {section}{\numberline {6.11}Bot.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{52}{section.6.11}%
+\contentsline {section}{\numberline {6.12}Referência do Arquivo HPPs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cura.hpp}{52}{section.6.12}%
+\contentsline {subsection}{\numberline {6.12.1}Descrição detalhada}{53}{subsection.6.12.1}%
+\contentsline {section}{\numberline {6.13}Cura.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{53}{section.6.13}%
+\contentsline {section}{\numberline {6.14}Referência do Arquivo HPPs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Estamina.hpp}{53}{section.6.14}%
+\contentsline {subsection}{\numberline {6.14.1}Descrição detalhada}{54}{subsection.6.14.1}%
+\contentsline {section}{\numberline {6.15}Estamina.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{54}{section.6.15}%
+\contentsline {section}{\numberline {6.16}Referência do Arquivo HPPs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Item.hpp}{55}{section.6.16}%
+\contentsline {subsection}{\numberline {6.16.1}Descrição detalhada}{56}{subsection.6.16.1}%
+\contentsline {section}{\numberline {6.17}Item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{56}{section.6.17}%
+\contentsline {section}{\numberline {6.18}Referência do Arquivo HPPs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Jogador.hpp}{56}{section.6.18}%
+\contentsline {subsection}{\numberline {6.18.1}Descrição detalhada}{57}{subsection.6.18.1}%
+\contentsline {section}{\numberline {6.19}Jogador.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{58}{section.6.19}%
+\contentsline {section}{\numberline {6.20}Referência do Arquivo HPPs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Jogo.hpp}{58}{section.6.20}%
+\contentsline {subsection}{\numberline {6.20.1}Descrição detalhada}{59}{subsection.6.20.1}%
+\contentsline {section}{\numberline {6.21}Jogo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{59}{section.6.21}%
+\contentsline {section}{\numberline {6.22}Referência do Arquivo HPPs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Monstrinho.hpp}{60}{section.6.22}%
+\contentsline {subsection}{\numberline {6.22.1}Descrição detalhada}{61}{subsection.6.22.1}%
+\contentsline {section}{\numberline {6.23}Monstrinho.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{61}{section.6.23}%
+\contentsline {section}{\numberline {6.24}Referência do Arquivo HPPs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Revive.hpp}{62}{section.6.24}%
+\contentsline {subsection}{\numberline {6.24.1}Descrição detalhada}{62}{subsection.6.24.1}%
+\contentsline {section}{\numberline {6.25}Revive.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{62}{section.6.25}%
+\contentsline {section}{\numberline {6.26}Referência do Arquivo HPPs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Treinador.hpp}{63}{section.6.26}%
+\contentsline {subsection}{\numberline {6.26.1}Descrição detalhada}{64}{subsection.6.26.1}%
+\contentsline {section}{\numberline {6.27}Treinador.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{64}{section.6.27}%
