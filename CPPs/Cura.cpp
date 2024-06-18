@@ -1,6 +1,7 @@
 #include "../HPPs/Cura.hpp"
 #include <cstdlib>
 #include "../ERR/CuraError.hpp"
+#include <iostream>
 
 bool Cura::usarItem(Monstrinho* m){
     int vidaTotal = m -> getHP();
@@ -16,6 +17,10 @@ bool Cura::usarItem(Monstrinho* m){
         vidaFinal = vidaTotal;
     } 
     m -> setHPAtual(vidaFinal);
+    int vidaRestaurada = vidaFinal - vidaAtual;
+    cout<<"--------------------------------------------------------------------------------"<<endl;
+    cout << "A vida do seu "<< m->getNome() <<" foi restaurada em " << vidaRestaurada << " pontos" << endl;
+    cout<<"--------------------------------------------------------------------------------"<<endl;
     return false;
 }
 

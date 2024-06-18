@@ -28,5 +28,8 @@ bool Revive::usarItem(Monstrinho* monstro){
     }else if(raridade == "Max"){
         monstro->setHPAtual(vidaTotal);
     }
+    cout<<"--------------------------------------------------------------------------------"<<endl;
+    cout <<"Seu "<< monstro->getNome() <<" foi revivido com sucesso!" << endl;
+    cout<<"--------------------------------------------------------------------------------"<<endl;
     return false;
 }
