@@ -11,6 +11,7 @@ set(SOURCES
     Jogador.test.cpp
     Treinador.test.cpp
     Jogo.test.cpp
+    Bot.test.cpp
 )
 
 include_directories(../HPPs)
