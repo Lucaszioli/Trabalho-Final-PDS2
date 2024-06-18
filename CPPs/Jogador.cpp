@@ -42,14 +42,14 @@ bool Jogador::mudaEquipe()
                     std::cin.clear(); // Limpa o estado de falha
                     throw EscolhaError("Escolha diferente do número possível de opções");
                 }
-                if (escolha < 1 || escolha > equipe.size() + 1)
-                {
-                    cout << "Escolha inválida!" << endl;
-                    continue;
-                }
                 if (escolha == equipe.size() + 1 && equipe[0]->getHPAtual() > 0)
                 {
                     return false;
+                }
+                if (escolha < 1 || escolha > equipe.size())
+                {
+                    cout << "Escolha inválida!" << endl;
+                    continue;
                 }
                 if (equipe[escolha - 1]->getHPAtual() <= 0)
                 {
