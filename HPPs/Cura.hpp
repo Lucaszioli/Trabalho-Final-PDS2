@@ -3,6 +3,11 @@
 
 #include "Item.hpp"
 
+/**
+ * @file Cura.hpp
+ * @brief Uma Classe herdando da Classe Item que representa o item Cura
+ */
+
 /*
 * @class Cura
 * 

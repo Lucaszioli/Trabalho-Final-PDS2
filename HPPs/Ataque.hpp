@@ -1,15 +1,16 @@
 #ifndef ATAQUE_HPP
 #define ATAQUE_HPP
-/**
- * @file Ataque.hpp
- * @brief Definição da classe Ataque e seus métodos.
- */
 
 #include <vector>
 #include <unordered_map>
 #include "Monstrinho.hpp"
 
 using namespace std;
+/**
+ * @file Ataque.hpp
+ * @brief Definição da classe Ataque e seus métodos.
+ */
+
 class Monstrinho; // Declaração antecipada da classe Monstrinho para evitar dependência circular
 
 /**

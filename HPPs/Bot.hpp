@@ -5,6 +5,11 @@
 #include <string>
 
 /**
+ * @file Bot.hpp
+ * @brief Uma Classe herdando da Classe Treinador que representa o Bot
+ */
+
+/**
  * @class Bot
  * @brief Representa um Bot em um jogo.
  *
