@@ -1,0 +1,7 @@
+<map id="Treinador" name="Treinador">
+<area shape="rect" id="Node000001" title="Classe que representa um treinador de monstrinhos." alt="" coords="109,93,185,119"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,160,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,40,140,91,136,94,97,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="185,5,239,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,43,158,94,154,91,193,40"/>
+</map>

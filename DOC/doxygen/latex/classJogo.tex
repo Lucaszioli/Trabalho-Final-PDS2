@@ -1,0 +1,93 @@
+\doxysection{Referência da Classe Jogo}
+\hypertarget{classJogo}{}\label{classJogo}\index{Jogo@{Jogo}}
+
+
+Classe que representa toda a lógica do jogo.  
+
+
+
+
+{\ttfamily \#include $<$Jogo.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classJogo_a338d89f782b2c4d2c299ca768b91ddad}\label{classJogo_a338d89f782b2c4d2c299ca768b91ddad} 
+void {\bfseries iniciar} ()
+\begin{DoxyCompactList}\small\item\em Função que inicia o jogo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJogo_a688e71236a86340db9d763a23a8e8ad1}{gera\+Turno}} (\mbox{\hyperlink{classJogador}{Jogador}} \texorpdfstring{$\ast$}{*}jogador, \mbox{\hyperlink{classBot}{Bot}} \texorpdfstring{$\ast$}{*}bot)
+\begin{DoxyCompactList}\small\item\em Função que gera um turno de batalha. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classJogo_abd3e3259f082e874e369b2cf1ad02b78}{escolher\+Monstrinho}} (\mbox{\hyperlink{classJogador}{Jogador}} \texorpdfstring{$\ast$}{*}jogador)
+\begin{DoxyCompactList}\small\item\em Cria a equipe para o jogador. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classJogo_a718cad54706feeacc5fef197f9f839f7}{cria\+Equipe\+Bot}} (\mbox{\hyperlink{classBot}{Bot}} \texorpdfstring{$\ast$}{*}bot)
+\begin{DoxyCompactList}\small\item\em Cria a equipe para o bot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa toda a lógica do jogo. 
+
+A classe cria as equipes de cada treinador e gera os turnos de batalha Em cada turno você pode escolher qual monstrinho atacar e qual ataque usar, bem como trocar de monstrinho e usar itens ganhos nas vitórias 
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classJogo_a718cad54706feeacc5fef197f9f839f7}\index{Jogo@{Jogo}!criaEquipeBot@{criaEquipeBot}}
+\index{criaEquipeBot@{criaEquipeBot}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{criaEquipeBot()}{criaEquipeBot()}}
+{\footnotesize\ttfamily \label{classJogo_a718cad54706feeacc5fef197f9f839f7} 
+vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*} $>$ Jogo\+::cria\+Equipe\+Bot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBot}{Bot}} \texorpdfstring{$\ast$}{*}}]{bot}{}\end{DoxyParamCaption})}
+
+
+
+Cria a equipe para o bot. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em bot} & Ponteiro para o bot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna um vetor de ponteiros do tipo \doxylink{classMonstrinho}{Monstrinho} 
+\end{DoxyReturn}
+\Hypertarget{classJogo_abd3e3259f082e874e369b2cf1ad02b78}\index{Jogo@{Jogo}!escolherMonstrinho@{escolherMonstrinho}}
+\index{escolherMonstrinho@{escolherMonstrinho}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{escolherMonstrinho()}{escolherMonstrinho()}}
+{\footnotesize\ttfamily \label{classJogo_abd3e3259f082e874e369b2cf1ad02b78} 
+vector$<$ \mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*} $>$ Jogo\+::escolher\+Monstrinho (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJogador}{Jogador}} \texorpdfstring{$\ast$}{*}}]{jogador}{}\end{DoxyParamCaption})}
+
+
+
+Cria a equipe para o jogador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em jogador} & Ponteiro para o jogador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna um vetor de ponteiros do tipo \doxylink{classMonstrinho}{Monstrinho} 
+\end{DoxyReturn}
+\Hypertarget{classJogo_a688e71236a86340db9d763a23a8e8ad1}\index{Jogo@{Jogo}!geraTurno@{geraTurno}}
+\index{geraTurno@{geraTurno}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{geraTurno()}{geraTurno()}}
+{\footnotesize\ttfamily \label{classJogo_a688e71236a86340db9d763a23a8e8ad1} 
+void Jogo\+::gera\+Turno (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJogador}{Jogador}} \texorpdfstring{$\ast$}{*}}]{jogador}{, }\item[{\mbox{\hyperlink{classBot}{Bot}} \texorpdfstring{$\ast$}{*}}]{bot}{}\end{DoxyParamCaption})}
+
+
+
+Função que gera um turno de batalha. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em jogador} & Ponteiro para o jogador \\
+\hline
+{\em bot} & Ponteiro para o bot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+HPPs/\mbox{\hyperlink{Jogo_8hpp}{Jogo.\+hpp}}\item 
+CPPs/Jogo.\+cpp\end{DoxyCompactItemize}

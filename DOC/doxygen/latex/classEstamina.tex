@@ -1,0 +1,109 @@
+\doxysection{Referência da Classe Estamina}
+\hypertarget{classEstamina}{}\label{classEstamina}\index{Estamina@{Estamina}}
+
+
+Classe que representa o item \doxylink{classEstamina}{Estamina}.  
+
+
+
+
+{\ttfamily \#include $<$Estamina.\+hpp$>$}
+
+
+
+Diagrama de hierarquia da classe Estamina\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{classEstamina__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Estamina\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{classEstamina__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classEstamina_a47db9ccaf4d97b48481e64b0543e6403}{pegar\+Item}} () override
+\begin{DoxyCompactList}\small\item\em Método para pegar o item. \end{DoxyCompactList}\item 
+\Hypertarget{classEstamina_a51fe0ec4a9a88ff2570707e9064784ce}\label{classEstamina_a51fe0ec4a9a88ff2570707e9064784ce} 
+int {\bfseries get\+Energia} ()
+\item 
+\Hypertarget{classEstamina_a0eac23bdb0617adfd0b9be192ae263af}\label{classEstamina_a0eac23bdb0617adfd0b9be192ae263af} 
+void {\bfseries set\+Energia} (int energia)
+\item 
+bool \mbox{\hyperlink{classEstamina_a85702209ed51dec6293f40ccff2e7920}{usar\+Item}} (\mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*}monstro) override
+\begin{DoxyCompactList}\small\item\em Usa um item selecionado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classItem}{Item}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classItem_aac4ada684809404557b4b5a2092aeb47}{get\+Tipo}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o tipo do item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classItem_a8dc4e5f40cb7a03f2af984843a7c035b}{set\+Tipo}} (string tipo)
+\begin{DoxyCompactList}\small\item\em Define o tipo do item. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classItem_a3ccff67ae0539df61a27c81ea89bd329}{get\+Raridade}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a raridade do item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classItem_a2e43f8d8603c5aa7d3d90542223e8882}{set\+Raridade}} (string raridade)
+\begin{DoxyCompactList}\small\item\em Define a raridade do item. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classItem_aaa39325c2387ee3a9004b17b35757edd}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome do item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classItem_aaa2418320634eb4ba13d4a074cf2102a}{set\+Nome}} (string nome)
+\begin{DoxyCompactList}\small\item\em Define o nome do item. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classItem_ac48f72f64f83be5c72aa459afec114ae}{get\+Descricao}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a descrição. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classItem_a503485b1e5e1ad7cc27cf581bd69014c}{set\+Descricao}} (string descricao)
+\begin{DoxyCompactList}\small\item\em Define a descrição do item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa o item \doxylink{classEstamina}{Estamina}. 
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classEstamina_a47db9ccaf4d97b48481e64b0543e6403}\index{Estamina@{Estamina}!pegarItem@{pegarItem}}
+\index{pegarItem@{pegarItem}!Estamina@{Estamina}}
+\doxysubsubsection{\texorpdfstring{pegarItem()}{pegarItem()}}
+{\footnotesize\ttfamily \label{classEstamina_a47db9ccaf4d97b48481e64b0543e6403} 
+void Estamina\+::pegar\+Item (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Método para pegar o item. 
+
+
+
+Implementa \mbox{\hyperlink{classItem_a7729c9696d8029d8df921eeda0957a49}{Item}}.
+
+\Hypertarget{classEstamina_a85702209ed51dec6293f40ccff2e7920}\index{Estamina@{Estamina}!usarItem@{usarItem}}
+\index{usarItem@{usarItem}!Estamina@{Estamina}}
+\doxysubsubsection{\texorpdfstring{usarItem()}{usarItem()}}
+{\footnotesize\ttfamily \label{classEstamina_a85702209ed51dec6293f40ccff2e7920} 
+bool Estamina\+::usar\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*}}]{monstro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Usa um item selecionado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em Monstro} & O monstrinho em que o item será utilizado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se o item foi usado com sucesso, false se não foi 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classItem_a37dcc2898aacb609fffcc938918f73af}{Item}}.
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+HPPs/\mbox{\hyperlink{Estamina_8hpp}{Estamina.\+hpp}}\item 
+CPPs/Estamina.\+cpp\end{DoxyCompactItemize}

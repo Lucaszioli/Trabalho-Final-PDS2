@@ -1,0 +1,103 @@
+\doxysection{Referência da Classe Revive}
+\hypertarget{classRevive}{}\label{classRevive}\index{Revive@{Revive}}
+
+
+Classe que representa o item \doxylink{classRevive}{Revive}.  
+
+
+
+
+{\ttfamily \#include $<$Revive.\+hpp$>$}
+
+
+
+Diagrama de hierarquia da classe Revive\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{classRevive__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Revive\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{classRevive__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRevive_a56facd67f07b1b8c4e7e8f4a7286b6f0}{pegar\+Item}} () override
+\begin{DoxyCompactList}\small\item\em Método para pegar o item. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRevive_acc26160b4fa302bfac246555de9a74c3}{usar\+Item}} (\mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*}monstro) override
+\begin{DoxyCompactList}\small\item\em Usa um item selecionado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classItem}{Item}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classItem_aac4ada684809404557b4b5a2092aeb47}{get\+Tipo}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o tipo do item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classItem_a8dc4e5f40cb7a03f2af984843a7c035b}{set\+Tipo}} (string tipo)
+\begin{DoxyCompactList}\small\item\em Define o tipo do item. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classItem_a3ccff67ae0539df61a27c81ea89bd329}{get\+Raridade}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a raridade do item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classItem_a2e43f8d8603c5aa7d3d90542223e8882}{set\+Raridade}} (string raridade)
+\begin{DoxyCompactList}\small\item\em Define a raridade do item. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classItem_aaa39325c2387ee3a9004b17b35757edd}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome do item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classItem_aaa2418320634eb4ba13d4a074cf2102a}{set\+Nome}} (string nome)
+\begin{DoxyCompactList}\small\item\em Define o nome do item. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classItem_ac48f72f64f83be5c72aa459afec114ae}{get\+Descricao}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a descrição. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classItem_a503485b1e5e1ad7cc27cf581bd69014c}{set\+Descricao}} (string descricao)
+\begin{DoxyCompactList}\small\item\em Define a descrição do item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa o item \doxylink{classRevive}{Revive}. 
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classRevive_a56facd67f07b1b8c4e7e8f4a7286b6f0}\index{Revive@{Revive}!pegarItem@{pegarItem}}
+\index{pegarItem@{pegarItem}!Revive@{Revive}}
+\doxysubsubsection{\texorpdfstring{pegarItem()}{pegarItem()}}
+{\footnotesize\ttfamily \label{classRevive_a56facd67f07b1b8c4e7e8f4a7286b6f0} 
+void Revive\+::pegar\+Item (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Método para pegar o item. 
+
+
+
+Implementa \mbox{\hyperlink{classItem_a7729c9696d8029d8df921eeda0957a49}{Item}}.
+
+\Hypertarget{classRevive_acc26160b4fa302bfac246555de9a74c3}\index{Revive@{Revive}!usarItem@{usarItem}}
+\index{usarItem@{usarItem}!Revive@{Revive}}
+\doxysubsubsection{\texorpdfstring{usarItem()}{usarItem()}}
+{\footnotesize\ttfamily \label{classRevive_acc26160b4fa302bfac246555de9a74c3} 
+bool Revive\+::usar\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMonstrinho}{Monstrinho}} \texorpdfstring{$\ast$}{*}}]{monstro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Usa um item selecionado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em Monstro} & O monstrinho em que o item será utilizado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se o item foi usado com sucesso, false se não foi 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classItem_a37dcc2898aacb609fffcc938918f73af}{Item}}.
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+HPPs/\mbox{\hyperlink{Revive_8hpp}{Revive.\+hpp}}\item 
+CPPs/Revive.\+cpp\end{DoxyCompactItemize}

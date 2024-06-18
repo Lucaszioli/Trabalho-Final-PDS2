@@ -1,0 +1,38 @@
+\doxysection{Treinador.\+hpp}
+\hypertarget{Treinador_8hpp_source}{}\label{Treinador_8hpp_source}\index{HPPs/Treinador.hpp@{HPPs/Treinador.hpp}}
+\mbox{\hyperlink{Treinador_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TREINADOR\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TREINADOR\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Monstrinho_8hpp}{Monstrinho.hpp}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTreinador}{Treinador}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTreinador_a453d981c3d896a456c6df0dfd512d71f}{ID}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ vector<Monstrinho\ *>\ \mbox{\hyperlink{classTreinador_aef2eab6508ff79b1640aab5ec32bb9ea}{equipe}};\ }
+\DoxyCodeLine{00027\ \ \ \ \ std::string\ \mbox{\hyperlink{classTreinador_a10e003e240c62b0294aa709a049f788c}{nome}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classTreinador_aff273105364b55b4aa90c891a308137a}{Treinador}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTreinador_a453d981c3d896a456c6df0dfd512d71f}{ID}},\ std::string\ \mbox{\hyperlink{classTreinador_a10e003e240c62b0294aa709a049f788c}{nome}},\ vector<Monstrinho\ *>\ \mbox{\hyperlink{classTreinador_aef2eab6508ff79b1640aab5ec32bb9ea}{equipe}});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTreinador_a1a992332ab2ade9d2e8e676027091f3d}{getID}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ std::string\ \mbox{\hyperlink{classTreinador_a69f71f1da4bd4d215623183adc695deb}{getNome}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ vector<Monstrinho\ *>\ \mbox{\hyperlink{classTreinador_ab5de4240df3af144fcfb8c6acf2af333}{getEquipe}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classTreinador_a573ae526296e0668c7712a119d717ab9}{verificaEquipe}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classTreinador_ae7b3f3777be0845242af0d1ed10dd490}{mudaEquipe}}()\ =\ 0;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTreinador_aa3e6943922337820b35bcf74a4095503}{imprimeEquipe}}();}
+\DoxyCodeLine{00078\ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTreinador_a56d4b2f3ec8359a37cab2691c9f35303}{colocaMonstrinho}}(\mbox{\hyperlink{classMonstrinho}{Monstrinho}}\ monstrinho);}
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

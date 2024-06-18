@@ -1,0 +1,9 @@
+<map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
+<area shape="rect" id="Node000000" href="$classItem.html" title="Classe que representa um item." alt="" coords="5,55,53,80"/>
+<area shape="rect" id="Node000001" href="$classCura.html" title="Classe que representa o item Cura." alt="" coords="115,5,165,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="65,49,113,27,115,32,67,54"/>
+<area shape="rect" id="Node000002" href="$classEstamina.html" title="Classe que representa o item Estamina." alt="" coords="101,55,179,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="67,65,101,65,101,70,67,70"/>
+<area shape="rect" id="Node000003" href="$classRevive.html" title="Classe que representa o item Revive." alt="" coords="109,104,171,129"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="67,81,112,102,110,106,65,86"/>
+</map>

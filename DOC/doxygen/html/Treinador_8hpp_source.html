@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Monstrinhos: Código-Fonte de HPPs/Treinador.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Monstrinhos
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_39d5b5075838973ab2f8f2c7fc2e9276.html">HPPs</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">Treinador.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Treinador_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef TREINADOR_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define TREINADOR_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="Monstrinho_8hpp.html">Monstrinho.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classTreinador.html">   22</a></span><span class="keyword">class </span><a class="code hl_class" href="classTreinador.html">Treinador</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classTreinador.html#a453d981c3d896a456c6df0dfd512d71f">   25</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classTreinador.html#a453d981c3d896a456c6df0dfd512d71f">ID</a>;                      </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classTreinador.html#aef2eab6508ff79b1640aab5ec32bb9ea">   26</a></span>    vector&lt;Monstrinho *&gt; <a class="code hl_variable" href="classTreinador.html#aef2eab6508ff79b1640aab5ec32bb9ea">equipe</a>; </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classTreinador.html#a10e003e240c62b0294aa709a049f788c">   27</a></span>    std::string <a class="code hl_variable" href="classTreinador.html#a10e003e240c62b0294aa709a049f788c">nome</a>;            </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_function" href="classTreinador.html#aff273105364b55b4aa90c891a308137a">Treinador</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="classTreinador.html#a453d981c3d896a456c6df0dfd512d71f">ID</a>, std::string <a class="code hl_variable" href="classTreinador.html#a10e003e240c62b0294aa709a049f788c">nome</a>, vector&lt;Monstrinho *&gt; <a class="code hl_variable" href="classTreinador.html#aef2eab6508ff79b1640aab5ec32bb9ea">equipe</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classTreinador.html#a1a992332ab2ade9d2e8e676027091f3d">getID</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    std::string <a class="code hl_function" href="classTreinador.html#a69f71f1da4bd4d215623183adc695deb">getNome</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    vector&lt;Monstrinho *&gt; <a class="code hl_function" href="classTreinador.html#ab5de4240df3af144fcfb8c6acf2af333">getEquipe</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classTreinador.html#a573ae526296e0668c7712a119d717ab9">verificaEquipe</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classTreinador.html#ae7b3f3777be0845242af0d1ed10dd490">   72</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTreinador.html#ae7b3f3777be0845242af0d1ed10dd490">mudaEquipe</a>() = 0;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classTreinador.html#aa3e6943922337820b35bcf74a4095503">imprimeEquipe</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classTreinador.html#a56d4b2f3ec8359a37cab2691c9f35303">colocaMonstrinho</a>(<a class="code hl_class" href="classMonstrinho.html">Monstrinho</a> monstrinho);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>};</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aMonstrinho_8hpp_html"><div class="ttname"><a href="Monstrinho_8hpp.html">Monstrinho.hpp</a></div><div class="ttdoc">Definição da classe Monstrinho e seus métodos.</div></div>
+<div class="ttc" id="aclassMonstrinho_html"><div class="ttname"><a href="classMonstrinho.html">Monstrinho</a></div><div class="ttdoc">Classe que representa um monstrinho.</div><div class="ttdef"><b>Definição</b> Monstrinho.hpp:26</div></div>
+<div class="ttc" id="aclassTreinador_html"><div class="ttname"><a href="classTreinador.html">Treinador</a></div><div class="ttdoc">Classe que representa um treinador de monstrinhos.</div><div class="ttdef"><b>Definição</b> Treinador.hpp:23</div></div>
+<div class="ttc" id="aclassTreinador_html_a10e003e240c62b0294aa709a049f788c"><div class="ttname"><a href="classTreinador.html#a10e003e240c62b0294aa709a049f788c">Treinador::nome</a></div><div class="ttdeci">std::string nome</div><div class="ttdef"><b>Definição</b> Treinador.hpp:27</div></div>
+<div class="ttc" id="aclassTreinador_html_a1a992332ab2ade9d2e8e676027091f3d"><div class="ttname"><a href="classTreinador.html#a1a992332ab2ade9d2e8e676027091f3d">Treinador::getID</a></div><div class="ttdeci">int getID()</div><div class="ttdoc">Obtém o identificador do treinador.</div><div class="ttdef"><b>Definição</b> Treinador.cpp:8</div></div>
+<div class="ttc" id="aclassTreinador_html_a453d981c3d896a456c6df0dfd512d71f"><div class="ttname"><a href="classTreinador.html#a453d981c3d896a456c6df0dfd512d71f">Treinador::ID</a></div><div class="ttdeci">int ID</div><div class="ttdef"><b>Definição</b> Treinador.hpp:25</div></div>
+<div class="ttc" id="aclassTreinador_html_a56d4b2f3ec8359a37cab2691c9f35303"><div class="ttname"><a href="classTreinador.html#a56d4b2f3ec8359a37cab2691c9f35303">Treinador::colocaMonstrinho</a></div><div class="ttdeci">void colocaMonstrinho(Monstrinho monstrinho)</div><div class="ttdoc">Coloca um monstrinho na equipe do treinador.</div><div class="ttdef"><b>Definição</b> Treinador.cpp:37</div></div>
+<div class="ttc" id="aclassTreinador_html_a573ae526296e0668c7712a119d717ab9"><div class="ttname"><a href="classTreinador.html#a573ae526296e0668c7712a119d717ab9">Treinador::verificaEquipe</a></div><div class="ttdeci">bool verificaEquipe()</div><div class="ttdoc">Verifica se a equipe de monstrinhos do treinador está completa.</div><div class="ttdef"><b>Definição</b> Treinador.cpp:23</div></div>
+<div class="ttc" id="aclassTreinador_html_a69f71f1da4bd4d215623183adc695deb"><div class="ttname"><a href="classTreinador.html#a69f71f1da4bd4d215623183adc695deb">Treinador::getNome</a></div><div class="ttdeci">std::string getNome()</div><div class="ttdoc">Obtém o nome do treinador.</div><div class="ttdef"><b>Definição</b> Treinador.cpp:13</div></div>
+<div class="ttc" id="aclassTreinador_html_aa3e6943922337820b35bcf74a4095503"><div class="ttname"><a href="classTreinador.html#aa3e6943922337820b35bcf74a4095503">Treinador::imprimeEquipe</a></div><div class="ttdeci">void imprimeEquipe()</div><div class="ttdoc">Imprime a equipe de monstrinhos do treinador.</div><div class="ttdef"><b>Definição</b> Treinador.cpp:29</div></div>
+<div class="ttc" id="aclassTreinador_html_ab5de4240df3af144fcfb8c6acf2af333"><div class="ttname"><a href="classTreinador.html#ab5de4240df3af144fcfb8c6acf2af333">Treinador::getEquipe</a></div><div class="ttdeci">vector&lt; Monstrinho * &gt; getEquipe()</div><div class="ttdoc">Obtém a equipe de monstrinhos do treinador.</div><div class="ttdef"><b>Definição</b> Treinador.cpp:18</div></div>
+<div class="ttc" id="aclassTreinador_html_ae7b3f3777be0845242af0d1ed10dd490"><div class="ttname"><a href="classTreinador.html#ae7b3f3777be0845242af0d1ed10dd490">Treinador::mudaEquipe</a></div><div class="ttdeci">virtual bool mudaEquipe()=0</div><div class="ttdoc">Método virtual para mudar a equipe de monstrinhos do treinador.</div></div>
+<div class="ttc" id="aclassTreinador_html_aef2eab6508ff79b1640aab5ec32bb9ea"><div class="ttname"><a href="classTreinador.html#aef2eab6508ff79b1640aab5ec32bb9ea">Treinador::equipe</a></div><div class="ttdeci">vector&lt; Monstrinho * &gt; equipe</div><div class="ttdef"><b>Definição</b> Treinador.hpp:26</div></div>
+<div class="ttc" id="aclassTreinador_html_aff273105364b55b4aa90c891a308137a"><div class="ttname"><a href="classTreinador.html#aff273105364b55b4aa90c891a308137a">Treinador::Treinador</a></div><div class="ttdeci">Treinador(int ID, std::string nome, vector&lt; Monstrinho * &gt; equipe)</div><div class="ttdoc">Construtor da classe Treinador.</div><div class="ttdef"><b>Definição</b> Treinador.cpp:5</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

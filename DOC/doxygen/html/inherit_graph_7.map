@@ -1,0 +1,7 @@
+<map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
+<area shape="rect" id="Node000000" href="$classTreinador.html" title="Classe que representa um treinador de monstrinhos." alt="" coords="5,31,81,56"/>
+<area shape="rect" id="Node000001" href="$classBot.html" title="Representa um Bot em um jogo." alt="" coords="142,5,185,31"/>
+<area shape="poly" id="edge11_Node000000_Node000001" title=" " alt="" coords="95,30,141,20,142,25,96,35"/>
+<area shape="rect" id="Node000002" href="$classJogador.html" title="Classe que representa um jogador no jogo." alt="" coords="129,55,197,80"/>
+<area shape="poly" id="edge12_Node000000_Node000002" title=" " alt="" coords="96,51,130,58,129,63,94,56"/>
+</map>

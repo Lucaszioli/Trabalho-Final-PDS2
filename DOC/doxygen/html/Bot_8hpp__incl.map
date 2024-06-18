@@ -1,0 +1,20 @@
+<map id="HPPs/Bot.hpp" name="HPPs/Bot.hpp">
+<area shape="rect" id="Node000001" title="Uma Classe herdando da Classe Treinador que representa o Bot." alt="" coords="149,5,256,31"/>
+<area shape="rect" id="Node000002" href="$Treinador_8hpp.html" title="Definição da classe Treinador e seus métodos." alt="" coords="108,79,209,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,32,175,68,171,66,193,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="199,225,254,251"/>
+<area shape="poly" id="edge11_Node000001_Node000003" title=" " alt="" coords="210,30,224,78,231,150,231,211,225,211,225,151,219,79,205,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="170,103,201,151,223,211,218,213,196,153,166,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,299,64,324"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="129,106,95,125,79,138,66,153,50,186,41,222,36,285,31,285,36,221,45,184,62,151,76,134,92,121,127,102"/>
+<area shape="rect" id="Node000005" href="$Monstrinho_8hpp.html" title="Definição da classe Monstrinho e seus métodos." alt="" coords="75,152,186,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="157,105,143,140,138,138,152,103"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="148,175,201,215,198,219,145,180"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="119,180,98,201,77,227,59,257,46,287,41,285,55,255,72,224,94,197,116,176"/>
+<area shape="rect" id="Node000006" href="$Ataque_8hpp.html" title="Definição da classe Ataque e seus métodos." alt="" coords="87,225,175,251"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="126,178,125,212,119,212,121,178"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="117,253,63,292,60,288,114,249"/>
+<area shape="poly" id="edge10_Node000006_Node000005" title=" " alt="" coords="135,225,137,191,142,191,140,225"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="89,299,199,324"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="135,251,142,285,137,286,130,251"/>
+</map>
