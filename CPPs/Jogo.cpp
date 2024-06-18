@@ -138,100 +138,114 @@ void Jogo ::geraTurno(Jogador *jogador, Bot *bot)
     int escolha;
     while (!state)
     {
-        int opcao;
-        int ataqueBot = rand() % 4;
-        float vidaBot = static_cast<float>(bot->getEquipe()[0]->getHPAtual()) / bot->getEquipe()[0]->getHP();
-        vidaBot = static_cast<int>(vidaBot * 1000) / 10.0f;
+        try{
+            int opcao;
+            int ataqueBot = rand() % 4;
+            float vidaBot = static_cast<float>(bot->getEquipe()[0]->getHPAtual()) / bot->getEquipe()[0]->getHP();
+            vidaBot = static_cast<int>(vidaBot * 1000) / 10.0f;
 
-        cout << "--------------------------------Turno do Jogador--------------------------------" << endl;
-        cout << "Monstrinho de " << bot->getNome() << ": " << bot->getEquipe()[0]->getNome() << " - HP: " << vidaBot << "%" << endl;
-        cout << "--------------------------------------------------------------------------------" << endl;
-        cout << "Monstrinho de " << jogador->getNome() << ": " << jogador->getEquipe()[0]->getNome() << " - HP: " << jogador->getEquipe()[0]->getHPAtual() << "/" << jogador->getEquipe()[0]->getHP() << endl;
-        cout << "--------------------------------------------------------------------------------" << endl;
-        cout << "Escolha uma opção:" << endl;
-        cout << "1 - Atacar" << endl;
-        cout << "2 - Mudar monstrinho" << endl;
-        cout << "3 - Usar item" << endl;
-        cout << "--------------------------------------------------------------------------------" << endl;
-        cin >> opcao;
-        switch (opcao)
-        {
-        case 1:
-            escolha = jogador->getEquipe()[0]->escolhaAtaque();
-            if (escolha != 4)
+            cout << "--------------------------------Turno do Jogador--------------------------------" << endl;
+            cout << "Monstrinho de " << bot->getNome() << ": " << bot->getEquipe()[0]->getNome() << " - HP: " << vidaBot << "%" << endl;
+            cout << "--------------------------------------------------------------------------------" << endl;
+            cout << "Monstrinho de " << jogador->getNome() << ": " << jogador->getEquipe()[0]->getNome() << " - HP: " << jogador->getEquipe()[0]->getHPAtual() << "/" << jogador->getEquipe()[0]->getHP() << endl;
+            cout << "--------------------------------------------------------------------------------" << endl;
+            cout << "Escolha uma opção:" << endl;
+            cout << "1 - Atacar" << endl;
+            cout << "2 - Mudar monstrinho" << endl;
+            cout << "3 - Usar item" << endl;
+            cout << "--------------------------------------------------------------------------------" << endl;
+            cin >> opcao;
+            if (std::cin.fail())
+                {                     // Se a entrada falhar (por exemplo, o usuário digitou uma string)
+                    std::cin.clear(); // Limpa o estado de falha
+                    throw EscolhaError("Escolha diferente do número possível de opções");
+                }
+            switch (opcao)
             {
-                if (jogador->getEquipe()[0]->getVelocidade() >= bot->getEquipe()[0]->getVelocidade())
+            case 1:
+                escolha = jogador->getEquipe()[0]->escolhaAtaque();
+                if (escolha != 4)
                 {
-                    state = jogador->getEquipe()[0]->atacar(bot->getEquipe()[0], escolha);
-                    if (bot->getEquipe()[0]->getHPAtual() <= 0)
+                    if (jogador->getEquipe()[0]->getVelocidade() >= bot->getEquipe()[0]->getVelocidade())
                     {
-                        bot->mudaEquipe();
-                        jogador->receberItem();
+                        state = jogador->getEquipe()[0]->atacar(bot->getEquipe()[0], escolha);
+                        if (bot->getEquipe()[0]->getHPAtual() <= 0)
+                        {
+                            bot->mudaEquipe();
+                            jogador->receberItem();
+                        }
+                        else
+                        {
+                            bot->getEquipe()[0]->atacar(jogador->getEquipe()[0], ataqueBot);
+                            if (jogador->getEquipe()[0]->getHPAtual() <= 0)
+                            {
+                                jogador->mudaEquipe();
+                            }
+                        }
                     }
                     else
                     {
                         bot->getEquipe()[0]->atacar(jogador->getEquipe()[0], ataqueBot);
                         if (jogador->getEquipe()[0]->getHPAtual() <= 0)
                         {
+
                             jogador->mudaEquipe();
                         }
+                        else
+                        {
+                            jogador->getEquipe()[0]->atacar(bot->getEquipe()[0], escolha);
+                            if (bot->getEquipe()[0]->getHPAtual() <= 0)
+                            {
+                                bot->mudaEquipe();
+                                jogador->receberItem();
+                            }
+                        }
                     }
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    cin.get();
+                    state = true;
                 }
                 else
+                {
+                    state = false;
+                }
+                break;
+
+            case 2:
+                state = jogador->mudaEquipe();
+                if (state == true)
                 {
                     bot->getEquipe()[0]->atacar(jogador->getEquipe()[0], ataqueBot);
                     if (jogador->getEquipe()[0]->getHPAtual() <= 0)
                     {
-
                         jogador->mudaEquipe();
                     }
-                    else
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    cin.get();
+                }
+                break;
+
+            case 3:
+                state = jogador->usarItem();
+                if (state == true)
+                {
+                    bot->getEquipe()[0]->atacar(jogador->getEquipe()[0], ataqueBot);
+                    if (jogador->getEquipe()[0]->getHPAtual() <= 0)
                     {
-                        jogador->getEquipe()[0]->atacar(bot->getEquipe()[0], escolha);
-                        if (bot->getEquipe()[0]->getHPAtual() <= 0)
-                        {
-                            bot->mudaEquipe();
-                            jogador->receberItem();
-                        }
+                        jogador->mudaEquipe();
                     }
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    cin.get();
                 }
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cin.get();
-                state = true;
+                break;
             }
-            else
-            {
-                state = false;
-            }
-            break;
-
-        case 2:
-            state = jogador->mudaEquipe();
-            if (state == true)
-            {
-                bot->getEquipe()[0]->atacar(jogador->getEquipe()[0], ataqueBot);
-                if (jogador->getEquipe()[0]->getHPAtual() <= 0)
-                {
-                    jogador->mudaEquipe();
-                }
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cin.get();
-            }
-            break;
-
-        case 3:
-            state = jogador->usarItem();
-            if (state == true)
-            {
-                bot->getEquipe()[0]->atacar(jogador->getEquipe()[0], ataqueBot);
-                if (jogador->getEquipe()[0]->getHPAtual() <= 0)
-                {
-                    jogador->mudaEquipe();
-                }
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cin.get();
-            }
-            break;
+        }catch(EscolhaError& e){
+            cout<<"--------------------------------------------------------------------------------"<<endl;
+            cout<<e.what()<<endl;
+            cout<<"--------------------------------------------------------------------------------"<<endl;
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.get();
+            state = false;
         }
     }
 }

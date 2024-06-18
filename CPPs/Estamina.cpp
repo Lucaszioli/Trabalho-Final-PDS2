@@ -53,6 +53,11 @@ bool Estamina::usarItem(Monstrinho* monstro){
             cout<<"Escolha um ataque para recuperar Estamina"<<endl;
             cout<<"--------------------------------------------------------------------------------"<<endl;
             cin>>escolha;
+            if (std::cin.fail())
+                {                     // Se a entrada falhar (por exemplo, o usuário digitou uma string)
+                    std::cin.clear(); // Limpa o estado de falha
+                    throw EscolhaError("Escolha diferente do número possível de opções");
+                }
             if(escolha>i || escolha<1){
                 throw EscolhaError("Escolha diferente do número possível de opções");
             }
