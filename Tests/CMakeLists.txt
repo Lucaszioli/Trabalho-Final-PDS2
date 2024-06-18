@@ -7,6 +7,7 @@ set(SOURCES
     test.cpp
     Itens.test.cpp
     Ataques.test.cpp
+    Monstrinhos.test.cpp
 )
 
 include_directories(../HPPs)
