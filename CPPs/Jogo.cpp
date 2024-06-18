@@ -214,6 +214,8 @@ void Jogo ::geraTurno(Jogador *jogador, Bot *bot)
                 {
                     jogador->mudaEquipe();
                 }
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cin.get();
             }
             break;
 
@@ -226,6 +228,8 @@ void Jogo ::geraTurno(Jogador *jogador, Bot *bot)
                 {
                     jogador->mudaEquipe();
                 }
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cin.get();
             }
             break;
         }
