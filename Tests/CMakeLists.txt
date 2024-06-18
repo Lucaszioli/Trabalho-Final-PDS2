@@ -10,6 +10,7 @@ set(SOURCES
     Monstrinhos.test.cpp
     Jogador.test.cpp
     Treinador.test.cpp
+    Jogo.test.cpp
 )
 
 include_directories(../HPPs)
