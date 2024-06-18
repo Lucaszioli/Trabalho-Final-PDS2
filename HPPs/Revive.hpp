@@ -3,10 +3,16 @@
 #include "Item.hpp"
 
 /**
- * @class Revive
- * 
- * @brief Classe que representa um item de reviver
+ * @file Revive.hpp
+ * @brief Uma Classe herdando da Classe Item que representa o item Revive
  */
+
+/**
+* @class Revive
+* 
+* @brief Classe que representa o item Revive
+* 
+*/
 class Revive : public Item{
     private:
         string raridade; ///< A raridade do item

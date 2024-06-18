@@ -6,6 +6,12 @@
 #include "Ataque.hpp"
 
 using namespace std;
+
+/**
+ * @file Monstrinho.hpp
+ * @brief Definição da classe Monstrinho e seus métodos.
+ */
+
 class Ataque; // Declaração antecipada da classe Ataque para evitar dependência circular.
 
 /**

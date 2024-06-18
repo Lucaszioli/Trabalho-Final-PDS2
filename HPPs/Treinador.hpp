@@ -6,6 +6,11 @@
 #include "Monstrinho.hpp"
 
 /**
+ * @file Treinador.hpp
+ * @brief Definição da classe Treinador e seus métodos.
+ */
+
+/**
  * @class Treinador
  *
  * @brief Classe que representa um treinador de monstrinhos.

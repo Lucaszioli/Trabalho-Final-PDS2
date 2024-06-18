@@ -4,10 +4,16 @@
 #include "Item.hpp"
 
 /**
- * @class Cura
- * 
- * @brief Classe que representa um item de cura
+ * @file Cura.hpp
+ * @brief Uma Classe herdando da Classe Item que representa o item Cura
  */
+
+/**
+* @class Cura
+* 
+* @brief Classe que representa o item Cura.
+*
+*/
 class Cura: public Item{
     private:
         int cura; ///< A cura do item

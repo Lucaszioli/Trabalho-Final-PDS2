@@ -3,6 +3,12 @@
 
 #include "Treinador.hpp"
 #include "Item.hpp"
+
+/**
+ * @file Jogador.hpp
+ * @brief Uma Classe herdando da Classe Treinador que representa o Jogador
+ */
+
 /**
  * @brief Classe que representa um jogador no jogo.
  *
