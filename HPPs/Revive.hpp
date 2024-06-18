@@ -2,7 +2,12 @@
 #define REVIVE
 #include "Item.hpp"
 
-/*
+/**
+ * @file Revive.hpp
+ * @brief Uma Classe herdando da Classe Item que representa o item Revive
+ */
+
+/**
 * @class Revive
 * 
 * @brief Classe que representa o item Revive

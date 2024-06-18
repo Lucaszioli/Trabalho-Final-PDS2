@@ -10,6 +10,12 @@
 
 using std::vector;
 using std::string;
+
+/**
+ * @file Jogo.hpp
+ * @brief Definição da classe Jogo e seus métodos.
+ */
+
 /**
  * @class Jogo
  * @file Jogo.hpp

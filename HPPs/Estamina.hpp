@@ -3,6 +3,11 @@
 
 #include "Item.hpp"
 
+/**
+ * @file Estamina.hpp
+ * @brief Uma Classe herdando da Classe Item que representa o item Estamina
+ */
+
 /** 
 * @class Estamina
 * 

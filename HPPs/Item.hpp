@@ -5,6 +5,11 @@
 #include <string>
 using std::string;
 
+/**
+ * @file Item.hpp
+ * @brief Classe que representa um item.
+ */
+
 /** 
 * @class Item
 * 
