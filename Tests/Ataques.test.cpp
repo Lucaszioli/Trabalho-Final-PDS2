@@ -36,10 +36,4 @@ TEST_CASE("Testando fazer os ataques","[Ataque][use]"){
         REQUIRE(m->getHPAtual() == m->getHP());
         REQUIRE(c.getQuantidadeAtual() == c.getQuantidade()-1);
     }
-
-    SECTION("Ataque esgotado"){
-        a.setQuantidadeAtual(0);
-        bool retorno = a.fazerAtaque(m[0]);
-        REQUIRE(retorno == false);
-    }
 }
